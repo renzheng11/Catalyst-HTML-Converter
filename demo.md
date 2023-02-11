@@ -10,17 +10,19 @@ School of Early Childhood Studies, Ryerson University
 
 nland@ryerson.ca
 
+Ren Zheng
+Georgia Insitute of Technology
+rzheng11@gatech.edu
+
 ###
 
 ### Abstract
 
-Thinking with a Canadian physical activity pedagogical resource, this
-article
+Thinking with a Canadian physical activity pedagogical resource, this article
 
 ### Keywords 
 
-Post-developmental pedagogies, physiological knowledges, feminist
-science studies, physical education
+Post-developmental pedagogies, physiological knowledges, feminist science studies, physical education
 
 ### Introduction
 
