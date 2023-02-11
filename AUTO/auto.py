@@ -41,7 +41,7 @@ with file1 as md, file2 as html:
     for line in md:
         #if line matches abstract
         if re.match("### Abstract(\s+)?", line):
-            # abstract = readContents()
+            print("hit abstract, stop top items")
             break
         else:
             #strip line of #'s
@@ -51,14 +51,14 @@ with file1 as md, file2 as html:
                 continue #to next line
             else:
                 #add all lines to topItems
-                print("adding " + line + " to topitems")
+                # print("adding " + line + " to topitems")
                 topItems.append(line)
 
     #-------Store authors-------
     authors = {}
     # format: "{0: [author, affil, contact], 1: [author, affil, contact]}"
-    print("print top itemsr")
-    print(topItems)
+    # print("print top items")
+    # print(topItems)
     logo = topItems[0]
     title = topItems[1].strip("#").strip()
 
@@ -89,20 +89,8 @@ with file1 as md, file2 as html:
 
     # ABSTRACT AND KEYWORDS
     print("starting abstract")
-    # abstract = readContents()
-        
-    # #if line matches keywords
-    # if re.match("### Keywords(\s+)?", line):
-    #     # md.readline() #keywords heading
-    #     print("hit keywords")
-
-    #     keywords = readContents()
-    #     # keywords = "tempkeywords"
-    #     #stop reading top of doc -> move onto section
-    #     break
-
-    abstract = "temp ab"
-    keywords = "temp keys"
+    abstract = readContents()
+    keywords = readContents()
 
     #write html head with metadata + styling
     html.write(f"""
@@ -317,7 +305,7 @@ with file1 as md, file2 as html:
         <p class="logoGap">&nbsp;</p>
         <p class="logoGap">&nbsp;</p>
         <div class="c1"></div>
-        <p class="c1 type">Type / Section</p>
+        <p class="c1 type">Article Type</p>
         <p class="paperTitle">
             {title}
         </p>
@@ -361,11 +349,6 @@ with file1 as md, file2 as html:
         <p class="c1">&nbsp;</p>
         <p class="c1">&nbsp;</p>
     """)
-
-    # write sections
-
-
-
 
     #-------Read sections-------
     code = """"""
