@@ -19,7 +19,7 @@ def readContents(last):
             #if the line is a section title
             anySectionTitle = "^###.+"
             if re.match(anySectionTitle, line):
-                print("match section: " + line)
+                # print("match section: " + line)
                 #end the loop
                 return (contents, line)
             else:
@@ -359,28 +359,29 @@ with file1 as md, file2 as html:
     subsectionTitle = "^#{4}\s.*$"
     subsubsectionTitle = "^^#{5}\s.*$"
 
-    for l in md:
+    for line in md:
+        print("last section: " + lastSection + "[end]")
         #if lastSection matches sectionTitle
         if re.match(sectionTitle, lastSection):
             print("writing sectionTitle")
-            line = line.strip("#").strip()
+            lastSection = lastSection.strip("#").strip()
             print("section = " + line)
-            html.write(f"""<p class="c1 sectionTitle">{line}</p>""")
+            html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
         #if lastSection matches subsectionTitle
         elif re.match(subsectionTitle, lastSection):
             print("writing subsec")
-            line = line.strip("#").strip()
+            lastSection = lastSection.strip("#").strip()
             print("subsec = " + line)
-            html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
+            html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
         #if lastSection matches subsubsectionTitle
         elif re.match(subsubsectionTitle, lastSection):
             print("writing subsub")
+            lastSection = lastSection.strip("#").strip()
             
-            line = line.strip("#").strip()
             print("subsub = " + line)
-            html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
+            html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
         
 
