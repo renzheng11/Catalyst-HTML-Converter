@@ -7,9 +7,9 @@ file1 = open("demo.md", "r")
 file2 = open("demo.html", "w")
 
 #function: read all text until next section
-
-def readContents():
-    print("starting readContents()")
+lastSection = ""
+def readContents(last):
+    # print("starting readContents()")
     contents = ""
     active = True
     while active:
@@ -19,9 +19,9 @@ def readContents():
             #if the line is a section title
             anySectionTitle = "^###.+"
             if re.match(anySectionTitle, line):
-                print("match section")
+                print("match section: " + line)
                 #end the loop
-                active = False
+                return (contents, line)
             else:
                 #add line to contents
                 contents += line 
@@ -31,7 +31,7 @@ def readContents():
             continue
             # line = md.readline() #read line
 
-    return contents
+    
 
 #---------start regex filtering and html writing--------
 # print("start filtering and writing")
@@ -41,7 +41,7 @@ with file1 as md, file2 as html:
     for line in md:
         #if line matches abstract
         if re.match("### Abstract(\s+)?", line):
-            print("hit abstract, stop top items")
+            # print("hit abstract, stop top items")
             break
         else:
             #strip line of #'s
@@ -88,9 +88,10 @@ with file1 as md, file2 as html:
             authorNames += ", "
 
     # ABSTRACT AND KEYWORDS
-    print("starting abstract")
-    abstract = readContents()
-    keywords = readContents()
+    abstract, lastSection = readContents(lastSection)
+    keywords, lastSection = readContents(lastSection)
+    print("LINE ON: " + lastSection)
+    
 
     #write html head with metadata + styling
     html.write(f"""
@@ -350,56 +351,51 @@ with file1 as md, file2 as html:
         <p class="c1">&nbsp;</p>
     """)
 
+
     #-------Read sections-------
-    code = """"""
+    print("first lastSection: " + lastSection)
+    print("starting to read sections")
+    sectionTitle = "^#{3}\s.*$"
+    subsectionTitle = "^#{4}\s.*$"
+    subsubsectionTitle = "^^#{5}\s.*$"
+
     for l in md:
+        #if lastSection matches sectionTitle
+        if re.match(sectionTitle, lastSection):
+            print("writing sectionTitle")
+            line = line.strip("#").strip()
+            print("section = " + line)
+            html.write(f"""<p class="c1 sectionTitle">{line}</p>""")
+
+        #if lastSection matches subsectionTitle
+        elif re.match(subsectionTitle, lastSection):
+            print("writing subsec")
+            line = line.strip("#").strip()
+            print("subsec = " + line)
+            html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
+
+        #if lastSection matches subsubsectionTitle
+        elif re.match(subsubsectionTitle, lastSection):
+            print("writing subsub")
+            
+            line = line.strip("#").strip()
+            print("subsub = " + line)
+            html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
+
         
-        #strip line of #'s (if accidentally marked as heading)
-        stripHash = line.strip("#")
-        
-        #if line is whitespace
-        if stripHash.strip() == "":
-            continue
-            print("empty line: " + line) 
 
-        #if line has contents
-        else:
-            #title patterns
-            sectionTitle = "^###\s.*$"
-            subsectionTitle = "^####\s.*$"
-            subsubsectionTitle = "^#####\s.*$"
+        # write body text under section title
+        bodyText, lastSection = readContents(lastSection)
 
-            #if line matches sectionTitle
-            if re.match(sectionTitle, line):
-                line = line.strip("#").strip()
-                html.write(f"""<p class="c1 sectionTitle">{line}</p>""")
-                # line = md.readline()
+        if lastSection == "### Author Bio\n":
+            break
 
-            #if line matches subsectionTitle
-            elif re.match(subsectionTitle, line):
-                line = line.strip("#").strip()
-                html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
-                # line = md.readline()
-
-            #if line matches subsubsectionTitle
-            elif re.match(subsubsectionTitle, line):
-                line = line.strip("#").strip()
-                html.write(f"""<p class="c1 subsectionTitle">{line}</p>""")
-                # line = md.readline()
-
-            #if line is body text
-            else:
-                # bodyText = readContents()
-                bodyText = "temp body"
-                print(bodyText)
-                html.write(f"""<p class="c1">{bodyText}</p>""")
-
-            html.write("""<p class="c1">&nbsp;</p>
-    <p class="c1">&nbsp;</p>""")
+        html.write(f"""<p class="c1">{bodyText}</p>""")
+        html.write("""<p class="c1">&nbsp;</p>
+        <p class="c1">&nbsp;</p>""")
 
 
-
-    
+print("close files")
 #close files
 md.close()
 html.close()
