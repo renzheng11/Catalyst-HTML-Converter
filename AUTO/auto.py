@@ -2,14 +2,15 @@
 import re
 # import pandoc
 
+#pandoc command: pandoc -s test.docx -o test.md
+
 #START
-file1 = open("demo.md", "r")
-file2 = open("demo.html", "w")
+file1 = open("test.md", "r")
+file2 = open("test.html", "w")
 
 #function: read all text until next section
 lastSection = ""
 def readContents(last):
-    # print("starting readContents()")
     contents = ""
     active = True
     while active:
@@ -19,7 +20,6 @@ def readContents(last):
             #if the line is a section title
             anySectionTitle = "^###.+"
             if re.match(anySectionTitle, line):
-                # print("match section: " + line)
                 #end the loop
                 return (contents, line)
             else:
@@ -34,14 +34,12 @@ def readContents(last):
     
 
 #---------start regex filtering and html writing--------
-# print("start filtering and writing")
 with file1 as md, file2 as html:
     topItems = []
     #reads top of doc in order (not accurately matched)
     for line in md:
         #if line matches abstract
         if re.match("### Abstract(\s+)?", line):
-            # print("hit abstract, stop top items")
             break
         else:
             #strip line of #'s
@@ -51,14 +49,11 @@ with file1 as md, file2 as html:
                 continue #to next line
             else:
                 #add all lines to topItems
-                # print("adding " + line + " to topitems")
                 topItems.append(line)
 
     #-------Store authors-------
     authors = {}
     # format: "{0: [author, affil, contact], 1: [author, affil, contact]}"
-    # print("print top items")
-    # print(topItems)
     logo = topItems[0]
     title = topItems[1].strip("#").strip()
 
@@ -89,9 +84,8 @@ with file1 as md, file2 as html:
 
     # ABSTRACT AND KEYWORDS
     abstract, lastSection = readContents(lastSection)
+
     keywords, lastSection = readContents(lastSection)
-    print("LINE ON: " + lastSection)
-    
 
     #write html head with metadata + styling
     html.write(f"""
@@ -353,50 +347,50 @@ with file1 as md, file2 as html:
 
 
     #-------Read sections-------
-    print("first lastSection: " + lastSection)
-    print("starting to read sections")
     sectionTitle = "^#{3}\s.*$"
     subsectionTitle = "^#{4}\s.*$"
     subsubsectionTitle = "^^#{5}\s.*$"
 
     for line in md:
-        print("last section: " + lastSection + "[end]")
         #if lastSection matches sectionTitle
         if re.match(sectionTitle, lastSection):
-            print("writing sectionTitle")
+            print("section: " + lastSection)
             lastSection = lastSection.strip("#").strip()
-            print("section = " + line)
             html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
         #if lastSection matches subsectionTitle
         elif re.match(subsectionTitle, lastSection):
-            print("writing subsec")
             lastSection = lastSection.strip("#").strip()
-            print("subsec = " + line)
             html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
         #if lastSection matches subsubsectionTitle
         elif re.match(subsubsectionTitle, lastSection):
-            print("writing subsub")
             lastSection = lastSection.strip("#").strip()
-            
-            print("subsub = " + line)
             html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
-        
 
         # write body text under section title
         bodyText, lastSection = readContents(lastSection)
 
-        if lastSection == "### Author Bio\n":
-            break
-
         html.write(f"""<p class="c1">{bodyText}</p>""")
         html.write("""<p class="c1">&nbsp;</p>
         <p class="c1">&nbsp;</p>""")
+
+        bioPattern = "### Author Bio\s+"
+        if re.match(bioPattern, lastSection):
+            break
+
+    html.write(f"""<p class="c1 sectionTitle">Author Bio</p>""")
+    authorBio = ""
+    for line in md:
+        authorBio += line
+    html.write(f"""<p class="c1">{authorBio}</p>""")
+
 
 
 print("close files")
 #close files
 md.close()
 html.close()
+
+#fix EM dash !!!
