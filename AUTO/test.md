@@ -33,7 +33,7 @@ through behavioral or epidemiological research.
 
 ### Keywords 
 
-### critical public health, safer sex, queer, transgender, sex education, feminist social studies of science 
+critical public health, safer sex, queer, transgender, sex education, feminist social studies of science 
 
 ### Introduction
 

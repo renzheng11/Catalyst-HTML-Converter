@@ -8,6 +8,11 @@ import re
 file1 = open("test.md", "r")
 file2 = open("test.html", "w")
 
+#patterns
+note = "\^\d+\^"
+
+# 
+
 #function: read all text until next section
 lastSection = ""
 def readContents(last):
@@ -15,21 +20,34 @@ def readContents(last):
     active = True
     while active:
         line = md.readline() #read next line
-        #if it is not empty and has text
-        if (line.replace("#", "")).replace(" ", "") != "": 
-            #if the line is a section title
-            anySectionTitle = "^###.+"
-            if re.match(anySectionTitle, line):
-                #end the loop
-                return (contents, line)
-            else:
-                #add line to contents
-                contents += line 
 
-        #if it is an empty line
+        #if any part of line has a note superscript number
+        if re.match(note, line):
+            print("match!!! at " + line)
+            print(re.search(note, line).match)
+            #replace ^#^ with <sup><a href="#note#b" id="note#t">1</a></sup>
+            line.replace("^#^", '<sup><a href="#note#b" id="note#t">1</a></sup>')
+        # print("read line: " + line)
+        #if it is not empty and has text
+        if (line == "\n"):
+            # print("empty line")
+            contents += "<br><br>"
+        # elif (line.replace("#", "")).replace(" ", "") != "": 
+        #if the line is a section title
+        anySectionTitle = "^###.+"
+        if re.match(anySectionTitle, line):
+            #end the loop
+            # md.readline() #skip newline after section title
+            # line is a section title
+            return (contents, line)
         else:
-            continue
-            # line = md.readline() #read line
+            #add line to contents
+            contents += line 
+
+        # #if it is an empty line
+        # else:
+        #     continue
+        #     # line = md.readline() #read line
 
     
 
@@ -83,8 +101,8 @@ with file1 as md, file2 as html:
             authorNames += ", "
 
     # ABSTRACT AND KEYWORDS
+    md.readline()
     abstract, lastSection = readContents(lastSection)
-
     keywords, lastSection = readContents(lastSection)
 
     #write html head with metadata + styling
@@ -332,19 +350,13 @@ with file1 as md, file2 as html:
         <p class="c1 sectionTitle">Abstract</p>
         <p class="c1">{abstract}</p>
 
-        <p class="c1">&nbsp;</p>
-        <p class="c1">&nbsp;</p>
-
         <p class="c1 sectionTitle">
         Keywords
         </p>
         <p class="c1">
             {keywords}
         </p>
-        <p class="c1">&nbsp;</p>
-        <p class="c1">&nbsp;</p>
     """)
-
 
     #-------Read sections-------
     sectionTitle = "^#{3}\s.*$"
@@ -354,7 +366,7 @@ with file1 as md, file2 as html:
     for line in md:
         #if lastSection matches sectionTitle
         if re.match(sectionTitle, lastSection):
-            print("section: " + lastSection)
+            # print("section: " + lastSection)
             lastSection = lastSection.strip("#").strip()
             html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
@@ -368,13 +380,11 @@ with file1 as md, file2 as html:
             lastSection = lastSection.strip("#").strip()
             html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
-
         # write body text under section title
         bodyText, lastSection = readContents(lastSection)
 
         html.write(f"""<p class="c1">{bodyText}</p>""")
-        html.write("""<p class="c1">&nbsp;</p>
-        <p class="c1">&nbsp;</p>""")
+        # html.write("""<p class="c1">&nbsp;</p>""")
 
         bioPattern = "### Author Bio\s+"
         if re.match(bioPattern, lastSection):
