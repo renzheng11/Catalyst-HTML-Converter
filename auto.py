@@ -561,7 +561,7 @@ html.close()
 # italics in certain paragraphs / italics in references 
 # characters []
 # \' doesn't always work
-# ^ superscripts that are notes 
+# IMAGES ?
 
 #reference
 
@@ -571,3 +571,4 @@ html.close()
     # class = reference
     # writes divs, link for <a>
     # when hit author bio, exit writeRefs 
+
