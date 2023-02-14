@@ -29,6 +29,7 @@ file2 = open("Auto/test.html", "w")
 
 # Function: test if line has a note
 def testForNote(line):
+    notesDone = False
     if re.search(notePattern, line):
         match = re.search(notePattern, line).group()
         noteNum = match.strip("^")
@@ -37,12 +38,14 @@ def testForNote(line):
         # if doc reaches bottom Notes section
         if (topNotes.count("1") == 2):
             lastNote = noteNum
-            return writeNotes(line, lastNote)
+            line = writeNotes(line, lastNote)
+            notesDone = True
+            return (line, notesDone)
 
         noteLink = f'<sup><a href="#note{noteNum}b" id="note{noteNum}t">{noteNum}</a></sup>'
         line = line.replace(match, noteLink)
     
-    return (line)
+    return (line, notesDone)
 
 # Function: Write each note in Notes section and link to top notes
 def writeNotes(line, lastNote):
@@ -71,6 +74,7 @@ def writeNotes(line, lastNote):
                         <sup><a href="#note{noteNum}t">{noteNum}</a></sup> {noteContent}
                     </p>
                 </div>
+                <p class="notes">&nbsp;</p>
                 """
             )
 
@@ -89,6 +93,7 @@ def writeNotes(line, lastNote):
             noteContent += l
     
     # when all notes are read
+    
     return line
 
 
@@ -96,6 +101,8 @@ lastSection = ""
 
 #function: read all body text until next section
 def readContents(last):
+    if last == "References":
+        print("starting references")
     contents = ""
     active = True
     while active:
@@ -121,22 +128,79 @@ def readContents(last):
         # otherwise it is body text
         else:
             # test if it has a note
-            line = testForNote(line)
+            (line, notesDone) = testForNote(line)
+            if notesDone:
+                return (contents, line)
+
             
             # add line to contents
             contents += line 
 
-# Function: replace markdown Italics, bold
+# Read references
+def readRefs():
+    print("lastSection = " + lastSection)
+
+# Function: replace markdown [brackets], *italic*, **bold**
 def style(text):
+    # # Replace instances of [bracket] text
+    # bracketPattern = "\\\[.*\\\]"
+
+    # # test
+    # print("match them")
+    # print(re.match(bracketPattern, "\[them\]"))
+
+    # searchResult = re.search(bracketPattern, text)
+    # if searchResult: #found match
+    #     matchList = re.findall(bracketPattern, text)
+
+    #     for item in matchList:
+    #         print("item")
+    #         print(item)
+    #         itemPattern = '\\\[' + item.strip("\\\[").strip("\\\]") + '\\\]'
+    #         replacement = "[" + item.strip("\[").strip("\]") + "]"
+    #         text = re.sub(itemPattern, replacement, text)
+
+
+    # Replace instances of ^superscripts^ (not notes)
+    superPattern = "\^.*\^"
+    searchResult = re.search(superPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(superPattern, text)
+
+        for item in matchList:
+            itemPattern = '\^' + item.strip("\^") + '\^'
+            replacement = "<sup>" + item.strip("\^") + "</sup>"
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of Apostrophes \'
+    aposPattern = "\\'"
+    searchResult = re.search(aposPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(aposPattern, text)
+
+        for item in matchList:
+            itemPattern = '\\\'' + item.strip("\\\'")
+            replacement = "\'" + item.strip("\\\'")
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of **bold** text
+    boldPattern = "\*\*.*\*\*"
+    searchResult = re.search(boldPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(boldPattern, text)
+
+        for item in matchList:
+            itemPattern = '\*\*' + item.strip("**") + '\*\*'
+            replacement = "<strong>" + item.strip("**") + "</strong>"
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of *italic* text
     italicPattern = "\*.*\*"
     searchResult = re.search(italicPattern, text)
     if searchResult: #found match
         matchList = re.findall(italicPattern, text)
-        # ['*social significance*', '*ambivalent technologies*', '*why*']
 
         for item in matchList:
-            # print("item:")
-            print(item)
             itemPattern = '\*' + item.strip("*") + '\*'
             replacement = "<em>" + item.strip("*") + "</em>"
             text = re.sub(itemPattern, replacement, text)
@@ -491,9 +555,6 @@ with file1 as md, file2 as html:
         authorBio += line
     html.write(f"""<p class="c1">{authorBio}</p>""")
 
-
-
-print("close files")
 #close files
 md.close()
 html.close()
@@ -501,4 +562,6 @@ html.close()
 #ISSUES !!!
 # EM dash
 # italics in certain paragraphs / italics in references 
-# characters [], \, ', *bold*
+# characters []
+# \' doesn't always work
+# ^ superscripts that are notes 
