@@ -4,37 +4,24 @@ import re
 
 #pandoc command: pandoc -s test.docx -o test.md
 
-# file1 = open("Auto/lil.md", "r")
-
-# with file1 as md:
-#     for i in range(30):
-#         line = md.readline()
-#         print(line)
-#         if re.search("\n", line):
-#             print("new line")
-
-# file1.close()
-
 print("""
 ___
-___
+
+RESET
 ___
 
 """)
 
-#START
+#Global variables
+writtenSections = []
+topNotes = []
+notePattern = "\^\d+\^"
+
+# Open files
 file1 = open("Auto/test.md", "r")
 file2 = open("Auto/test.html", "w")
 
-writtenSections = []
-topNotes = []
-
-# note in body: <sup><a href="#note1b" id="note1t">1</a></sup>
-# note in note links: 
-   
-
-notePattern = "\^\d+\^"
-onBottom = False
+# Function: test if line has a note
 def testForNote(line):
     if re.search(notePattern, line):
         
@@ -42,10 +29,8 @@ def testForNote(line):
         noteNum = match.strip("^")
         topNotes.append(noteNum)
 
-        # print(f"Match - Note {noteNum}: " + line)
-        # print("topNotes: " + str(topNotes))
-
-        if (topNotes.count("1") == 2): # reached bottom Notes section
+        # if doc reaches bottom Notes section
+        if (topNotes.count("1") == 2):
             lastNote = noteNum
             writeNotes(line, lastNote)
 
@@ -54,12 +39,13 @@ def testForNote(line):
     
     return (line)
 
+# Function: Write each note in Notes section and link to top notes
 def writeNotes(line, lastNote):
     print("starting writeNotes on: " + line)
-    # match = re.search(notePattern, line).group()
     noteNum = 1
     noteContent = ""
-    #strip line of ^#^
+
+    # strip line of ^#^
     line = re.sub("\^\d*\^\s+", "", line)
     # add first line of note 1
     noteContent += line
@@ -68,16 +54,12 @@ def writeNotes(line, lastNote):
         if l == "### References\n":
             # reached end of notes, REPLACE !!!
             break
-        #until next note
-
-        print("On [LINE]: " + l)
-        # print(re.search(notePattern, l))
         
-        if (re.search(notePattern, l)):
-            # hit next note
+        # if next note is hit
+        if (re.search(notePattern, l)): 
             print(l[0:10] + "... matches, [STOP], move onto next note")
+
             # add complete previous note to html
-            
             html.write(
                 f"""
                 <div id="note{noteNum}b">
@@ -88,46 +70,43 @@ def writeNotes(line, lastNote):
                 """
             )
 
-            
-
-
-
-            # reset noteContent
-            print("resetting contents")
             #reset note contents
             noteContent = ""
 
             # add first line of note to contents
             l = re.sub("\^\d*\^\s+", "", l)
             noteContent += l
+
             noteNum += 1
 
-        else: #note still going
-            #add to contents
+        # if note still going
+        else: 
+            #add the line to contents
             noteContent += l
-            print("noteContent = " + noteContent)
-
-    print("return writeNotes()")
+    
+    # when all notes are read
     return
 
 
-#function: read all text until next section
 lastSection = ""
+
+#function: read all body text until next section
 def readContents(last):
     contents = ""
     active = True
     while active:
-        line = md.readline() #read next line
+        #read next line
+        line = md.readline() 
+
         #if it is not empty and has text
         if (line == "\n"):
             contents += "<br><br>"
-        # elif (line.replace("#", "")).replace(" ", "") != "": 
+
         #if the line is a section title
         anySectionTitle = "^###.+"
-        if re.match(anySectionTitle, line):
-            # md.readline() #skip newline after section title
-            # line is a section title
 
+        # if line is a section title
+        if re.match(anySectionTitle, line):
             #add section name to writtenSections list
             strippedSection = line.replace("#", "").strip()
             writtenSections.append(strippedSection)
@@ -136,12 +115,11 @@ def readContents(last):
 
         # otherwise it is body text
         else:
+            # test if it has a note
             line = testForNote(line)
             
-            #add line to contents
+            # add line to contents
             contents += line 
-
-        
 
 #---------start regex filtering and html writing--------
 with file1 as md, file2 as html:
@@ -162,8 +140,9 @@ with file1 as md, file2 as html:
                 topItems.append(line)
 
     #-------Store authors-------
+    # authors: "{0: [author, affil, contact], 1: [author, affil, contact]}"
     authors = {}
-    # format: "{0: [author, affil, contact], 1: [author, affil, contact]}"
+    
     logo = topItems[0]
     title = topItems[1].strip("#").strip()
 
@@ -475,7 +454,6 @@ with file1 as md, file2 as html:
         bodyText, lastSection = readContents(lastSection)
 
         html.write(f"""<p class="c1">{bodyText}</p>""")
-        # html.write("""<p class="c1">&nbsp;</p>""")
 
         bioPattern = "### Author Bio\s+"
         if re.match(bioPattern, lastSection):
