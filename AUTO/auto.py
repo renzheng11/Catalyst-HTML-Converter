@@ -8,8 +8,9 @@ import re
 
 # import pandoc
 # pandoc -s test.docx -o test.md
-#pandoc command: pandoc -s test.docx -o test.md
+# pandoc command: pandoc -s test.docx -o test.md
 
+# print for testing
 print("""
 ___
 
@@ -18,15 +19,12 @@ ___
 
 """)
 
-#Global variables
-writtenSections = []
-topNotes = []
-notePattern = "\^\d+\^"
-
 # Open files
 file1 = open("Auto/test.md", "r")
 file2 = open("Auto/test.html", "w")
 
+notePattern = "\^\d+\^"
+topNotes = []
 # Function: test if line has a note
 def testForNote(line):
     notesDone = False
@@ -98,7 +96,7 @@ def writeNotes(line, lastNote):
 
 
 lastSection = ""
-
+writtenSections = []
 #function: read all body text until next section
 def readContents(last):
     if last == "References":
@@ -132,7 +130,6 @@ def readContents(last):
             if notesDone:
                 return (contents, line)
 
-            
             # add line to contents
             contents += line 
 
@@ -209,7 +206,6 @@ def style(text):
 
 
 #---------start regex filtering and html writing--------
-
 
 with file1 as md, file2 as html:
 
@@ -553,6 +549,7 @@ with file1 as md, file2 as html:
     authorBio = ""
     for line in md:
         authorBio += line
+    authorBio = style(authorBio)
     html.write(f"""<p class="c1">{authorBio}</p>""")
 
 #close files
@@ -565,3 +562,12 @@ html.close()
 # characters []
 # \' doesn't always work
 # ^ superscripts that are notes 
+
+#reference
+
+#flag: in references
+
+#if in references:
+    # class = reference
+    # writes divs, link for <a>
+    # when hit author bio, exit writeRefs 
