@@ -4,14 +4,112 @@ import re
 
 #pandoc command: pandoc -s test.docx -o test.md
 
+# file1 = open("Auto/lil.md", "r")
+
+# with file1 as md:
+#     for i in range(30):
+#         line = md.readline()
+#         print(line)
+#         if re.search("\n", line):
+#             print("new line")
+
+# file1.close()
+
+print("""
+___
+___
+___
+
+""")
+
 #START
-file1 = open("test.md", "r")
-file2 = open("test.html", "w")
+file1 = open("Auto/test.md", "r")
+file2 = open("Auto/test.html", "w")
 
-#patterns
-note = "\^\d+\^"
+writtenSections = []
+topNotes = []
 
-# 
+# note in body: <sup><a href="#note1b" id="note1t">1</a></sup>
+# note in note links: 
+   
+
+notePattern = "\^\d+\^"
+onBottom = False
+def testForNote(line):
+    if re.search(notePattern, line):
+        
+        match = re.search(notePattern, line).group()
+        noteNum = match.strip("^")
+        topNotes.append(noteNum)
+
+        # print(f"Match - Note {noteNum}: " + line)
+        # print("topNotes: " + str(topNotes))
+
+        if (topNotes.count("1") == 2): # reached bottom Notes section
+            lastNote = noteNum
+            writeNotes(line, lastNote)
+
+        noteLink = f'<sup><a href="#note{noteNum}b" id="note{noteNum}t">{noteNum}</a></sup>'
+        line = line.replace(match, noteLink)
+    
+    return (line)
+
+def writeNotes(line, lastNote):
+    print("starting writeNotes on: " + line)
+    # match = re.search(notePattern, line).group()
+    noteNum = 1
+    noteContent = ""
+    #strip line of ^#^
+    line = re.sub("\^\d*\^\s+", "", line)
+    # add first line of note 1
+    noteContent += line
+
+    for l in md:
+        if l == "### References\n":
+            # reached end of notes, REPLACE !!!
+            break
+        #until next note
+
+        print("On [LINE]: " + l)
+        # print(re.search(notePattern, l))
+        
+        if (re.search(notePattern, l)):
+            # hit next note
+            print(l[0:10] + "... matches, [STOP], move onto next note")
+            # add complete previous note to html
+            
+            html.write(
+                f"""
+                <div id="note{noteNum}b">
+                    <p class="notes">
+                        <sup><a href="#note{noteNum}t">{noteNum}</a></sup> {noteContent}
+                    </p>
+                </div>
+                """
+            )
+
+            
+
+
+
+            # reset noteContent
+            print("resetting contents")
+            #reset note contents
+            noteContent = ""
+
+            # add first line of note to contents
+            l = re.sub("\^\d*\^\s+", "", l)
+            noteContent += l
+            noteNum += 1
+
+        else: #note still going
+            #add to contents
+            noteContent += l
+            print("noteContent = " + noteContent)
+
+    print("return writeNotes()")
+    return
+
 
 #function: read all text until next section
 lastSection = ""
@@ -20,36 +118,30 @@ def readContents(last):
     active = True
     while active:
         line = md.readline() #read next line
-
-        #if any part of line has a note superscript number
-        if re.match(note, line):
-            print("match!!! at " + line)
-            print(re.search(note, line).match)
-            #replace ^#^ with <sup><a href="#note#b" id="note#t">1</a></sup>
-            line.replace("^#^", '<sup><a href="#note#b" id="note#t">1</a></sup>')
-        # print("read line: " + line)
         #if it is not empty and has text
         if (line == "\n"):
-            # print("empty line")
             contents += "<br><br>"
         # elif (line.replace("#", "")).replace(" ", "") != "": 
         #if the line is a section title
         anySectionTitle = "^###.+"
         if re.match(anySectionTitle, line):
-            #end the loop
             # md.readline() #skip newline after section title
             # line is a section title
+
+            #add section name to writtenSections list
+            strippedSection = line.replace("#", "").strip()
+            writtenSections.append(strippedSection)
+            
             return (contents, line)
+
+        # otherwise it is body text
         else:
+            line = testForNote(line)
+            
             #add line to contents
             contents += line 
 
-        # #if it is an empty line
-        # else:
-        #     continue
-        #     # line = md.readline() #read line
-
-    
+        
 
 #---------start regex filtering and html writing--------
 with file1 as md, file2 as html:
@@ -366,7 +458,6 @@ with file1 as md, file2 as html:
     for line in md:
         #if lastSection matches sectionTitle
         if re.match(sectionTitle, lastSection):
-            # print("section: " + lastSection)
             lastSection = lastSection.strip("#").strip()
             html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
