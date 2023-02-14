@@ -1,7 +1,13 @@
 #import libraries
 import re
-# import pandoc
 
+# import aspose.words as aw
+
+# doc = aw.Document("Input.docx")
+# doc.save("Output.md")
+
+# import pandoc
+# pandoc -s test.docx -o test.md
 #pandoc command: pandoc -s test.docx -o test.md
 
 print("""
@@ -24,7 +30,6 @@ file2 = open("Auto/test.html", "w")
 # Function: test if line has a note
 def testForNote(line):
     if re.search(notePattern, line):
-        
         match = re.search(notePattern, line).group()
         noteNum = match.strip("^")
         topNotes.append(noteNum)
@@ -32,7 +37,7 @@ def testForNote(line):
         # if doc reaches bottom Notes section
         if (topNotes.count("1") == 2):
             lastNote = noteNum
-            writeNotes(line, lastNote)
+            return writeNotes(line, lastNote)
 
         noteLink = f'<sup><a href="#note{noteNum}b" id="note{noteNum}t">{noteNum}</a></sup>'
         line = line.replace(match, noteLink)
@@ -41,7 +46,6 @@ def testForNote(line):
 
 # Function: Write each note in Notes section and link to top notes
 def writeNotes(line, lastNote):
-    print("starting writeNotes on: " + line)
     noteNum = 1
     noteContent = ""
 
@@ -53,13 +57,13 @@ def writeNotes(line, lastNote):
     for l in md:
         if l == "### References\n":
             # reached end of notes, REPLACE !!!
+            line = l
             break
         
         # if next note is hit
         if (re.search(notePattern, l)): 
-            print(l[0:10] + "... matches, [STOP], move onto next note")
-
             # add complete previous note to html
+            noteContent = style(noteContent)
             html.write(
                 f"""
                 <div id="note{noteNum}b">
@@ -85,7 +89,7 @@ def writeNotes(line, lastNote):
             noteContent += l
     
     # when all notes are read
-    return
+    return line
 
 
 lastSection = ""
@@ -98,7 +102,7 @@ def readContents(last):
         #read next line
         line = md.readline() 
 
-        #if it is not empty and has text
+        #if empty line
         if (line == "\n"):
             contents += "<br><br>"
 
@@ -110,6 +114,7 @@ def readContents(last):
             #add section name to writtenSections list
             strippedSection = line.replace("#", "").strip()
             writtenSections.append(strippedSection)
+            contents = style(contents)
             
             return (contents, line)
 
@@ -121,8 +126,29 @@ def readContents(last):
             # add line to contents
             contents += line 
 
+# Function: replace markdown Italics, bold
+def style(text):
+    italicPattern = "\*.*\*"
+    searchResult = re.search(italicPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(italicPattern, text)
+        # ['*social significance*', '*ambivalent technologies*', '*why*']
+
+        for item in matchList:
+            # print("item:")
+            print(item)
+            itemPattern = '\*' + item.strip("*") + '\*'
+            replacement = "<em>" + item.strip("*") + "</em>"
+            text = re.sub(itemPattern, replacement, text)
+
+    return text
+
+
 #---------start regex filtering and html writing--------
+
+
 with file1 as md, file2 as html:
+
     topItems = []
     #reads top of doc in order (not accurately matched)
     for line in md:
@@ -183,7 +209,7 @@ with file1 as md, file2 as html:
         <head>
             <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
             <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-            <meta charset="UTF-8">`
+            <meta charset="UTF-8">
             <meta name="description" content="{title}">
             <meta name="keywords"
                 content="{keywords}">
@@ -472,4 +498,7 @@ print("close files")
 md.close()
 html.close()
 
-#fix EM dash !!!
+#ISSUES !!!
+# EM dash
+# italics in certain paragraphs / italics in references 
+# characters [], \, ', *bold*
