@@ -11,8 +11,12 @@ import re
 # pandoc command: pandoc -s test.docx -o test.md
 
 # Open files
-file1 = open("test.md", "r")
-file2 = open("test.html", "w")
+# file1 = open("test.md", "r")
+# file2 = open("test.html", "w")
+
+file1 = open("chacko.md", "r")
+file2 = open("chacko.html", "w")
+
 
 # Function: replace markdown [brackets], *italic*, **bold**
 def styleText(text):
@@ -72,8 +76,6 @@ def styleText(text):
             itemPattern = '\^' + item.strip("\^") + '\^'
             replacement = "<sup>" + item.strip("\^") + "</sup>"
             text = re.sub(itemPattern, replacement, text)
-
-    
     
     # Replace instances of ellipses \...
     ellipsePattern = "\\\.\.\."
@@ -147,7 +149,6 @@ def styleText(text):
             replacement = ""
             text = re.sub(itemPattern, replacement, text)
 
-
     return text
 
 
@@ -171,10 +172,55 @@ def readContents(last):
         if (line == "\n"):
             contents += "<br><br>"
 
+
+        # Figure html
+        figurePattern = r"\(?Figure \d\)?"
+
+        
+        searchResult = re.search(figurePattern, line)
+        if searchResult: #found match
+            # get first author last name
+            figAuthor = authors[0][0].split(" ")[-1].lower()
+
+
+            matchList = re.findall(figurePattern, line)
+            # print(matchList)
+
+            for item in matchList:
+                if item.count("(") == 1:
+                    continue
+                # get figure #
+                figNum = re.findall("\d", item)[0]
+                print("figNum: " + figNum)
+
+                # text = re.sub(itemPattern, replacement, text)
+
+                # print(line)
+                figContent = "replace with figContent"
+
+                # until new line
+                nextline = md.readline()
+                print("[nextline]: " + nextline)
+
+                # add to figContents
+
+                print(f"""
+                    <img src="{figAuthor}figure{figNum}.jpg"
+                    alt="Replace image alt"
+                    style="height: Auto; max-width: 100%;;position: relative;">
+                    <p class="imagetext">Figure {figNum}. {figContent}</p>
+                """)
+
+            # contents += f"""
+            #         <img src="{figAuthor}figure{figNum}.jpg"
+            #         alt="Replace image alt"
+            #         style="height: Auto; max-width: 100%;;position: relative;">
+            #         <p class="imagetext">Figure {figNum}. {figContent}</p>
+            # """
+
+
         #if the line is a section title
         anySectionTitle = "^###.+"
-
-        # if line is a section title
         if re.match(anySectionTitle, line):
             #add section name to writtenSections list
             strippedSection = line.replace("#", "").strip()
@@ -700,3 +746,5 @@ html.close()
 
 # MANUAL
 # need to change article type (not in docx)
+# remove []{.mark}
+# replace image alts
