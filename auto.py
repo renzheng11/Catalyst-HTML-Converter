@@ -35,6 +35,32 @@ def styleText(text):
             # replacement = "[" + item.strip("\[").strip("\]") + "]"
             # text = re.sub(itemPattern, replacement, text)
 
+    # --
+    # -- = –
+    # --- = —
+
+    # Replace three --- em dash —
+    dashPattern = "---"
+    searchResult = re.search(dashPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(dashPattern, text)
+
+        for item in matchList:
+            itemPattern = "---"
+            replacement = "—"
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace two -- em dash –
+    dashPattern = "--"
+    searchResult = re.search(dashPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(dashPattern, text)
+
+        for item in matchList:
+            itemPattern = "--"
+            replacement = "–"
+            text = re.sub(itemPattern, replacement, text)
+
     # Replace "quote marks" with “quote marks”
     quotePattern = "\"[^\x22]+\""
     searchResult = re.search(quotePattern, text)
@@ -47,15 +73,14 @@ def styleText(text):
             text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of ^superscripts^ (not notes)
-    # superPattern = "\^.*\^"
-    # searchResult = re.search(superPattern, text)
-    # if searchResult: #found match
-    #     matchList = re.findall(superPattern, text)
-
-    #     for item in matchList:
-    #         itemPattern = '\^' + item.strip("\^") + '\^'
-    #         replacement = "<sup>" + item.strip("\^") + "</sup>"
-    #         text = re.sub(itemPattern, replacement, text)
+    superPattern = "\^[^\d]{2}\^"
+    searchResult = re.search(superPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(superPattern, text)
+        for item in matchList:
+            itemPattern = '\^' + item.strip("\^") + '\^'
+            replacement = "<sup>" + item.strip("\^") + "</sup>"
+            text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of Apostrophes \'
     aposPattern = "([\\\']+)"
@@ -165,11 +190,11 @@ def writeNotes():
     # add first line of note 1
     noteContent += line
 
+    
     for l in md:
         if l == "### References\n":
             # reached end of notes, REPLACE !!!
             line = l
-
             break
         
         notePattern = "\^\d+\^"
@@ -208,13 +233,20 @@ def writeNotes():
 
 # Read references
 def writeRefs():
+    # write References sectionTitle
+    html.write(
+        f"""
+        <p class="c1 sectionTitle">References</p>
+        """
+    )
+
     refContent = ""
 
     for l in md:
-        bioPattern = "### Author Bio\s*"
-        if re.match(bioPattern, l):
-            # reached end of references, REPLACE !!!
-            break
+        sectionTitle = "^#{3}\s.*$" 
+        if re.match(sectionTitle, l):
+            # reached end of references (hit Author Bios reference)
+            break 
         
         # if blank space is hit
         if l == "\n": 
@@ -223,7 +255,7 @@ def writeRefs():
             searchResult = re.search(linkPattern, refContent)
             if searchResult: #found a link
                 match = re.search(linkPattern, refContent).group()
-                link = match.strip("<").strip(">")
+                link = match.strip("<").strip(">.")
             refContent = re.sub(linkPattern, "", refContent)
 
             # convert markdown styles
@@ -233,7 +265,7 @@ def writeRefs():
             if link != "": #reference has a link
                 html.write(
                     f"""
-                    <p class="reference"> {refContent} <a href="{link}">{link}</a></p>
+                    <p class="reference"> {refContent} <a href="{link}">{link}.</a></p>
                     """
                 )
             else: #reference does not have a link
@@ -313,6 +345,7 @@ with file1 as md, file2 as html:
     md.readline()
     abstract, lastSection = readContents(lastSection)
     keywords, lastSection = readContents(lastSection)
+    keywords = keywords.strip("<br><br>")
 
     #write html head with metadata + styling
     html.write(f"""
@@ -561,12 +594,15 @@ with file1 as md, file2 as html:
         <p class="c1 sectionTitle">Abstract</p>
         <p class="c1">{abstract}</p>
 
+        <p class="c1">&nbsp;</p>
+
         <p class="c1 sectionTitle">
         Keywords
         </p>
         <p class="c1">
             {keywords}
         </p>
+        <p class="c1">&nbsp;</p>
     """)
 
     #-------Read sections-------
@@ -593,17 +629,22 @@ with file1 as md, file2 as html:
         # write body text under section title
         bodyText, lastSection = readContents(lastSection)
 
-        html.write(f"""<p class="c1">{bodyText}</p>""")
+        refPattern = "### References\s*"
+        if re.match(refPattern, lastSection):
+            writeRefs()
+            break
 
+        html.write(f"""<p class="c1">{bodyText}</p>""")
 
         bioPattern = "### Author Bio\s*"
         if re.match(bioPattern, lastSection):
-        # if lastSection == "Author Bios":
+            #reached Author Bios - last section
             break
 
     html.write(f"""<p class="c1 sectionTitle">Author Bio</p>""")
     authorBio = ""
     for line in md:
+        # until end of file
         authorBio += line
     authorBio = styleText(authorBio)
     html.write(f"""<p class="c1">{authorBio}</p>""")
@@ -620,4 +661,7 @@ html.close()
 # ^ superscript (not conflicting with notes)
 # keywords spacing
     # check other spacing
+# ([[https://www.queersexed.org/]{.underline}](https://www.queersexed.org/))
 
+# MANUAL
+# need to change article type (not in docx)
