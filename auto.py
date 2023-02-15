@@ -19,26 +19,6 @@ def styleText(text):
     # strip all newlines so text is one string
     text = re.sub("\n", "", text)
 
-    # Replace instances of [bracket] text
-    # bracketPattern = "\\\[[^\]]*\]"
-    # \[them\]
-    bracketPattern = "[\\][\[][\s\S]*[\\][\]]"
-    
-    # searchResult = re.search(bracketPattern, text)
-    # if searchResult: #found match
-    #     matchList = re.findall(bracketPattern, text)
-
-    #     for item in matchList:
-    #         print(item)
-            #
-            # itemPattern = '\\\[' + item.strip("\\\[").strip("\\\]") + '\\\]'
-            # replacement = "[" + item.strip("\[").strip("\]") + "]"
-            # text = re.sub(itemPattern, replacement, text)
-
-    # --
-    # -- = –
-    # --- = —
-
     # Replace three --- em dash —
     dashPattern = "---"
     searchResult = re.search(dashPattern, text)
@@ -59,6 +39,17 @@ def styleText(text):
         for item in matchList:
             itemPattern = "--"
             replacement = "–"
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of Apostrophes \'
+    aposPattern = "\\\'"
+    searchResult = re.search(aposPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(aposPattern, text)
+
+        for item in matchList:
+            itemPattern = '\\\'' + item.strip("\'")
+            replacement = "'"
             text = re.sub(itemPattern, replacement, text)
 
     # Replace "quote marks" with “quote marks”
@@ -82,15 +73,17 @@ def styleText(text):
             replacement = "<sup>" + item.strip("\^") + "</sup>"
             text = re.sub(itemPattern, replacement, text)
 
-    # Replace instances of Apostrophes \'
-    aposPattern = "([\\\']+)"
-    searchResult = re.search(aposPattern, text)
+    
+    
+    # Replace instances of ellipses \...
+    ellipsePattern = "\\\.\.\."
+    searchResult = re.search(ellipsePattern, text)
     if searchResult: #found match
-        matchList = re.findall(aposPattern, text)
+        matchList = re.findall(ellipsePattern, text)
 
         for item in matchList:
-            itemPattern = '\\\'' + item.strip("\\\'")
-            replacement = "\'" + item.strip("\\\'")
+            itemPattern = "\\\.\.\." + item.strip("\...")
+            replacement = "..."
             text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of **bold** text
@@ -115,7 +108,48 @@ def styleText(text):
             replacement = "<em>" + item.strip("*") + "</em>"
             text = re.sub(itemPattern, replacement, text)
 
+    # Left bracket
+    bracketPattern = "\\\\\["
+    
+    searchResult = re.search(bracketPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(bracketPattern, text)
+
+        for item in matchList:
+            
+            itemPattern = "\\\\\["
+            replacement = "["
+            text = re.sub(itemPattern, replacement, text)
+
+    # Right bracket
+    bracketPattern = "\\\\\]"
+    
+    searchResult = re.search(bracketPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(bracketPattern, text)
+
+        for item in matchList:
+            
+            itemPattern = "\\\\\]"
+            replacement = "]"
+            text = re.sub(itemPattern, replacement, text)
+
+    # last pass - remove blackslash
+    slashPattern = "\\\\"
+    
+    searchResult = re.search(slashPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(slashPattern, text)
+
+        for item in matchList:
+            
+            itemPattern = "\\\\"
+            replacement = ""
+            text = re.sub(itemPattern, replacement, text)
+
+
     return text
+
 
 lastSection = ""
 writtenSections = []
@@ -190,14 +224,28 @@ def writeNotes():
     # add first line of note 1
     noteContent += line
 
-    
     for l in md:
-        if l == "### References\n":
-            # reached end of notes, REPLACE !!!
+        sectionTitle = "^#{3}\s.*$" 
+        if re.match(sectionTitle, l):
+            # reached end of notes (hit References)
+            # write last note:
+            noteContent = styleText(noteContent)
+            html.write(
+                f"""
+                <div id="note{noteNum}b">
+                    <p class="notes">
+                        <sup><a href="#note{noteNum}t">{noteNum}</a></sup> {noteContent}
+                    </p>
+                </div>
+                <p class="notes">&nbsp;</p>
+                """
+            )
+
             line = l
             break
         
         notePattern = "\^\d+\^"
+
         # if next note is hit
         if (re.search(notePattern, l)): 
             # add complete previous note to html
@@ -228,7 +276,6 @@ def writeNotes():
             noteContent += " " + l
     
     # when all notes are read
-    
     return line
 
 # Read references
@@ -283,16 +330,10 @@ def writeRefs():
         else: 
             #add the line to contents
             refContent += " " + l
-
     return
 
-
-
-
 #---------start regex filtering and html writing--------
-
 with file1 as md, file2 as html:
-
     topItems = []
     #reads top of doc in order (not accurately matched)
     for line in md:
@@ -586,8 +627,6 @@ with file1 as md, file2 as html:
             """
             )
 
-    print(keywords)
-
     # write abstract + keywords
     html.write(f"""
         <!--Main Body-->
@@ -645,7 +684,7 @@ with file1 as md, file2 as html:
     authorBio = ""
     for line in md:
         # until end of file
-        authorBio += line
+        authorBio += line + " "
     authorBio = styleText(authorBio)
     html.write(f"""<p class="c1">{authorBio}</p>""")
 
@@ -654,13 +693,9 @@ md.close()
 html.close()
 
 #ISSUES !!!
-# EM dash
 # brackets 
-# Apostrophes (\')
+# Apostrophes (\') messes up when in a "double quote"
 # IMAGES ?
-# ^ superscript (not conflicting with notes)
-# keywords spacing
-    # check other spacing
 # ([[https://www.queersexed.org/]{.underline}](https://www.queersexed.org/))
 
 # MANUAL
