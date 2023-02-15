@@ -55,6 +55,49 @@ so you probably know there isn't any research documenting the
 effectiveness of using gloves for an already very low-risk sexual
 practice."
 
+Largely stumped by this question, I mumbled something about barriers
+preventing more than just transmission of infection and the need to
+think capaciously about what constitutes "safer sex." The point,
+however, was well taken: the gaps between the practice of glove use and
+their relationship to scientific knowledge raised important questions
+about the social and political contexts of queer safer sex: In the
+absence of known clinical effectiveness in preventing disease
+transmission, what is the *social significance* of technologies such as
+the use of gloves and dental dams? What cultural or political work is
+accomplished by the affective investment in these technologies in queer
+communities? I focus on gloves and dams because they are objects
+generally signified as queer. Of course, any person can use them
+regardless of sexual identity or behavior, but gloves and dams are
+seldom promoted to or used by heterosexuals. Rather than asking
+biomedical, behavioral, or epidemiological questions about the efficacy
+of gloves and dams, the rates of their use, or how to better promote
+them, this article asks a different set of questions. My aim is to
+disrupt the focus of normative behavioral or policy research on safer
+sex by generating queer feminist science and technology insights into
+these technologies. Drawing on my extensive archive of safer sex
+materials from 1982 to the present and thirty-two in-depth individual
+interviews with queer adults in the United States and Canada, I explore
+the politics of gloves and dams through the "social worlds" framework
+and queer feminist science and technology studies. The social worlds
+framework originates in feminist sociological studies of science and
+technology. According to Adele Clarke and Leigh Star, the social worlds
+"theory-methods package" includes "epistemological and ontological
+assumptions, along with concrete practices" through which social
+interactions occur, "including relating to/with one another and with the
+various nonhuman entities involved in the situation" (2008, 117). I
+combine this framework with insights from queer feminist science and
+technology studies, which is concerned with the quotidian practices of
+meaning making that trouble, disrupt, and reconfigure assumptions about
+nature, difference, and worldliness---in my case, the queer disruptions
+of sex, "safer" sex, gender, and bodies through safer sex technologies
+such as gloves and dams (Cipolla et al. 2017). Together, these
+frameworks demonstrate how gloves and dams are *ambivalent technologies*
+entangled with discourses of risk, governmentality, and care in queer
+social worlds. The concept of ambivalent technologies helps us to
+understand *why* people use these technologies in the absence of known
+scientific effectiveness; it also illustrates the social and political
+significance of these technologies.
+
 ### A Short and Incomplete Genealogy of Gloves and Dams for Safer Sex 
 
 Although there is a growing body of literature that explores the social
