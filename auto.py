@@ -120,7 +120,6 @@ def styleText(text, lastSection):
         for item in matchList:
             itemPattern = '\*' + item.strip("*") + '\*'
 
-            ### fix this !!!
             # refPattern = "### Notes\s*"
             # if re.match(refPattern, lastSection):
             #     replacement = "<i>" + item.strip("*") + "</i>"
@@ -180,9 +179,8 @@ def readContents(last, md, html, authors):
         return (contents, line)
 
     active = True
-    listNum = 0
     itemtext = ""
-    nextLine = ""
+    previousIsImage = False
     global inList
 
     while active:
@@ -190,18 +188,23 @@ def readContents(last, md, html, authors):
         if itemtext:
             line = itemtext
         else:
+            
             line = md.readline() 
 
         #if empty line
         if (line == "\n"):
             contents += "<br><br>"
+           
+            # if (previousIsImage):
+            #     contents.strip("<br><br>")
+            #     previousIsImage = False
 
         # LISTS
         listPattern = r"-   \w*"
+
         if re.search(listPattern, line):
-            contents = contents.strip().strip("<br><br>") # NOT WORKING !!
+            contents = contents.strip().strip("<br><br>") 
             contents += """</p><p class="c1 quotes"><ul><li>""" + line.strip("-").strip()
-            
 
             inList = True
             nextstartline = ""
@@ -222,108 +225,44 @@ def readContents(last, md, html, authors):
                         nextstartline = nextline
 
                     if nextline.count("-") == 0: # end of list
-    
-                        contents += '</ul></p><p class="c1">&nbsp;</p><p class="c1">' + nextline
+                        contents += '</ul></p><p class=c1>&nbsp;</p><p class=c1>' + nextline
                         break
                 line = line.strip("-").strip()
                 contents += line + " "
 
-        # END OF LISTS _______________________________________________________
-        
         # IMAGES + FIGURES
+        fileName = authors[0][0].split(" ")[1].lower()
         altPattern = "!["
         if line.count("![") == 1:
-            print("starting alt")
-            # line = line.replace('"', "”")
-            # line = line.replace("'", "’")
-            contents += """</p><p class="c1">&nbsp;</p>
-            <img src="Picture1.jpg" class="figure" alt="
+            contents += f"""</p>
+            <img src="{fileName}1.jpg" class="figure" alt='
             """ + line.strip("![")
             
             # start reading
             inAlt = True
             while inAlt:
-                
                 line = md.readline()
-
-                # line = styleText(line, lastSection)
-
-                # if line.count('"') >= 1:
-                #     # print(line)
-                #     line = line.replace('"', "”")
-                #     # print(line)
-                # if line.count("'") >= 1:
-                #     # print(line)
-                #     line = line.replace("'", "’")
-                #     # print(line)
-
-                # pattern='\''
-                # searchResult = re.search(pattern, "that's")
-                # if searchResult: #found match
-                #     line = re.sub(pattern, "’", line)
-
-                # pattern='\"'
-                # searchResult = re.search(pattern, "that's")
-                # if searchResult: #found match
-                #     line = re.sub(pattern, "’", line)
-                    
-
-                # line = line.replace('"', "”")
-                # line = line.replace("'", "’")
-
-
                 if line.count("]") == 1: # end of alt text
                     line = line.split("]")[0]
-                    print("end of alt text, adding >")
-                    contents += line + '"' + '>' + """
-
-                    <p class="imageText">Figure 1. The Rensselaer poem (2018). Photo by Rebecca Rouse.</p>"""
-                    # print(line)
+                    contents += line +  "'" + '>'
+                    photoZ = True
                     break
                 else:
-                    print("adding following line to contents:\n" + line + "\n")
                     contents += line + " "
                     contents = styleText(contents, lastSection)
 
-        # figure right after image
+            # clear end of alt text from line
+            line = ""
 
-        figurePattern = r"\(?Figure \d\)?"
-        
-        searchResult = re.search(figurePattern, line)
-        if searchResult: #found match
-            # get first author last name
-            figAuthor = authors[0][0].split(" ")[-1].lower()
+            md.readline() # empty line
+            figure = md.readline()
+            figNum = figure[7]
+            figContent = figure[10:]
 
-            matchList = re.findall(figurePattern, line)
-
-            for item in matchList:
-                if item.count("(") == 1:
-                    continue
-                # get figure #
-                figNum = re.findall("\d", item)[0]
-
-                # text = re.sub(itemPattern, replacement, text)
-
-                figContent = "replace with figContent"
-
-                # until new line
-                nextline = md.readline()
-
-                # add to figContents
-
-                # print(f"""
-                #     <img src="{figAuthor}figure{figNum}.jpg"
-                #     alt="Replace image alt"
-                #     style="height: Auto; max-width: 100%;;position: relative;">
-                #     <p class="imagetext">Figure {figNum}. {figContent}</p>
-                # """)
-
-            # contents += f"""
-            #         <img src="{figAuthor}figure{figNum}.jpg"
-            #         alt="Replace image alt"
-            #         style="height: Auto; max-width: 100%;;position: relative;">
-            #         <p class="imagetext">Figure {figNum}. {figContent}</p>
-            # """
+            contents += f"""
+                <p class=imageText>Figure {figNum}. {figContent}</p>
+                <p class=c1>
+            """
 
         #if the line is a section title
         anySectionTitle = "^###.+"
@@ -508,6 +447,7 @@ def convertToHTML(file, lastSection):
                 else:
                     #add all lines to topItems
                     topItems.append(line)
+
 
         #-------Store authors-------
         # authors: "{0: [author, affil, contact], 1: [author, affil, contact]}"
@@ -825,7 +765,7 @@ def convertToHTML(file, lastSection):
             #if lastSection matches subsubsectionTitle
             elif re.match(subsubsectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
-                html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
+                html.write(f"""<p class="c1 sub_subsectionTitle">{lastSection}</p>""")
 
             # write body text under section title
             bodyText, lastSection = readContents(lastSection, md, html, authors)
@@ -842,6 +782,8 @@ def convertToHTML(file, lastSection):
                 #reached Author Bios - last section
                 break
 
+        # AUTHOR BIOS
+
         if len(authors) == 1:
             html.write(f"""<p class="c1">&nbsp;</p><p class="c1">&nbsp;</p>
             <p class="c1 sectionTitle">Author Bio</p>""")
@@ -853,8 +795,24 @@ def convertToHTML(file, lastSection):
         for line in md:
             # until end of file
             lineNum += 1
+
+
             if line == "\n" and lineNum > 2:
                 authorBio += "<br><br>"
+            
+            for a in authors:
+                authorPattern = authors[a][0]
+                searchResult = re.search(authorPattern, line)
+                if searchResult:
+                    matchList = re.findall(authorPattern, line)
+                    for item in matchList:
+                        bolded = "<b>" + item + "</b>"
+                        line = re.sub(authorPattern, bolded, line)
+
+                    #reached Author Bios - last section
+                    # break
+
+
             authorBio += line + " "
         authorBio = styleText(authorBio, lastSection)
         authorBio.strip("<br><br>")

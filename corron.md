@@ -281,10 +281,45 @@ lengthy poem, unattributed to any particular author but rather to the
 institution itself, which hangs framed in several buildings on campus
 (see Figure 1).
 
-![The photograph shows a poem hanging on a beige wall in a brown wood
-frame, behind glass. The poem is printed on red paper in white text and
-set in a white matte. The poem is untitled and unattributed, and the
-text of the poem reads ffff](media/image2.jpeg){width="5.625in" height="7.5in"}
+![The photograph shows a poem hanging on a beige wall in a brown wood frame, behind glass. The poem is printed on red paper in white text and set in a white matte. The poem is untitled and unattributed, and the text of the poem reads: 
+
+    “The New Polytechnic
+    Is the place for those who LOVE change.
+    We instigate and incubate it. 
+    Quintessentially curious, 
+    We embrace the race
+    To make our world better in every way. 
+    
+    We believe innovation and discovery thrive
+    In a caring community 
+    Where head meets heart …
+    Science meets art …
+    And collaboration lights the way. 
+    
+    And we believe in thinking big—
+    From our upstate envlave, we connect
+    To a global network of support and entrepreneurship.
+    Because big change is what the world needs. 
+    From energy to infrastructure, 
+    From food security and fighting disease, 
+    To national defense.
+    
+    People come here hard-wired for the havoc of change. 
+    They know it isn’t easy—
+    That theories can fail and world changing can feel futile. 
+    But that’s the calm before the brilliant storm.
+    The breath you take before you break through.
+
+    Small change comes from asking “Why?”
+    Changing THE WORLD comes from asking “Why not?”
+    That’s the question we ask everyone, 
+    From freshmen to faculty …
+    It’s the question that fuels us to find THE NEXT NEW…
+    The question we ask YOU.
+    
+    Why not change the world?
+    
+    At the bottom of the text the Rensselaer school seal and logo is printed, also in white on red background, with the trademarked school slogan text: why not change the world?"](media/image2.jpeg){width="5.625in" height="7.5in"}
 
 Figure 1. The Rensselaer poem (2018). Photo by Rebecca Rouse.
 
