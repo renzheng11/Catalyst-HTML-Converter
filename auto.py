@@ -69,15 +69,15 @@ def styleText(text, lastSection):
             text = re.sub(itemPattern, replacement, text)
 
     # Replace "quote marks" with “quote marks”
-    # quotePattern = "\"[^\x22]+\""
-    # searchResult = re.search(quotePattern, text)
-    # if searchResult: #found match
-    #     matchList = re.findall(quotePattern, text)
+    quotePattern = "\"[^\x22]+\""
+    searchResult = re.search(quotePattern, text)
+    if searchResult: #found match
+        matchList = re.findall(quotePattern, text)
 
-    #     for item in matchList:
-    #         itemPattern = '\"' + item.strip("\"") + '\"'
-    #         replacement = "“" + item.strip("\"") + "”"
-    #         text = re.sub(itemPattern, replacement, text)
+        for item in matchList:
+            itemPattern = '\"' + item.strip("\"") + '\"'
+            replacement = "“" + item.strip("\"") + "”"
+            text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of ^superscripts^ (not notes)
     superPattern = "\^[^\d]{2}\^"
@@ -123,9 +123,7 @@ def styleText(text, lastSection):
             ### fix this !!!
             # refPattern = "### Notes\s*"
             # if re.match(refPattern, lastSection):
-            #     print("match ref")
             #     replacement = "<i>" + item.strip("*") + "</i>"
-            #     print(replacement)
             # else:
             # replacement = "<em>" + item.strip("*") + "</em>"
             replacement = "<i>" + item.strip("*") + "</i>"
@@ -174,6 +172,7 @@ def styleText(text, lastSection):
 
 # Function: read all body text until next section
 def readContents(last, md, html, authors):
+    # inList = inList
     contents = ""
 
     if last == "Notes":
@@ -181,17 +180,17 @@ def readContents(last, md, html, authors):
         return (contents, line)
 
     active = True
-    inList = False
     listNum = 0
     itemtext = ""
     nextLine = ""
+    global inList
 
     while active:
         #read next line
-        # if itemtext:
-        #     line = itemtext
-        # else:
-        line = md.readline() 
+        if itemtext:
+            line = itemtext
+        else:
+            line = md.readline() 
 
         #if empty line
         if (line == "\n"):
@@ -199,44 +198,95 @@ def readContents(last, md, html, authors):
 
         # LISTS
         listPattern = r"-   \w*"
-
         if re.search(listPattern, line):
-            print("on line: " + line)
-            line = line.strip("-").strip()
-            # starting list
-            inList = True
-            listNum += 1
-            print("listNum" + str(listNum))
+            contents = contents.strip().strip("<br><br>") # NOT WORKING !!
+            contents += """</p><p class="c1 quotes"><ul><li>""" + line.strip("-").strip()
             
-            # # on first item of list
-            if listNum == 1:
-                print("adding <ul>")
-                contents += "<ul>"
 
-            print("adding <li>")
-            contents += "<li>"
+            inList = True
+            nextstartline = ""
 
-        if inList and (line == "\n"):
-            # end of item
-            print("adding </li>")
-            contents += "</li>"
+            while inList:
+                if nextstartline:
+                    line = nextstartline
+                    nextstartline = ""
+                else:
+                    line = md.readline()
 
-            nextLine = md.readline()
-            # itemtext = nextLine
-            print("nextline: " + nextLine)
+                if (line == "\n"): # end of item
+                    contents += "</li>"
 
-        if inList and nextLine.count("-") >= 1:
-            print("another dash")
-            # itemtext = nextLine
-        elif inList and nextLine.count("-") == 0:
-            print("adding </ul>")
-            contents += "</ul>"
-            inList = False
-            print("end of list")
-            return (contents, line)
+                    nextline = md.readline()
+                    if nextline.count("-") >= 1: # next item
+                        contents += "<li>" + line
+                        nextstartline = nextline
 
-        # NOT FINISHED !! images + figures 
-        # Figure html
+                    if nextline.count("-") == 0: # end of list
+    
+                        contents += '</ul></p><p class="c1">&nbsp;</p><p class="c1">' + nextline
+                        break
+                line = line.strip("-").strip()
+                contents += line + " "
+
+        # END OF LISTS _______________________________________________________
+        
+        # IMAGES + FIGURES
+        altPattern = "!["
+        if line.count("![") == 1:
+            print("starting alt")
+            # line = line.replace('"', "”")
+            # line = line.replace("'", "’")
+            contents += """</p><p class="c1">&nbsp;</p>
+            <img src="Picture1.jpg" class="figure" alt="
+            """ + line.strip("![")
+            
+            # start reading
+            inAlt = True
+            while inAlt:
+                
+                line = md.readline()
+
+                # line = styleText(line, lastSection)
+
+                # if line.count('"') >= 1:
+                #     # print(line)
+                #     line = line.replace('"', "”")
+                #     # print(line)
+                # if line.count("'") >= 1:
+                #     # print(line)
+                #     line = line.replace("'", "’")
+                #     # print(line)
+
+                # pattern='\''
+                # searchResult = re.search(pattern, "that's")
+                # if searchResult: #found match
+                #     line = re.sub(pattern, "’", line)
+
+                # pattern='\"'
+                # searchResult = re.search(pattern, "that's")
+                # if searchResult: #found match
+                #     line = re.sub(pattern, "’", line)
+                    
+
+                # line = line.replace('"', "”")
+                # line = line.replace("'", "’")
+
+
+                if line.count("]") == 1: # end of alt text
+                    line = line.split("]")[0]
+                    print("end of alt text, adding >")
+                    contents += line + '"' + '>' + """
+
+                    <p class="imageText">Figure 1. The Rensselaer poem (2018). Photo by Rebecca Rouse.</p>"""
+                    # print(line)
+                    break
+                else:
+                    print("adding following line to contents:\n" + line + "\n")
+                    contents += line + " "
+                    contents = styleText(contents, lastSection)
+
+        # figure right after image
+
         figurePattern = r"\(?Figure \d\)?"
         
         searchResult = re.search(figurePattern, line)
@@ -251,16 +301,13 @@ def readContents(last, md, html, authors):
                     continue
                 # get figure #
                 figNum = re.findall("\d", item)[0]
-                # print("figNum: " + figNum)
 
                 # text = re.sub(itemPattern, replacement, text)
 
-                # print(line)
                 figContent = "replace with figContent"
 
                 # until new line
                 nextline = md.readline()
-                # print("[nextline]: " + nextline)
 
                 # add to figContents
 
