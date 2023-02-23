@@ -8,21 +8,25 @@
 import re
 import os
 
-# import pandoc
-
 # ------ Manual Todo (not done by script) ------
+    # This scripts converts markdown files (.md) to (.html)
+    # to convert (.docx) to markdown (.md), use the command:
+    # pandoc -s name.docx -o name.md
+        # (pandoc can be installed at https://pandoc.org/installing.html)
+        # option 2: use a web converter to get (.md) file
 
-    # temporary: 
-        # This scripts converts markdown files (.md) to (.html)
-        # to convert (.docx) to markdown (.md), use the command:
-        # pandoc -s name.docx -o name.md
-            # (pandoc can be installed at https://pandoc.org/installing.html)
-            # option 2: use a web converter to get (.md) file
+    # Manual changes
+        # - Change article type before title (ex. special spection, original research, etc.)
 
-    # change article type before title (not including in docx)
+    # Checklist for docx
+        # - List of keywords should be normal body text (not a heading)
+        # - Quotes should be in Heading 7 style
+            # - If more than one quote in a row, they both need Heading 7 Style separately
+        # - Do not put quote marks (single or double) in alt-text
+        # - Correct spacing in between each item
 
-    # if there are issues with text formatting, make sure the styling headings in docx are correct and rerun
-    # if there are issues with text content, search for it in html to change it
+    # if there are issues with text formatting, go through checklist for docx and reconvert to md then rerun script 
+    # if there are outlying issues with text content, search for it in html to change it
 
 # Global variables
 lastSection = ""
@@ -34,6 +38,74 @@ topNotes = []
 def styleText(text, lastSection):
     # strip all newlines so text is one string
     text = re.sub("\n", "", text)
+
+    # Replace [.]{.smallcaps}
+    smallPattern = "\[\.\]\{\.smallcaps\}"
+    searchResult = re.search(smallPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(smallPattern, text)
+        for item in matchList:
+            text = text.strip(r"[.]{.smallcaps}")
+
+    # Replace []{.mark}
+    markPattern = "\[.*\]{\.mark}"
+    searchResult = re.search(markPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(markPattern, text)
+        for item in matchList:
+            text = item.strip("[").replace(r"]{.mark}", "")
+
+    # Replace link
+    # [[link]{.underline}](link).
+    linkPattern = "\[\[.*\]\{\.underline\}\]\(.*\)\."
+    searchResult = re.search(linkPattern, text)
+    if searchResult:
+        matchList = re.findall(linkPattern, text)
+        parenPattern = "\(.*\)"
+        for item in matchList:
+            # replace extra
+            itemPattern = "\[\[.*\]\{\.underline\}\]\(.*\)\."
+            replacement = ""
+            text = re.sub(itemPattern, replacement, text)
+
+            # get link
+            searchResult = re.search(parenPattern, item)
+            if searchResult:
+                matchList = re.findall(parenPattern, item)
+                for item in matchList:
+                    item = item.strip("()")
+                    # item = "<" + item + ">"
+
+            
+            text += f"""
+                <a href="{item}">{item}</a>.</p>
+                """
+
+                # matchList == None
+
+    # Replace second link pattern
+    # [link](link).
+    linkPattern = "\[.*\]\(.*\)"
+    searchResult = re.search(linkPattern, text)
+    if searchResult:
+        matchList = re.findall(linkPattern, text)
+        parenPattern = "\(.*\)"
+        for item in matchList:
+            # replace extra
+            itemPattern = "\s*\[.*\]\(.*\)*"
+            replacement = ""
+            text = re.sub(itemPattern, replacement, text)
+
+            # get link
+            searchResult = re.search(parenPattern, item)
+            if searchResult:
+                matchList = re.findall(parenPattern, item)
+                for item in matchList:
+                    link = item.strip("()")
+        
+            text += f"""
+                <a href={link}>{link}</a>.</p>
+                """
 
     # Replace three --- em dash —
     dashPattern = "---"
@@ -90,26 +162,26 @@ def styleText(text, lastSection):
             text = re.sub(itemPattern, replacement, text)
     
     # Replace instances of ellipses \...
-    ellipsePattern = "\\\.\.\."
-    searchResult = re.search(ellipsePattern, text)
-    if searchResult: #found match
-        matchList = re.findall(ellipsePattern, text)
-
-        for item in matchList:
-            itemPattern = "\\\.\.\." + item.strip("\...")
-            replacement = "..."
-            text = re.sub(itemPattern, replacement, text)
-
-    # Replace instances of **bold** text
-    # boldPattern = "\*\*.*\*\*"
-    # searchResult = re.search(boldPattern, text)
+    # ellipsePattern = "\\\.\.\."
+    # searchResult = re.search(ellipsePattern, text)
     # if searchResult: #found match
-    #     matchList = re.findall(boldPattern, text)
+    #     matchList = re.findall(ellipsePattern, text)
 
     #     for item in matchList:
-    #         itemPattern = '\*\*' + item.strip("**") + '\*\*'
-    #         replacement = "<strong>" + item.strip("**") + "</strong>"
+    #         itemPattern = "\\\.\.\." + item.strip("\...")
+    #         replacement = "..."
     #         text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of **bold** text
+    boldPattern = "\*\*[^*]*\*\*"
+    searchResult = re.search(boldPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(boldPattern, text)
+
+        for item in matchList:
+            itemPattern = '\*\*' + item.strip("**") + '\*\*'
+            replacement = "<strong>" + item.strip("**") + "</strong>"
+            text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of *italic* text
     italicPattern = "\*(?!\s)[\s\S]*?\*(?<!\s\*)"
@@ -180,7 +252,6 @@ def readContents(last, md, html, authors):
 
     active = True
     itemtext = ""
-    previousIsImage = False
     global inList
 
     while active:
@@ -188,7 +259,6 @@ def readContents(last, md, html, authors):
         if itemtext:
             line = itemtext
         else:
-            
             line = md.readline() 
 
         #if empty line
@@ -230,9 +300,30 @@ def readContents(last, md, html, authors):
                 line = line.strip("-").strip()
                 contents += line + " "
 
+        # QUOTES
+        if line.count("#######"):
+            line = line.strip("####### ")
+            contents += f'<p class=quotes>{line}'
+
+            # print("[beg]" + md.readline() + "[end]")
+            # print("[beg]" + md.readline() + "[end]")
+            # print("[beg]" + md.readline() + "[end]")
+            # print("[beg]" + md.readline() + "[end]")
+
+            count = 0 
+            while True:
+                line = md.readline()
+                print("[beg]" + line + "[end]")
+                count += 1
+                if line.strip() == "":
+                    print("breaking")
+                    break
+                contents += line + " "
+
+            contents += '<br><br></p><p class="c1">'
+            
         # IMAGES + FIGURES
         fileName = authors[0][0].split(" ")[1].lower()
-        altPattern = "!["
         if line.count("![") == 1:
             contents += f"""</p>
             <img src="{fileName}1.jpg" class="figure" alt='
@@ -254,13 +345,25 @@ def readContents(last, md, html, authors):
             # clear end of alt text from line
             line = ""
 
-            md.readline() # empty line
-            figure = md.readline()
+            next = md.readline() # empty line
+            if next != "\n":
+                md.readline()
+
+            figure = ""
+
+            lineNotEmpty = True
+            while lineNotEmpty:
+                next = md.readline()
+                figure += next + " "
+                if next == "\n":
+                    break
+
             figNum = figure[7]
             figContent = figure[10:]
 
             contents += f"""
                 <p class=imageText>Figure {figNum}. {figContent}</p>
+                <br><br>
                 <p class=c1>
             """
 
@@ -434,19 +537,30 @@ def convertToHTML(file, lastSection):
     with mdfile as md, htmlfile as html:
         topItems = []
         #reads top of doc in order (not accurately matched)
+        # get title until blank line
+
+        # get rest of top
         for line in md:
             #if line matches abstract
             if re.match("### Abstract(\s+)?", line):
                 break
             else:
-                #strip line of #'s
+                # if title is in second line
+                secondTitle = ""
+                if line.count("##") == 1:
+                    secondTitle = line
                 stripHash = line.strip("#")
-                #if line is whitespace
+
+                # if line is whitespace
                 if stripHash.strip() == "":
                     continue #to next line
                 else:
                     #add all lines to topItems
-                    topItems.append(line)
+                    # if second line of title, replace first line
+                    if secondTitle and len(topItems) > 1:
+                        topItems[1] = secondTitle
+                    else:
+                        topItems.append(line)
 
 
         #-------Store authors-------
@@ -464,7 +578,17 @@ def convertToHTML(file, lastSection):
         topLength = len(topItems)
         
         while topLength != 0:
+            #author
             author = topItems[topIndex].strip()
+
+            #affil
+            
+            if not topItems[topIndex + 2].count("@") == 1:
+                topItems[topIndex + 1] = topItems[topIndex + 1] + topItems[topIndex + 2]
+                deleting = topItems[topIndex + 2]
+                del(topItems[topIndex + 2])
+                topLength = topLength - 1
+
             affil = topItems[topIndex + 1].strip()
             contact = topItems[topIndex + 2].strip()
 
@@ -799,19 +923,6 @@ def convertToHTML(file, lastSection):
 
             if line == "\n" and lineNum > 2:
                 authorBio += "<br><br>"
-            
-            for a in authors:
-                authorPattern = authors[a][0]
-                searchResult = re.search(authorPattern, line)
-                if searchResult:
-                    matchList = re.findall(authorPattern, line)
-                    for item in matchList:
-                        bolded = "<b>" + item + "</b>"
-                        line = re.sub(authorPattern, bolded, line)
-
-                    #reached Author Bios - last section
-                    # break
-
 
             authorBio += line + " "
         authorBio = styleText(authorBio, lastSection)
@@ -828,4 +939,3 @@ for file in os.listdir():
     #     # convert to .md
     if str(file).endswith(".md"):
         convertToHTML(file, lastSection)
-
