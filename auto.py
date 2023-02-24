@@ -23,10 +23,13 @@ import os
         # - List of keywords should be normal body text (not a heading)
         # - Quotes should be in Heading 7 style
             # - If more than one quote in a row, they both need Heading 7 Style separately
-        # - Do not put quote marks (single or double) in alt-text (need to add manually to html after conversion)
+        
         # - Correct spacing in between each item
         # - Empty lines should be normal body text style
         # - Line break between photo and figure
+
+        # - ALT text should not be empty (will throw error)
+        # - Do not put quote marks (single or double) in alt-text (need to add manually to html after conversion)
 
     # if there are issues with text formatting, go through checklist for docx and reconvert to md then rerun script 
     # if there are outlying issues with text content, search for it in html to change it
@@ -42,21 +45,34 @@ def styleText(text, lastSection):
     # strip all newlines so text is one string
     text = re.sub("\n", "", text)
 
+    # Replace three --- em dash —
+    text = text.replace("---", "&mdash;")
+
+    # Replace two -- em dash –
+    text = text.replace("--", "-")
+
     # Replace [.]{.smallcaps}
-    smallPattern = "\[\.\]\{\.smallcaps\}"
-    searchResult = re.search(smallPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(smallPattern, text)
-        for item in matchList:
-            text = text.strip(r"[.]{.smallcaps}")
+    text = text.replace(r"[.]{.smallcaps}", "")
+
+    # Replace instances of ellipses \...
+    text = text.replace("\...", "...")
+
+    # Replace left and right brackets
+    text = text.replace("\[", "[")
+    text = text.replace("\]", "]")
+
+    # Replace \"
+    # Replace left and right brackets
+    text = text.replace('\\"', '"')
 
     # Replace []{.mark}
-    markPattern = "\[.*\]{\.mark}"
+    markPattern = r"\[[^{}]*\]{\.mark}"
     searchResult = re.search(markPattern, text)
     if searchResult: #found match
         matchList = re.findall(markPattern, text)
         for item in matchList:
-            text = text.strip("[").replace(r"]{.mark}", "")
+            replacement = item.strip("[").strip(r"]{.mark}")
+            text = text.replace(item, replacement)
 
     # Replace link
     # [[link]{.underline}](link).
@@ -64,24 +80,24 @@ def styleText(text, lastSection):
     searchResult = re.search(linkPattern, text)
     if searchResult:
         matchList = re.findall(linkPattern, text)
-        parenPattern = "\(.*\)"
+        parenPattern = "\]\(.*\)"
         for item in matchList:
             # replace extra
             itemPattern = "\[\[.*\]\{\.underline\}\]\(.*\)\."
-            replacement = ""
-            text = re.sub(itemPattern, replacement, text)
-
+            
             # get link
             searchResult = re.search(parenPattern, item)
             if searchResult:
                 matchList = re.findall(parenPattern, item)
                 for item in matchList:
-                    item = item.strip("()")
-                    # item = "<" + item + ">"
+                    
+                    item = item.strip("]()")
 
-            
+            replacement = ""
+            text = re.sub(itemPattern, replacement, text)
+
             text += f"""
-                <a href="{item}">{item}</a>.</p>
+                <a href={item}>{item}</a>.</p>
                 """
 
                 # matchList == None
@@ -109,29 +125,18 @@ def styleText(text, lastSection):
     #         text += f"""
     #             <a href={link}>{link}</a>.</p>
     #             """
-
-    # Replace three --- em dash —
-    dashPattern = "---"
-    searchResult = re.search(dashPattern, text)
+    
+    # Replace "double quote marks" with “quote marks”
+    quotePattern = "\"[^\x22]+\""
+    searchResult = re.search(quotePattern, text)
     if searchResult: #found match
-        matchList = re.findall(dashPattern, text)
+        matchList = re.findall(quotePattern, text)
 
         for item in matchList:
-            itemPattern = "---"
-            replacement = "—"
+            itemPattern = '\"' + item.strip("\"") + '\"'
+            replacement = "“" + item.strip("\"") + "”"
             text = re.sub(itemPattern, replacement, text)
-
-    # Replace two -- em dash –
-    dashPattern = "--"
-    searchResult = re.search(dashPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(dashPattern, text)
-
-        for item in matchList:
-            itemPattern = "--"
-            replacement = "–"
-            text = re.sub(itemPattern, replacement, text)
-
+    
     # Replace instances of Apostrophes \'
     aposPattern = "\\\'"
     searchResult = re.search(aposPattern, text)
@@ -143,17 +148,22 @@ def styleText(text, lastSection):
             replacement = "'"
             text = re.sub(itemPattern, replacement, text)
 
-    # Replace "quote marks" with “quote marks”
-    # quotePattern = "\"[^\x22]+\""
+    # Replace 'single quote marks' with “quote marks”
+    # quotePattern = "'([^']*)'[^s]"
     # searchResult = re.search(quotePattern, text)
     # if searchResult: #found match
     #     matchList = re.findall(quotePattern, text)
+    #     # print(matchList)
 
     #     for item in matchList:
-    #         print("[beg] " + item + "\n")
-    #         itemPattern = '\"' + item.strip("\"") + '\"'
-    #         replacement = "“" + item.strip("\"") + "”"
-    #         text = re.sub(itemPattern, replacement, text)
+    #         if (item[:2] == "s "):
+    #             continue
+    #         else:
+    #           # NOT FINISHED
+                # itemPattern = '\'' + item.strip("\'") + '\''
+                # replacement = "&lsquo;" + item.strip("\'") + "&lsquo;"
+                # text = re.sub(itemPattern, replacement, text)
+
 
     # Replace instances of ^superscripts^ (not notes)
     superPattern = "\^[^\d]{2}\^"
@@ -172,9 +182,10 @@ def styleText(text, lastSection):
     #     matchList = re.findall(ellipsePattern, text)
 
     #     for item in matchList:
-    #         itemPattern = "\\\.\.\." + item.strip("\...")
-    #         replacement = "..."
-    #         text = re.sub(itemPattern, replacement, text)
+    #         # itemPattern = "\\\.\.\." + item.strip("\...")
+    #         # replacement = "..."
+    #         # text = re.sub(itemPattern, replacement, text)
+    #         text.replace("\...", "...")
 
     # Replace instances of **bold** text
     boldPattern = "\*\*[^*]*\*\*"
@@ -215,31 +226,31 @@ def styleText(text, lastSection):
             replacement = "<i>" + item.strip("*") + "</i>"
             text = re.sub(itemPattern, replacement, text)
 
-    # Left bracket
-    bracketPattern = "\\\\\["
+    # # Left bracket
+    # bracketPattern = "\\\\\["
     
-    searchResult = re.search(bracketPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(bracketPattern, text)
+    # searchResult = re.search(bracketPattern, text)
+    # if searchResult: #found match
+    #     matchList = re.findall(bracketPattern, text)
 
-        for item in matchList:
+    #     for item in matchList:
             
-            itemPattern = "\\\\\["
-            replacement = "["
-            text = re.sub(itemPattern, replacement, text)
+    #         itemPattern = "\\\\\["
+    #         replacement = "["
+    #         text = re.sub(itemPattern, replacement, text)
 
-    # Right bracket
-    bracketPattern = "\\\\\]"
+    # # Right bracket
+    # bracketPattern = "\\\\\]"
     
-    searchResult = re.search(bracketPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(bracketPattern, text)
+    # searchResult = re.search(bracketPattern, text)
+    # if searchResult: #found match
+    #     matchList = re.findall(bracketPattern, text)
 
-        for item in matchList:
+    #     for item in matchList:
             
-            itemPattern = "\\\\\]"
-            replacement = "]"
-            text = re.sub(itemPattern, replacement, text)
+    #         itemPattern = "\\\\\]"
+    #         replacement = "]"
+    #         text = re.sub(itemPattern, replacement, text)
 
     # last pass - remove blackslash
     slashPattern = "\\\\"
@@ -280,10 +291,6 @@ def readContents(last, md, html, authors):
         #if empty line
         if (line == "\n"):
             contents += "<br><br>"
-           
-            # if (previousIsImage):
-            #     contents.strip("<br><br>")
-            #     previousIsImage = False
 
         # LISTS
         listPattern = r"-   \w*"
@@ -406,7 +413,7 @@ def testForNote(text, line):
             if (topNotes.count("1") == 2):
                 return line
 
-            noteLink = f'<sup><a href="#note{noteNum}b" id="note{noteNum}t">{noteNum}</a></sup>'
+            noteLink = f'<sup><a href=#note{noteNum}b id=note{noteNum}t>{noteNum}</a></sup>'
             noteFullPattern = "\^" + noteNum + "\^"
             text = re.sub(noteFullPattern, noteLink, text)
     
@@ -433,7 +440,7 @@ def writeNotes(md, html):
                 f"""
                 <div id="note{noteNum}b">
                     <p class="notes">
-                        <sup><a href="#note{noteNum}t">{noteNum}</a></sup> {noteContent}
+                        <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
                     </p>
                 </div>
                 <p class="notes">&nbsp;</p>
@@ -453,7 +460,7 @@ def writeNotes(md, html):
                 f"""
                 <div id="note{noteNum}b">
                     <p class="notes">
-                        <sup><a href="#note{noteNum}t">{noteNum}</a></sup> {noteContent}
+                        <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
                     </p>
                 </div>
                 <p class="notes">&nbsp;</p>
@@ -509,11 +516,13 @@ def writeRefs(md, html):
             # convert markdown styles
             refContent = styleText(refContent, lastSection) 
 
+            
+
             # add complete previous reference to html
             if link != "": #reference has a link
                 html.write(
                     f"""
-                    <p class="reference"> {refContent} <a href="{link}">{link}</a>.</p>
+                    <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
                     """
                 )
             else: #reference does not have a link
@@ -908,6 +917,7 @@ def convertToHTML(file, lastSection):
 
             refPattern = "### References\s*"
             if re.match(refPattern, lastSection):
+                html.write(f"""<p class="c1">{bodyText}</p>""")
                 writeRefs(md, html)
                 break
 

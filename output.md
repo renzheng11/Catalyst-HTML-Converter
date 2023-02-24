@@ -2,1269 +2,1167 @@
 
 ## 
 
-##  The Slave Episteme in Biocapitalism
+##  Indian "Native Companions" and Korean Camptown Women: Unpacking Coloniality in Transnational Surrogacy and Transnational Adoption 
 
-Alys Eve Weinbaum
+Johanna Gondouin
 
-University of Washington
+Linköping University
 
-alysw@uw.edu
+johanna.gondouin@liu.se
+
+Suruchi Thapar-Björkert
+
+University of Uppsala
+
+suruchi.thapar-bjorkert@statsvet.uu.se
 
 ### Abstract
 
-This article explores the connection between the extraction and
-dispossession of human reproductive labor power and its products in the
-contexts of Atlantic slavery and contemporary biocapitalism. It argues
-that the conceptualization and practice of slave reproduction that
-sustained slave racial capitalism is forwarded into the biocapitalist
-present through "the slave episteme." This becomes evident when
-reproduction in biocapitalism is viewed through the lens of the long
-history of slave "breeding" in the Atlantic world. While the supposed
-"blackness" that enslavers attributed to enslaved mothers and their
-progeny objectified and dehumanized both and rationalized their
-treatment as fungible and alienable commodities, in contempory
-biocapitalism the racial formation that subtends reproductive extraction
-and dispossession has been complexly recalibrated to do related
-ideological and material work. The article concludes with a discussion
-of the sublation of "blackness" in contemporary market exchanges in
-which reproductive labor and its products are bought and sold.
+The article argues that transnational adoption and surrogacy from South
+Korea and India are shaped through US and British imperial and colonial
+histories in Korea and India respectively. We focus on the reproductive
+labor of 'native companions' in early British India and *kijich'on*
+(camptown) women in post--World War II Korea. The management of native
+women's sexuality was crucial for maintaining social order, political
+stability, and for consolidating capitalism through the commodification
+and devaluation of colonized reproductive labor. The configuration of
+historical legacies is unpacked through the idea of coloniality, the
+constitutive dark side of modernity, which reproduces subalternity and
+exploitation of racialized bodies. The reproductive labour of Korean
+birth mothers and Indian surrogate mothers is formed and shaped by the
+colonial and imperial formations of gender, sexuality, kinship and
+family, in which white supremacy and exploitation of Indian and Korean
+women was at the core. We argue that these formations are re-configured
+in the present through three mechanisms that enables contemporary
+practices of adoption and surrogacy: the transformation of waste into
+profit, the erasure of non-white mothers, and the trope of the white
+savior.
 
-### Keywords
+### 
 
-Reproduction, slavery, surrogacy, ARTs, racial capitalism, biocapitalism, Black feminism
+### Keywords 
+
+Coloniality, race, reproductive labor, India, Korea, transnational
+surrogacy, transnational adoption
 
 ### Introduction
 
-Over the last two decades, scholars of human reproduction have examined
-the development and consumption of biotechnological know-how and
-assisted reproductive technologies (ARTs), especially *in vitro*
-fertilization (IVF) and embryo freezing, and have honed in on expanding
-markets in oocyte vending and gestational surrogacy. In attending to
-human reproduction's commodification around the globe, they highlight
-the extractive character of the seemingly quotidian economic exchanges
-by which we are today surrounded and in which increasing numbers of
-people participate as either sellers or consumers of human biological
-commodities including cells, tissue, eggs, wombs, and babies. Taken
-together existing scholarship documents interconnected markets that make
-possible what some call "transnational reproduction" and what others
-evocatively describe as the "global fertility chains" that link a range
-of reproductive transactions across geographically and geopolitically
-disparate spaces (Vertommen, Pavone, and Nahman 2021). Such "chains"
-simultaneously connect and bind. They transform poor women in the Global
-South who sell reproductive labor and products into workers who fulfill
-the affective and material desires of intending parents seeking to
-purchase high-tech babies (or the necessary labor, biological parts, and
-biotechnological processes). Notably, consumers oftentimes elect
-transnational reproduction so that they can short-circuit prohibitions
-on economic transactions in their home countries. In this way, their
-reproductive choices facilitate further expansion of global fertility
-chains.
+Transnational adoption and surrogacy are commonly perceived as opposites
+on a moral spectrum ranging from humanitarianism to exploitation.
+Transnational adoption in its modern form started as a war relief
+effort, with the adoption of mixed-race children fathered by American
+GIs in the aftermath of the Korean War (1950--1953). The language of
+altruistic rescue and love instituted during this formative period still
+frames the practice, while commercial surrogacy---especially when it
+involves the reproductive labor of women in the Global South---is
+perceived as controversial. Though adoption stakeholders emphatically
+distance themselves from any link to the commodification of children,
+there is a growing consensus among scholars that it is fruitful to
+analyze adoption through a market framework (Raleigh 2018). Furthermore,
+fraud, corruption, and child trafficking have been acknowledged as major
+challenges to transnational adoption since its very beginnings. Scholars
+such as US law professor David Smolin have argued that the recurrent
+"scandals" featured in media reports on adoption are not exceptions but
+point to the very structure of the adoption system (Smolin 2006; 2010;
+Nelson 2006; Raleigh 2018).
 
-In limning the commodification of human reproduction that characterizes
-contemporary global exchange, scholars reveal the scope and inner
-workings of a version of late capitalism that is most aptly labeled
-"biocapitalist."^1^ This moniker, though by no means adopted by all who
-treat transnational reproduction and the global fertility chains that
-secure it, is mobilized here as descriptive shorthand. In my preferred
-reading, biocapitalism is both a linguistic and a conceptual term. The
-prefacing "bio" draws attention to the commodification of *in vivo*
-processes (ovulation, conception, gestation, and parturition), the
-commodification of human biological products (cells, tissue, eggs, and
-babies), and the accumulation of surplus value by those who possess the
-means to invest in (as opposed to those who labor at) what I will
-hereafter refer to as *(re)production*.^2^ I place parentheses around
-"re" to create a term that describes how women's *in vivo* processes and
-biological products move through capitalist circuits of exchange
-alongside of conventional commodities, thereby constituting a
-specifically (re)productive form of productive labor. As with the
-exchange of conventional commodities, (re)productive commodities are
-rendered alienable and fungible in and through market exchange.
+In the present, transnational adoption is being scrutinized and
+problematized, in the aftermath of a critical debate, sparked by the
+discovery of illegal adoptions in Chile in 2019 (Nelsen 2021). This has
+created unprecedented legal and political repercussions in some of the
+largest receiving countries. In 2020 an independent investigation on
+transnational adoption commissioned by the minister for Legal Protection
+in the Netherlands was published (Government of the Netherlands,
+Committee on the Investigation of Intercountry Adoption, 2021), followed
+by the publication of similar reports in Denmark (Ankestyrelsen, 2021),
+and Switzerland (Bitter, Bangerter, and Ramsauer 2020), and in Sweden,
+the parliament voted for the commissioning of such an investigation
+(Sköld and Lundberg*,* 2021b). As a consequence, all transnational
+adoptions in the Netherlands and Denmark have been halted, and the Swiss
+government has issued an official apology. The Dutch report emphasized
+that the illegal and unethical practices---alongside the governmental
+complicity---pertain to transnational adoption as a system. It also
+identifies the social and political imagery of adoption---the good deed
+of "saving children"---as crucial in the emergence and upkeeping of
+abusive practices: "Because of the deep roots of this image, abuses such
+as age falsification were accepted or even considered normal. Also,
+anyone who helped promote adoption was seen as a benefactor, and
+politicians fought for (rapid) intercountry adoption. Research has
+uncovered repeated patterns of passivity and whitewashing. The view that
+any adoption, even an illicit one, is better than no adoption at all was
+indisputable" (Government of the Netherlands, Committee on the
+Investigation of Intercountry Adoption, 2021, 3). Significantly, the
+committee recommends that lessons learned from transnational adoption be
+considered in the case of surrogacy. The ways in which perceptions of
+morality ("doing good") can gloss over social injustices is a dimension
+that will be addressed in the following analysis.
 
-In the past decade, scholars of biocapitalism have sought to treat the
-colonial histories and imaginaries that subtend the (re)production of
-surplus value. Attentiveness to such legacies is treated in rich
-ethnographies on the processes and products offered for sale in parts of
-the Global South formerly subject to colonialism, especially India
-(Pande 2014; Rudrappa 2015; Hochschild 2012; Vora 2015; Deomampo 2016).
-Notably, the colonial legacies of ARTs are also amplified in several
-articles collected in this special issue. Settler colonialism is
-examined in emergent research on ARTs in scholarship focused on contexts
-subject to ongoing occupation, especially Palestine (Nahman 2013;
-Vertommen 2017). Focus on both colonialism and settler colonialism is
-evident in recent scholarship that takes a meta view and tracks the
-spread of (re)productive markets in cryopreserved eggs and gestational
-labor to new locations in Asia, Africa, Latin America, and Eastern
-Europe in the wake of the closure of the Indian surrogate market to
-foreigner consumers in 2015 (see Parry 2022; Parry and Ghoshal 2018).
-And yet, despite the attention to colonial and settler colonial
-legacies, existing scholarship on (re)production in biocapitalism can be
-characterized by a concerning, although largely unremarked silence on
-the related issue of the impress of the legacies of Atlantic slavery on
-ARTs and the global market in (re)productive labor and products more
-generally. As I discuss later in this article, this silence has been
-created by separation of the history of colonialism from that of
-Atlantic slavery, and by tacit assumption that the history of slavery is
-only truly germane in relation to analysis of surrogacy in the United
-States. The upshot: in most feminist work on biocapitalism long-standing
-relationships of historical reciprocity between colonialism and Atlantic
-slavery----the relationships that subtended globalizing capitalism from
-the outset (Robinson 1983; Lowe 2015; Melamed, 2015; Smallwood
-2019)----are ignored and the impact on the present conceptualization and
-practice of (re)production of four hundred years of what enslavers
-called slave "breeding" all but entirely neglected.
+This article explores the continuities between transnational adoption
+and transnational surrogacy through a shared history of imperialism and
+colonialism. More specifically, we argue that imperial and colonial
+regulations of native women's reproductive labor are reconfigured in
+current practices of surrogacy and adoption. The centrality of the
+gendered colonized body in the articulation of imperial ideologies has
+often revealed fraught dynamics of cross-cultural contact. Adding to
+previous scholarship on the imperial/colonial lineages of adoption and
+surrogacy, we focus on the reproductive labor of "native companions" in
+early British India and camptown women in post--World War II Korea, as
+historical and epistemological templates for surrogacy and adoption.
+Thus, our article contributes to a more robust understanding of how US
+imperial history and British colonialism---in which white supremacy and
+the reproductive exploitation of native women were at the core---shape
+contemporary globalized reproduction. Our main contribution lies in
+reading these two archives together, which enables us to discern the
+workings of the colonial matrix of power (Quijano 2000) across different
+geopolitical and temporal sites.
 
-In *The Afterlife of Reproductive Slavery: Biocapitalism and Black
-Feminism's Philosophy of History*, I call attention to the silence and
-neglect of the legacies of slavery and seek to redress it. Following in
-the footsteps of Black Feminists who first wrote on surrogacy in the
-1990s (Roberts 1997; Allen 1990, 1991; Rutherford 1992; Cherry 2001), I
-explore the impress of the practice of slave "breeding" on contemporary
-(re)production and thus account for how (re)production in biocapitalism
-is conceptualized and materialized in and through ideas about human
-reproductive labor and products that were brewed up in the context of
-Atlantic slavery. I suggest the urgency of bringing feminist histories
-of slavery in the Americas and the Caribbean to bear not only on
-surrogacy in the US but also on (re)production in global
-biocapitalism.^3^ Along the way I argue, that more than any other group
-of scholars and activists, Black Feminists, writing across idioms
-(history, theory, law, and fiction, among others) have demonstrated that
-slavery shaped and continues to contour the cultures and politics of
-human reproduction and mothering in the modern world.^4^ And I thus urge
-scholars of (re)production in biocapitalism to follow the lead of Black
-Feminists, especially those writing about surrogacy and slavery. For
-when Black Feminist insights are set to work in relation to
-transnational reproduction and the global fertility chains that secure
-it, it becomes possible to apprehend what I have called "the afterlife
-of reproductive slavery," and thus to discern the myriad itineraries and
-iterations of anti-blackness in a neoliberal, supposedly post-racial
-present.^5^ In sum, in the *Afterlife of Reproductive Slavery* I argue
-for recognition of biocapitalism as a form of racial capitalism (more on
-the latter concept shortly) that is predicated on the forwarding into
-the present of ideas about racialized (re)production that were set in
-place long ago.
+In the next section, we will situate our study within postcolonial
+feminist research on transnational surrogacy and critical adoption
+studies. We will then present the theoretical perspective and
+methodological approach of our analysis. The first part of our analysis
+deals with the regulation of inter-racial intimacies in early British
+India, the (in)visibility of native women and the regulation of native
+motherhood. We will then proceed to map the regulation of inter-racial
+intimacies between US servicemen and Korean women in post--WWII Korea.
+Finally, we argue that these historical regulations of native women's
+reproductive labor are reconfigured in the present. We develop these
+findings through three mechanisms that characterize contemporary
+globalized adoption and surrogacy: (a) the transformation of waste into
+profit, (b) the erasure of non-white mothers, and (c) the trope of the
+white savior.
 
-In the present article, I reprise key arguments of my book in view of
-the animating concern of this special issue: "the colonial present of
-ARTs." By digging into the thorny question of the relationship of the
-extraction and dispossession of (re)productive labor and products in
-biocapitalism to the extraction and dispossession of (re)productive
-labor and products in Atlantic slavery, I seek to contribute to the
-discussion about the colonial present an understanding of the importance
-of engaging with the long history of Atlantic slavery. When placed
-alongside the history of colonialism, the history of slavery not only
-allows for comprehension of the complex material foundation for
-contemporary biocapitalism it also allows for identification of a
-constitutive epistemic antecedent for the complex processes of
-racialization that characterize and power the forms of (re)productive
-extraction and dispossession by which we are today surrounded and in
-which many participate.
+#### Genealogies of Stratified Reproduction
 
-Above all, the impress of the history of slavery on biocapitalism
-becomes visible when we attend to what I elsewhere describe as *the
-slave episteme* (2019)----the thought system, brewed up and distilled
-over the course of four centuries, that initially enabled and continues
-to subtend the racialization of (re)production. When tracking the slave
-episteme, it is useful to underscore an instructive if seldom
-acknowledged fact: There are only two periods in modern world history
-during which *in vivo* (re)productive labor and products have been
-expressly engineered for profit. The first of these is the extended
-period of racial slavery in the Atlantic world, a period during which
-enslaved women's wombs became the source of human commodities and were
-themselves treated as commodities. The second is the comparatively brief
-period that commences with the rise of biocapitalism and the market for
-surrogate labor in the 1970s, a period that extends over several decades
-into the present.
+Postcolonial feminists and feminists of color have emphasized the
+stratification of motherhood, that is, the ways in which race,
+ethnicity, and migration status shape women's reproductive roles (Colen
+1995), and how the present international division of reproductive labor
+is conditioned by racial hierarchies and Western colonialism. Black US
+feminists see transatlantic chattel slavery---in which the reproductive
+labor of female slaves was engineered for profit---as a precursor of
+surrogacy (Twine 2011; Weinbaum 2019). Drawing on Alys Weinbaum's notion
+of the "imperial/colonial episteme" (2019, 59)---which posits
+racialization as a mechanism through which extraction and
+commodification is facilitated (also see Collins 1990)---we aim to
+explore the workings of this episteme in contemporary practices of
+adoption and surrogacy.
 
-And yet, having made this point, I should clarify that my intent in
-tracking the forwarding of the slave episteme into the present is not to
-demonstrate a simple form of historical repetition. I neither aim to
-document resurgence of human (re)productive enslavement, nor to equate
-contemporary (re)productive laborers and women enslaved in the context
-of Atlantic slavery. Instead, the present argument is principally
-philosophical and speculative. It seeks to shift conceptualization of
-the relationship of human reproduction to capitalism by highlighting not
-only the role of non-commodified reproductive labor in social
-reproduction (as Marxist feminists and a subsequent cohort of Social
-Reproduction Theorists have so eloquently done \[Mies 1986; Federici
-2012; Bhattacharya 2017) but also by highlighting the centrality of
-expressly (re)productive labor. In short, I seek to offer an argument
-about the persistence of an old conceptual edifice---the slave
-episteme---by exploring how it time-travels and in so doing constellates
-contemporary (re)productive extraction and dispossession with its
-historical antecedent.
+The pivotal role of racial hierarchies and Western colonialism has been
+highlighted in previous scholarship on Indian surrogacy (Vora 2009,
+2015; Banerjee 2014; Deomampo 2016). Kalindi Vora argues that British
+colonialism constitutes the condition of possibility for Indian
+surrogacy. British colonial medicine, the classical Western mechanistic
+understanding of the body, more recent visual technologies that
+instrumentalize the uterus, the historical devaluation of reproductive
+labor, and neoliberal globalization are discerned as significant
+components in Indian surrogacy in Vora's work (Vora 2015). Furthermore,
+she draws parallels between surrogacy and Indian indentured labor,
+arguing that the system of Indian indentured labor and Indian surrogacy
+both illustrate the strategic and racialized use of critical notions
+such as freedom, consent, and autonomy (Vora 2009). Analogous to
+contemporary contracts regulating surrogacy in India, the contracts
+regulating Indian coolie labor were fraught with significant omissions
+that make ideas about freedom and consent difficult to maintain;
+"consent" glosses over the absence of choices; the lack of information
+and the many binding circumstances that uphold the fiction of
+non-coercion underpin Indian indentured labor (Vora 2009).
 
-As it constellates past and present, the slave episteme does something
-remarkable and remarkably disturbing: it renders contemporary
-(re)productive extraction and dispossession *conceivable* in both senses
-of that biologically laden term. This becomes evident when contemporary
-(re)production is viewed through the lens of the long history of slave
-"breeding." For when we begin from an understanding of Atlantic slavery
-as an economic system that came over time to be based on (re)productive
-extraction and dispossession, it becomes possible to see that
-contemporary (re)productive extraction and dispossession would be
-unthinkable----and thus unmaterializable----were it not for the creation
-and persistent recalibration of racialized ideas about wombs as founts
-of fungible and alienable commodities.
+In our analysis of Korean adoption, we build on research within the
+field of critical adoption studies that attend to the historical,
+political, and socioeconomic contexts of transnational adoption (Trenka
+et al. 2006; E. Kim 2010; Briggs 2012). While previous scholarship on
+transnational adoption has focused on health, medical issues, and
+socio-psychological questions of adjustment and identity formation,
+scholars within this field place the practice within histories of
+Western colonialism and military violence, thus challenging the dominant
+narrative of adoption as child rescue. Transnational adoption is seen as
+a paradigmatic example of how "imperialist processes 'over there' and
+social relations 'over here' intersect" (Eng 2010, 95). Hence, the
+emergence of Korean adoption is not seen as the "natural" solution to
+the orphan crisis, but as an expression of Cold War politics and US
+empire building, with the Korean War marking the initial stage of global
+hegemony. The opening up of adoption programs followed US military
+invasions in Vietnam and Thailand, which then became the next major
+sending countries after South Korea (Hübinette 2006, 145). When
+transnational adoption spread to other countries, South Korea, which has
+the longest and largest adoption program in the world, was used as a
+model.
 
-### Biocapitalism as Racial Capitalism
+#### Theoretical Framework and Methodological Approach
 
-In advancing an argument about the afterlife of reproductive slavery,
-I've found it necessary to bring the concept of biocapitalism into
-conversation with that of racial capitalism. The latter was first
-developed by the political scientist Cedric Robinson in his
-groundbreaking study, *Black Marxism* (1983). According to Robinson
-contemporary capitalism has constitutively racial origins and is powered
-by ongoing racial dynamics. Drawing on a range of thinkers whom he dubs
-"Black Marxist," Robinson demonstrates that there is a Black radical
-tradition that has continuously elaborated on ideas first proffered by
-Marx and Engels but never fully adumbrated by them. These include ideas
-about the role that processes of racialization play in the creation of
-the antagonisms that turn the wheels of capitalism and thus modern
-history. As Robinson explains through recourse to W.E B. Du Bois and
-C.L.R. James among others, complex processes of racial differentiation
-not only initially enabled dispossession, enclosure, colonization,
-genocide, settlement, and enslavement (in short, the combined processes
-that Marx and Engels include within their account of the birth of
-capitalism during what they incorrectly regard as a finite period of
-"so-called primitive accumulation"), complex processes of racialization
-continue to power *ongoing* capitalist expansion. As Robinson famously
-observes, "the development, organization, and expansion of capitalist
-society pursued essentially racial directions, \[and\] so too did social
-ideology. As a material force...it could be expected that racialism
-would inevitably permeate the social structures emergent from
-capitalism" (1983, 2). Capitalism, Robinson concludes, is always already
-racial capitalism.
+We draw on the key analytical concept of "coloniality" (Quijano 2000) to
+understand how configurations of gender, race, and sexuality that were
+institutionalized during various phases of colonial rule have
+reconfigured in current typologies of labor and capital. Coloniality is
+"still the most general form of domination in the world today, once
+colonialism as an explicit political order was destroyed" (Quijano 2007,
+170); we have moved from a period of "global colonialism" to a current
+period of "global coloniality," implying the continued subordination and
+exploitation of peripheral nation-states and non-Europeans.
 
-Robinson's insights have transformed numerous academic fields including
-slavery studies. This is unsurprising given that the history of Atlantic
-slavery so clearly manifests the dynamics of racial capitalism. Within
-recent historical scholarship, plantation economies in the Americas and
-the Caribbean are now regarded as key players in early racial capitalist
-expansion which finds its apotheosis in contemporary globalization.
-Relatedly, the concept of "blackness" is now treated as the principal
-ideological creation responsible for rationalizing and thus
-materializing the forms of dehumanization that subtend enslavement
-(Baptist 2014; Johnson 1999, 2013; Smallwood 2007), and subtend the
-capitalist world system (Wallerstein 2004). In some work, Atlantic
-slavery has simply been recast as "slave racial capitalism" (Johnson
-2013). This coinage represents more than a semantic innovation. It
-signals wholescale reconceptualization of Atlantic slavery as one
-instantiation of racial capitalism among others, one that sits alongside
-colonialism, settler colonialism, and, I argue, biocapitalism. Put
-otherwise, the concept of slave racial capitalism invites awareness of
-racial capitalism's continuous recalibration of complex processes of
-racial differentiation, and of slavery as an instantiation of racial
-capitalism that both precedes and shapes biocapitalism.^6^ And yet, to
-fully compass the relationship of historical reciprocity between slavery
-and biocapitalism it is necessary to go beyond Robinson by focusing in
-on the history of (re)productive in slavery afforded by expressly
-feminist historians. Together with other Black Feminist scholars of
-racial capitalism, feminist historians of slavery foreground sex and
-reproduction (and thus attune us to the intersection of gender and
-sexuality with race and class), effectively demonstrating that slavery
-was powered by both the productive and (re)productive labor of the
-enslaved.^7^
+In his conceptualization of "coloniality of power," Aníbal Quijano
+(2000) highlighted the centrality of race, which justified the
+superiority of the European as the dominant subject and in relation to
+whom other social categories were subordinate and inferior. The
+invention of race gave rise to new social identities (Quijano 2000,
+216), first using "physiognomic" traits of people as external
+manifestations of their racial nature (whites, Indians, Mestizos,
+Negroes, yellows, olives), and then, on that basis, "geocultural
+identities" were produced (European, American, Asiatic, African) (see
+Quijano 2007, 171). As Quijano states, "the relation between European
+culture and the other cultures was established and has been maintained,
+as a relation between 'subject' and 'object'...\[in\] a relation of
+externality" (2007, 174). Sylvia Wynter draws attention to the ways in
+which "human" refers to a particular ethnoclass; Man (i.e., Western
+bourgeois) ''overrepresents itself as if it were the human itself''
+(2003, 260)---securing its own well-being, but denying humanity to those
+excluded from this globally hegemonic construct (2003, 262). Nelson
+Maldonado-Torres explains how the uneven distribution of humanity among
+groups that appeared human became "the foundation of the differentiation
+between the idea of human being as *humanitas* as opposed to human being
+as *antrophos*, the first one referring to human beings as subjects, and
+the other one to a sub-set of beings...entities that generate anxiety,
+fear, desire, and rage" (2017, 433). On a similar tack, Lisa Lowe
+suggests that the "uses of universalizing concepts of reason,
+civilization, and freedom effect colonial divisions of humanity,
+affirming liberty for modern man while subordinating the variously
+colonized and dispossessed peoples whose material labor and resources
+were the conditions of possibility for that liberty" (2015, 6). If
+coloniality was one axis in global Euro-centered capitalism, structured
+through a hierarchical international division of labor, then modernity
+was the other. There is "no modernity without coloniality" (Mignolo
+2011, 3). In fact, the achievements of modernity are inseparable from
+"colonial humiliation'' (Sakai 2010, 443).
 
-Three generations of feminist historians ground my thinking on Atlantic
-slavery as the world's first modern (re)productive enterprise (Davis
-1971; Hine 1979; White 1985; Beckles 1989; Bush 1990; Camp 2004; Morgan
-2004; Fuentes 2016; Berry 2017; Turner 2017). Hilary McD. Beckles's now
-classic history of enslaved women in Barbados is especially instructive
-for present purposes. As Beckles explains, earlier (non-feminist)
-scholars of the oldest and most lucrative of the sugar economies were
-unable to explain why it was that importation of African women
-outnumbered the import of men beginning in the late seventeenth century
-because they simply could not recognize female slaves as the main source
-of capital accumulation within the plantation economy (1989, 2). The
-situation on Barbadian plantations was not exceptional, Beckles insists,
-but ought to be regarded as indexical of "the overall history of
-plantation America" (5) in that it attests to a long-neglected truth:
-*All* enslaved women experienced slavery as producers and *reproducers*,
-as all enslaved women were valued in both capacities throughout the
-Atlantic world. The task of writing the history of women in slavery is
-not, therefore, the "absurd" one of "adding women to history." It is the
-challenging one of restoring history to those who constituted "the
-pivot"----as opposed to the tangent----around which the entire slave
-enterprise turned (Beckles 1989, 5).
+Building on Quijano's framework of coloniality of power, María Lugones
+develops an intersectionality of race and gender, positing gender "as
+constituted by and constituting the coloniality of power" (2008, 3--4).
+Thus, in specific historical geopolitical contexts, gender was
+instrumental in the colonial domination over non-Western racialized
+bodies and subjectivities---a structure that structured power. The
+colonial gender system ordered lives into heteronormative and
+hierarchical structures, justifying the dehumanization and enslavement
+of those that fell outside these frames.
 
-Like most studies of Caribbean slavery, Beckles divides his into three
-distinct periods. During the first (1627--1730), planters preferred to
-import African men. However, once land was cleared, women were
-increasingly imported to perform agricultural work. In the second period
-(1730--1790), planters came to regard African women as more manageable
-and efficient than men because West and Central Africa women were
-already acculturated to heavy agricultural labor. Consequently, in the
-second period, import of African women dramatically increased. By the
-start of the third period (1790--1838) a new gender dynamic was set in
-place. Planters worked enslaved women in field gangs and invested in
-their (re)productive labor. Significantly, because this last period
-encompassed the imposition of the 1807 Slave Trade Act that banned
-further importation of captive Africans to the New World, it is the
-period of greatest interest to me here. Bracketed by the Slave Trade Act
-and British abolition of slavery, this last period was characterized by
-intensified \"creolization" of the slave population (Beckles's
-euphemism), by increase in the valuation of enslaved women, and, most
-importantly, by systematic "stimulation" of fertility (again, Beckles's
-term). Specifically, enslaved women were offered "concessions" that were
-expressly targeted at amelioration of the harsh, often deadly conditions
-on Barbadian plantations that militated against conception, gestation,
-and care for pregnancies and offspring. Although Beckles finds little
-empirical evidence of what he calls "selective breeding" (by which he
-presumably means the application of the principals of animal husbandry
-to human beings), his analysis of management manuals detailing
-plantation organization and administration support his conclusion that
-slave (re)production was deliberately "orchestrated" (Beckles 1989, 92).
+Our analysis is based on existing postcolonial literature and inspired
+by Lowe's (2015) methodological approach of reading across archives: we
+posit British colonialism (India) and US neo-imperialism (South Korea)
+as two archives on transracial intimacies, through which we identify
+convergences in contemporary regimes of reproductive labor. This
+approach enables us to see how colonial/imperial histories in two
+seemingly disparate and dissimilar geographical and social contexts
+yielded similar outcomes---identifying unifying themes pertaining to the
+reproductive labor of native women. Our reading establishes a link
+between the archives without obliterating their differences. We
+investigate how discursive conceptualizations that underpin exploitative
+practices acquire legitimacy. To borrow from Lowe, ours is an "analysis
+\[that\] does not accept given categories and concepts as fixed or
+constant, but rather takes as its work the inquiry into how those
+categories became established as given, and with what effects" (2015,
+3). In other words, analyzing contemporary practices of globalized
+reproduction through these colonial archives enables us to see the
+history of the present.
 
-Planters were motivated to orchestrate (re)production by their growing
-awareness that successful "increase" was fast becoming not only a useful
-means by which labor power could be replenished, but after 1807 the only
-means by which slave racial capitalism could be maintained. Due to
-implementation of highly successful managerial strategies and use of
-incentives in the late eighteenth century, by the start of the
-nineteenth century, slavery in Barbados was no longer dependent on the
-importation of captive Africans. Whereas in the 1730s and 1740s at least
-half the children born in Barbados died within their first week of life,
-by the 1790s, improved diet, lessened workload during pregnancy,
-fieldwork schedules more amenable to nursing, and monetary incentives
-for live births together facilitated increased (re)production and a
-sharp decline in infant mortality.^8^ Nothing evinces intensified
-planter investment in slave women's reproductive lives more poignantly
-than changes in planter bookkeeping practices. Alongside increase in
-cattle, horses, and other valuable nonhuman livestock, beginning in the
-late eighteenth century they began to routinely record the birth of
-slaves as capital gains (Beckles 1989, 102).
+### "Native Companions" in Early British India
 
-Subsequent scholarship expands on Beckles's signal contribution by
-accounting not only for the material conditions of enslaved
-(re)production but also for the importance of the ideological dimensions
-of (re)productive enslavement to a globalizing Euro-American empire. As
-Jennifer Morgan (2004) elaborates in her watershed study of the early
-English colonies in the West Indies and on the North American mainland,
-enslavers required both women's physical labor and their "symbolic
-value" as "black," fecund, animal beings. To this end, those invested in
-the slave trade created and disseminated ideas about the distinct
-"blackness" of African women through discourses that tethered African
-women's reproductive bodies and capacities, actual and imagined, to
-their enslavability. These discourses, initiated by European travelers
-in the sixteenth and seventeenth centuries, can be gleaned from both
-visual and discursive archives that together adumbrate the ideological
-construction of African women as (re)productive assets, living and
-breathing tools available for use. In etchings from the seventeenth
-century that portray African women at work in the fields, for instance,
-they are depicted nursing infants, affixed to their backs, with milk
-provided by elongated breasts that are slung over their shoulders
-(Morgan 2004, 12--49). In written accounts, African women are depicted
-as capable of "pain-free" and "disinterested" delivery; parturition is
-for them just another form of work. Indeed, for African women
-reproductive and productive toil were represented as entirely compatible
-activities. As travel diaries attest, African women were a breed apart,
-less-than-human beings descended from a bestial point of origin that was
-imagined to be "black" and therefore distinct from that of the Christian
-Eve and her white European descendants (Morgan 2004, 40--47).^9^
+#### Regulating Transracial Intimacies in Early British India
 
-In creating representations of African women's specifically "black"
-reproduction, Europeans fueled an ideology in which "blackness"
-constituted a visible mark of the biological and social distance
-separating African and European women. In circulating representations of
-African women as "black", Europeans naturalized the two forms of
-productive labor impressed upon female slaves: agricultural work and
-(re)production of human commodities. Over time, such representations
-rationalized treatment of enslaved conception, gestation, parturition,
-and the products of "black" women's wombs as fungible and alienable.
+In this article, we focus on the period between 1700 and 1858 during
+which the English East India Company established and consolidated the
+foundations of British colonial rule in India. During this period,
+transracial cohabitations or concubinage between European merchants and
+servicemen and Indian native women were commonplace, although not
+publicly recognized. The forms of cohabitation ranged from domestic and
+sexual services to conjugal relations. As opposed to previous
+understandings of this early stage as an era of creolization,
+cosmopolitanism, and carelessness towards racial boundaries, Durba Ghosh
+(2006) demonstrates how anxieties about racial purity and fears of
+racial mixing are present from the outset of the Anglo-Indian encounter,
+reflecting Ann Laura Stoler's observation that "who bedded and wedded
+with whom in the colonies was intensely debated and meticulously
+codified from the very beginning of the Imperial Era" (1989, 636--37).
+Regulations and practices of transracial intimacies shifted during the
+British colonial regime. The progressive colonization of India, during
+which the East India Company claimed greater political authority, was
+accompanied by legislations to end Anglo-Indian social intimacy under
+the rule of governor general Lord Cornwallis (1786--1793). Distance
+between Britons and native people was seen as necessary to uphold the
+racial, national, and religious superiority of the colonizers
+(McClintock 1995; Ghosh 2006). Nonetheless, interracial relationships
+continued in the post-Cornwallis era.
 
-In so far as (re)production was deemed fungible, (re)productive labor
-and products were regarded as substitutable----one commodity (including
-labor power) could stand in for another so that a purely formal economic
-exchange could take place.^10^ As *in vivo* labor took place within
-enslaved wombs, the children being gestated within were abstracted into
-the metrics of capital. Upon birth, all qualitative characteristics were
-erased or instrumentalized so that children could be viewed as
-commodities that could justifiably circulate in quantifiable form. In so
-far as (re)productive labor was deemed alienable the "lively products"
-to which women gave birth were regarded as rightfully separable from
-those who (re)produced them, transferrable away from the (re)productive
-body through market exchange. Like their enslaved mothers, children born
-to enslaved women were regarded as chattel. Because they existed as
-commodities within an exchange relationship, enslaved women who gave
-birth were forced to (re)produce the foreclosure of their own
-motherhood, the "natal alienation" of their children (Patterson 1982),
-their own and their children\'s status as dehumanized slaves, and their
-mutual loss of belonging to each other as kin. As Hortense Spillers
-observes, in slavery the gendered maternal function was severed from
-(re)production effectively rendering ideas such as Senator Moynihan's
-"black matriarch" a violent misnaming of "the captive African
-female"---she whose gender was in fact negated in and through the
-abstracting calculations involved in filling the hold of the slave ship
-with its "human-as-cargo" bound for the New World (1987, 72).
+The Indian rebellion of 1857 was a watershed moment in the political and
+social history of India (Procida 2002). The Government of India Act of
+1858, which marked the beginning of the British Raj, the improved
+communication between Britain and India (including the opening of the
+Suez Canal in 1869), and the widening distance between British and the
+Indians, fueled by the rebellion, interrupted the racialized, gendered,
+and sexualized economies that existed in the pre-British Raj period.
+Practices of concubinage were pushed to the margins and replaced with a
+different set of relationships with domestic servants, housekeepers, and
+nursemaids. Efforts were made to foreground British morality and the
+establishment of British monogamous heterosexual households, with the
+British "memsahib" (wife of a high ranking British official) as the
+upholder of this morality within the intimate space of the home
+(Chaudhuri 1988, 1994).
 
-Taken together, the fungibility and alienability of (re)productive labor
-and its products distinguish commodified (re)production from
-non-commodified reproduction (for instance unremunerated domestic work,
-child bearing, child rearing, care for the elderly, sick, and dying,
-etc.), as non-commodified reproduction only indirectly enters into
-circuits of market exchange. Put otherwise, although non-commodified
-reproduction is integral to the reproduction of capitalism, as Marxist
-feminists, Social Reproduction theorists, and historians of care work
-and intimate labor demonstrate (Mies 1986; Federici 2012; Bhattacharya
-2017; Boris and Parreñas 2010), non-commodified reproduction is not
-expressly transacted in order to create surplus value in the ways that
-the (re)productive labor of enslaved women was once transacted in the
-context of Atlantic slavery, or the ways that it is today transacted in
-the global marketplace for (re)productive labor and products.^11^
+As Ronald Hyam argues, the memsahib became the new "instrument" for
+maintaining the social distance between the ruler and the ruled (1990,
+19). Furthermore, domesticity, childhood, and Britishness became
+intimately linked. Within the imperial home the female servant's (ayah)
+surrogate motherhood and the native wet nurses' (amahs) lactating body
+threatened to re-order the domestic familial organization, while
+simultaneously exposing the vulnerability of English reproduction.
+Though predicated on a race/class superiority of the memsahib, the
+ayah's closeness to European children was a cause of colonial anxiety as
+it threatened to destabilize the power hierarchies within the colonial
+nursery and contest the British ideal of childhood. On the other hand,
+due to their low class and caste, wet nurses were projected as
+physically and morally dirty, betraying the racialized, caste, and
+classed character of the relationship between the British and native
+Indians in the colonial home (Sen 2009; S. Banerjee 2010). Thus, the
+colonial-domestic space became a site of negotiation and contestation,
+with the native female body arousing ambivalent feelings of fear and
+disgust, on the one hand, but also seen as a necessary inclusion within
+the British household, on the other.
 
-The fungibility and alienability of enslaved (re)production is nowhere
-more visible than in the implementation, beginning in the second half of
-the seventeenth century, of the New World interpretation of the Ancient
-Roman doctrine of *partus sequitur ventrem* (Berry 2017; Morgan 2004,
-2018). This Latin phrase, roughly translated as "that which comes forth
-follows the womb," was enshrined in English and Spanish slave codes to
-ensure that children born to enslaved women were enslaved.
-Significantly, *partus* made a child born to an enslaved woman
-enslaveable regardless of the race or status of the father. As a
-consequence, free white men's rape of enslaved women functioned to
-augment their own (or other free white men's) property. By the late
-antebellum era, advertisements and bills of sale frequently classified
-enslaved women as "breeders" or "breeding wenches," indicating precisely
-how (re)productive labor and products were valued.^12^ Especially robust
-enslaved men were selected and taken on a "breeding circuit" and
-appraised for rent or sale as "studs" (Roberts 1997, 28; Berry 2017, 19,
-78--79). Although limited space requires me to omit a discussion of the
-sexual labor performed by male and female slaves, it is crucial to note
-that while the concept of (re)production does not encompass all forms of
-sexual labor, it includes, by necessity, procreative sex. In fact, the
-term "(re)production" instructively illustrates (precisely because it
-replicates) enslavers' enfolding of procreative sex, often in the form
-of rape, into (re)productive labor. My intention in using (re)production
-as a portmanteau is certainly not to minimize sexual violence in
-slavery, but rather to specify the manner in which (re)productive
-extraction and dispossession included extraction and dispossession of
-procreative sex.^13^ Put otherwise, from the vantage point of enslavers
-and thus from that of (re)production as an engine of surplus value,
-enslaved sex, conception, gestation, and parturition were inextricable.
-By contrast, from the vantage point of enslaved individuals and
-communities, conception, gestation, and parturition were experienced as
-sites of resistance, refusal, joy, hope, sadness, violation, and
-violence, as scholarship on intimacy in slavery attests (Berry and
-Harris 2018). Importantly, in biocapitalism (re)production rarely
-requires sexual violence in the form of rape or forced "breeding"---
-which is not to suggest that contemporary (re)productive laborers do not
-suffer a host of psychological and bodily violations that are both
-intimate and sexualized in nature.
+#### Exploitation and Non-recognition of Native Women's Reproductive Labor
 
-Over time, the circular ideological construction of African and
-African-descended women's reproduction as "black" was called upon to
-justify the treatment of their wombs as engines of "future increase" and
-thus of surplus value.^14^ Histories that account for the racialization
-of enslaved (re)production and treat the role of "blackness" in the
-maintenance of slave racial capitalism resonate forcefully with the
-present argument. As in slave racial capitalism, in biocapitalism
-racialized (re)production makes the system go. As in slavery, in
-biocapitalism (re)productive labor and products are rendered fungible
-and alienable through a complex process of racialization. The feminist
-histories of slavery that I have briefly limned above historically
-ground an argument about contemporary (re)productive extraction and
-dispossession. As, I will now argue, they also constitute the foundation
-upon which unique insights into the continuous recalibration of racial
-capitalism may built. They allow us to see that (re)productive
-extraction and dispossession in slavery both temporally precedes
-(re)productive extraction and dispossession in biocapitalism, and,
-therefore, they intimately link biocapitalism to the evolution of racial
-capitalism.
+Cohabiting with a native woman was often regarded as a socially and
+sexually transgressive act by the emerging colonial state (Ghosh 2006,
+31), but served imperial interests in several ways. These arrangements
+eliminated the responsibility and economic expense of the Company to
+"import" British women. Furthermore, by remaining legally unbound, their
+men were free to move on to respectable marriages with European women
+who would potentially bring wealth into the marriage. European men were
+thus able to maximize both sexual and economic opportunities.
+Concubinage was also seen as both politically and medically beneficial,
+as a way to form strategic bonds with powerful indigenous families,
+while at the same time keeping "men in their barracks and bungalows, out
+of brothels and less inclined to perverse liaisons with one another"
+(Stoler 1989, 637). Not the least, it enabled colonial societies like
+British India to imagine itself as being uncontaminated by racial and
+cultural mixing (Ghosh 2006, 30), and to maintain the racial hierarchy
+on which colonialism rested. As Ghosh argues, interracial intimacies
+were camouflaged by the fact that indigenous women living in colonial
+households were given new names: "the absence of native women's names
+\[or the erasure of her identity as an indigenous woman\] in colonial
+archives correlated with the state's interests to suppress the
+visibility of subjects who threatened the whiteness of colonial society"
+(2006, 18--19). By obscuring indigenous forms of identification, the
+colonial archive systematically erased the identity of native women.
 
-And yet, even though slave racial capitalism and biocapitalism can be
-constellated, it should not be assumed that (re)production in
-biocapitalism is racialized in the same way as it was in the slave past.
-In the next and final section, I offer some preliminary ideas about how
-to think about the complex recalibration of racialized (re)production
-over time. While anti-blackness clearly characterizes a present moment
-violently saturated by myriad forms of racism, the attribution of
-"blackness" to (re)productive labor and its products is no longer the
-only modality through which (re)productive extraction and dispossession
-operate today. Rather, in contemporary biocapitalism "blackness" is
-being *sublated*, by which, I mean it is being simultaneously *negated
-and preserved* in order to make biocapitalism go.
+Indrani Chatterjee (1999a) has explored slavery in colonial India, which
+is an under-studied theme in South Asian historiography. She argues that
+a significant number of the native women cohabiting with Company men
+during the early colonial period were slaves in the legal sense---that
+is, they received their freedom on the death of their master. Continuous
+wars over succession within provinces and battles between the British
+military and local rulers created a population of women and children
+available for purchase. With their homes destroyed, they would turn to
+the cantonments of the Company for protection and livelihood
+opportunities (Chatterjee 1999a, 64). Other women were supplied by the
+system of regimental bazaars, itinerant markets that followed each
+military unit and provided the troops and the regiment as a whole with
+domestic and sexual services. Although prohibitions of coerced labor
+were put in place at this time, exceptions were made for the category of
+women and young girls recruited by force to perform these services in
+the bazaars. This later developed into the *chakla* system (government
+managed spaces for prostitutes) in which indigenous middlemen were
+allocated funds by the local commander to deliver purchased young women
+for the regiment's use.
 
-### The Sublation of "Blackness" in Biocapitalism
+#### Savage Mothers
 
-Although, as already observed at the outset, it could reasonably be
-assumed that feminist scholarship on (re)production in biocapitalism
-would center the history of slavery, substantive discussion of slavery
-and its legacies is missing from most scholarship on ARTs,
-biocapitalism, and the neoliberal post-racial ideologies that sustain
-transnational reproduction.^15^ There appear to be several reasons for
-this. Scholarship on the global fertility chains that secure
-transnational reproduction is primarily concerned with the largest
-(re)productive markets, those in oocytes and surrogate labor. In most
-instances, oocyte vendors and surrogates are neither majority Black nor
-do they predominantly reside in locales that were at one time directly
-implicated in the Atlantic slave trade. When historical antecedents are
-considered, as already noted, European colonialism is therefore deemed
-most germane, and is too often hived off from Atlantic slavery as if the
-two were not historically coincident and economically imbricated.
-Separation of these histories lends itself to spurious distinctions
-between slavery and remunerated or waged labor, distinctions that tend
-to be reified rather than interrogated. And yet, as I elsewhere argue
-(2019), in both past and present, the distinction between slavery and
-waged labor is messy; and, at least when it is construed rigidly, this
-distinction constitutes one of capitalism's major ideological supports.
+While erased in the colonial archives, the "native companions" of
+European men become visible through their children. The growing number
+of mixed-race children become a palpable threat to the authority of
+European rule---as concrete manifestations of the permeable boundaries
+between the native population and the imperial rulers, and as colonial
+subjects with a compromised loyalty (Stoler 1989, 2010; Ghosh 2006,
+213). Thus, in 1782 the Military Orphan Society was founded by officers
+of the East India Company with the purpose of managing the effects of
+racial mixing. This group of children was seen as the literal
+incarnation of the harmful effects of miscegenation, including excessive
+sexuality, and the influence of the native mothers was seen as
+detrimental to the children, particularly in upper-class families, where
+a perceived lack of chastity, fidelity, and other moral qualities made
+them unfit to parent the offspring of English gentlemen. Therefore, the
+orphanages also served the crucial purpose of separating children from
+their native mothers.
 
-Rather than begin from the assumption that (re)productive laborers
-\"choose\" to labor for a wage (for instance, when they participate in
-transnational markets as surrogates), I suggest beginning from an
-insight that is neatly if perhaps too implicitly encapsulated in Marx's
-quip that contract labor is a form of "wage slavery." In creating a
-seeming oxymoron, Marx challenged us to consider nineteenth-century wage
-labor as existent on a continuum. By extension, here I challenge us to
-critically re-examine the character of the so-called choices that are
-made by contemporary (re)productive laborers, women who, in some
-instances, enter the market without even the supposed protection
-afforded by labor contracts or other legal protections (Rudrappa 2015).
-From a vantage point that apprehends the predication of liberal notions
-of freedom on the exemption of slaves, the colonized, and Indigenous
-Peoples from such freedom (Lowe 2015; Smallwood 2004), it is apparent
-that on the underside of the supposed freedom to alienate labor power
-lie interlocked forms of gendered, sexualized, and racialized governance
-that divide laboring populations into categories of human and
-less-than-human. Those deemed human are more likely to be remunerated
-for their labor and to be perceived (and perhaps to feel themselves) as
-having "chosen" to labor for a wage. Those deemed less-than-human are
-more likely to be treated as disposable and to understand the ruse that
-the ideology of "choice" conceals.^16^ In sum, the neglect of the
-impress of the slave episteme by scholarship on biocapitalism has
-troubling consequences in that it obscures the conditions and contexts
-in which laborers "choose" to labor, and creates an artificially narrow
-understanding of the connections between (re)production in slavery and
-biocapitalism.
+Native women with biracial children were systematically targeted with a
+range of legal and administrative measures that undermined their social
+recognition as mothers. For instance, before the age of four, at which
+admittance to the orphan school was compulsory, every child was entitled
+to a monthly allowance, a prerequisite being that the child was cared
+for by a close relative. However, the native mother or her family were
+not eligible as such. Instead, in the absence of close relatives, it was
+required that a serviceman in the regiment registered as the child's
+guardian, or the child would commonly be taken into custody. Tying
+financial aid to a particular regiment made native mothers' prospects of
+supporting and living with their children dependent on their ability to
+find a European guardian---a precarious position which pushed them into
+a series of intimate relationships with soldiers of the same regiment.
+Native mothers "circulated through the households of soldiers in a
+regiment in order to maintain their livelihoods and their ties to their
+children" (Ghosh 2006, 232). These women were perceived as promiscuous,
+which further sedimented the idea of native women as unfit mothers.
 
-To demonstrate the importance of accounting for the work of the slave
-episteme when seeking to understand (re)production in
-biocapitalism----even in those instances and in those locales in which
-slavery does not immediately appear to be relevant----I have found it
-necessary to craft a reoriented approach to (re)production that treats
-it as a racializing process that is being continuously recalibrated over
-capitalism's *longue durée*. This reorientation begins with an
-observation, indebted to feminist historians of slavery, that enslaved
-women's participation in (re)productive labor was regarded as
-racializing of the labor performed (it rendered it less-than-human,
-"black", and therefore fungible and alienable), and of the products of
-this labor. In other words, rather than begin by assuming the *a priori*
-racial identity of (re)productive laborers, as existing studies of
-surrogates and other participants in the (re)productive economy have
-(Twine 2011; Hochschild 2012; Pande 2014; Rudrappa 2015; Vora 2015;
-Deomampo 2016; Harrison 2016), I instead suggest that scholars of
-(re)production in biocapitalism follow the example set by feminist
-historians of slavery. This requires focus on (re)production as a
-racializing process----a process that racializes the laborer and renders
-her labor and products fungible and alienable.
+Chatterjee (1999b) demonstrates how this undermining of native women's
+motherhood becomes manifest when compared to indigenous systems of
+slavery. In the latter, the child born to a slave-concubine inherited
+the father's legal status, which allowed for filiation,
+status-reckoning, and incorporation into the slave-holding household.
+This entailed advantages in terms of status and continued protection for
+the mother of the child. In contrast, according to colonial law and
+practice, the offspring of slave-women inherited the mother's juridical
+status. Mothers of children fathered by European free men were seen as
+"illegitimate" and could make no claims to their children.
 
-The proposed shift in focus is intended to be expansive. It clears a
-path to a historically inclusive account of the (re)productive character
-of ongoing forms of "so-called primitive accumulation" in biocapitalism.
-It is also intended to nuance discussions of processes of racialization
-in a neoliberal moment saturated by post-racial ideologies that insist
-on treating the slave past as irrelevant to the present. Indeed, the
-shift to a focus on processes of racialization is intended to open our
-eyes to the pervasive disavowal of the afterlife of slavery, the work of
-the slave episteme in biocapitalism, and thus to the sublation---again,
-by this I mean the simultaneous *negation* and the *preservation*----of
-"blackness" in rationalizing processes of (re)productive extraction and
-dispossession.
+These practices were bolstered by imperial ideologies of race and
+gender. Colonized women deviated from the norm of both *humanitas*
+(Maldonado-Torres 2017) and the norm of womanhood modeled on white
+bourgeoisie women. Thus, for native women, colonization brought both
+"racial inferiorization and gender subordination" (Lugones 2008, 8).
+While white European women were seen as fragile and sexually passive,
+colonized women were constructed as sexually aggressive and perverse
+(Cott 1978). Felicity Nussbaum (1995) argues that the eighteenth century
+marks the formation of the cult of domesticity, wherein hierarchies of
+class and race among women were expressed through their quintessential
+role as mothers. An "English" and "civilized" motherhood was ascribed
+according to class position, and further distinguished in opposition to
+the savage motherhood of the racialized women in the colonies: "women of
+the upper and middle classes are pitted against lower-class women and
+'civilized' English mothers against 'barbaric' mothers---their
+difference a proof of racial and class superiority, their sameness an
+indication of their gendered inferiority in an interlocking network of
+hierarchies" (Nussbaum 1995, 126). Capable of killing, eating, or giving
+away their children, native mothers, otherwise pictured as closer to
+animals and a regime of primordial instincts, were paradoxically seen to
+lack maternal instinct. As Stoler (1989, 647) has shown, the idea of
+native mothers as harmful to their children and the subsequent removal
+and institutionalization of mixed-race children is a recurrent pattern
+not only from British India but also from French Indochina, the Dutch
+Indies, and white settler colonies in North America (the American Native
+Indian boarding schools in the United States, the Indian residential
+school system in Canada), and Australia (the Stolen Generations).
 
-For the most part, analyses of race and racism emergent from critical
-race studies, critical ethnic studies, Black studies, and postcolonial
-studies have treated race as a social construct that is affixed to
-individual bodies and populations as power is arrayed hierarchically and
-white racial hegemony secured. In such analyses, race is not regarded as
-biological, genetic, empirical, or, for that matter, as analytically
-stable.^17^ Rather, race is examined for *how* it is equated with
-phenotype and thus naturalized, for *how* it functions as a biosocial
-mark, and for *how* it exerts social, political, and economic power as
-it transforms over time. In short, race is variously recognized as a
-process (as opposed to an identity) and as a motor of globalizing
-capitalism, regimes of racial nationalism (white racial nationalism and
-other forms of ethnic nationalism), colonialism, settler colonialism,
-empire, or some combination of these. In situating (re)production as a
-racializing process, as I do here, I suggest that the race ascribed to
-individuals and populations prior to their recruitment into and
-participation in (re)production ought not be construed as the only
-racial calculation that enables and rationalizes (re)productive
-extraction and dispossession today.
+### US Neo-imperialism and Korean Birth Mothers
 
-The proposed treatment of (re)production as racializing process makes
-sense for several reasons. Around the globe, the (re)productive labor
-force is robustly multiracial, multiethnic, and multinational. Available
-information about the individuals who currently perform (re)productive
-labor reveals that they are more frequently connected to each other by
-their shared economic precarity than by any single racial, ethnic,
-caste, religious, or national identity. Indeed, it is never solely the
-*a priori* racial identity of the (re)productive laborer that renders
-her (re)productive labor and products alienable and fungible. It is
-always also the exchange relationship into which she enters when she
-sells her (re)productive labor that precipitates a racializing process
-that devalues labor and renders labor and products alienable and
-fungible.
+#### Post--WWII Korea
 
-Notably, my treatment of (re)productive labor as a racializing process
-resonates deeply with the dominant approach to the creation of
-racialized divisions of labor as these are elaborated by labor
-historians. For those who study the changing racial formation of the
-labor force over time, the labor that individuals and populations engage
-in or are forced to perform both creates racial identity and shapes the
-racial character of labor. By virtue of her place in the division of
-labor, the laborer is transformed into a racialized individual (be this
-individual previously identified as "white," "black," or "Asian") and,
-by extension, incorporated as a member of a racialized group thought to
-be comprised of "slaves," "coolies," or "niggers" (Roediger 1991; Allen
-1994; Jung 2006; Day 2016). As labor historians attest, static ideas of
-race are too rigid to account for the ideological and material processes
-that create the complex racial formations that were consolidated during
-prior periods in the history of racial capitalist expansion (slavery,
-colonialism, settler colonialism, and industrialization). Here I follow
-in their footsteps and suggest that static (*a priori*) ideas of race
-are likewise too rigid to account for the ideological and material
-processes that create the complex racial formations that make
-biocapitalism go and facilitate its expansion.
+In Korea, the victory of the Allied forces over the Axis powers at the
+end of WWII put an end to thirty-five years of Japanese colonial rule.
+Drawing up an arbitrary border at the 38^th^ parallel, the Cold War
+superpowers---charged with the task of overseeing the retreat of the
+Japanese army---divided the peninsula, with the Soviet Union (backed by
+China) taking charge of the northern part and the United States
+(supported by the UN) claiming the southern part. In September 1945, the
+United States Army Military Government in Korea (USAMGIK) was created.
+But the process towards independence was stalled as post-WWII turned
+into Cold War politics and the conflicting interests of the two
+superpowers, who stood face to face on the Korean peninsula, escalated.
+The USSR and US each installed ideologically attuned Korean-led
+governments, turning Korea into a testing ground for democracy versus
+communism. Because of its proximity to the Soviet border, the American
+military presence was seen as a way to both ensure Korean independence
+and prevent communist expansion in East Asia. In the years after WWII,
+South Korea received massive war relief from the international
+community, in particular the US, to rebuild its shattered economy. The
+US economic assistance became increasingly geared towards making Korea a
+strong yet subordinate partner in the Cold War. A system of dependency
+was mounted, in which political and social problems were solved by
+economic contributions. As South Korea gained independence in 1948, the
+Republic of Korea--US Agreement on Aid preserved the structures
+established during the rule of the USAMGIK.
 
-Primary emphasis on the race of (re)productive laborers cannot fully
-account for the totality or complexity of the racializing processes that
-subtend transnational reproduction and the global fertility chains that
-secure it. On the one hand, treatment of race (or, for that matter,
-ethnicity, caste, or national identity) as *a priori* has the tendency
-to foreclose attention to (re)production as a process that shapes
-observable divisions of labor. On the other hand, focus on the race
-ascribed to laborers obscures the connectivity (or, to invoke Lowe\'s
-capacious formulation "the intimacy") that has in the past existed among
-those individuals and populations caught up in the violence of Atlantic
-slavery, colonialism, settler colonialism, and empire, and thus in the
-intertwined economic systems that first enabled and that continue to
-subtend globalizing capitalism (Robinson 1983; Lowe 2015; Smallwood
-2019). In sum, failure to treat (re)production as a racializing process
-runs of the risk of obscuring the impress of the slave episteme (which
-is never the possession of a single nation or national economy), and the
-circuitous routes that it travels, crisscrossing historical epochs and
-national boundaries as it renders (re)productive extraction and
-dispossession conceivable and thus materializable.
+#### Camptown Women
 
-And yet, an irrepressible question remains: What happens in the present
-moment to the specific form of "blackness" that functioned as product
-and rational for (re)productive extraction and dispossession in slavery?
-I believe that a preliminary answer to this question lies in realization
-that "blackness" is one but never the only modality through which the
-slave episteme is forwarded into the present. Today "blackness" is no
-longer the only mark of alienability and fungibility; rather, it has
-been both expanded and abstracted, recalibrated and erased. This is
-because biocapitalism has a hegemonic neoliberal cast that sometimes
-successfully, and at other times unsuccessfully, obscures from view the
-historically sedimented processes of racialization that have subtended
-(re)productive extraction and dispossession over time.^18^ As noted
-earlier, these include (but cannot be reduced to) processes of
-racialization that powered *partus sequitur ventrem,* the doctrine that
-was encoded in Slave Law to ensure that in slavery the enslaved woman
-was transformed into a "black" womb (re)producing alienable and fungible
-commodities rather than children.
+The establishment of US military camps throughout the southern peninsula
+was accompanied by the construction of camptowns, or
+*kijich'ons*---areas adjacent or in close proximity to military bases
+that provided services, not the least sexual services, for soldiers. In
+some cases, the American troops would take over and expand already
+existing "comfort stations" set up by the Japanese army, including the
+women who lived there. Thus, as suggested by scholarship on Korean
+comfort women and early camptown women, there is no clear distinction
+between the two categories (Moon 1997; Cho 2008). The first generation
+of camptown women (1950--1970) came from poor rural areas where the war
+had created a large supply of girls and women without families and
+livelihoods, and for whom prostitution became a means for survival. Some
+considered themselves to be "fallen women" even before entering the
+camptowns, having lost their social status as a result of divorce, rape,
+or sex and/or pregnancy outside wedlock. A few of these women would
+marry American servicemen, while others entered into "contract
+cohabitations," in which women were provided living expenses in return
+for a monogamous relationship (Moon 1997, 25--26). As Akeia Benard
+(2016) notes, these Cold War--era relationships were similar to the
+forms of interracial domestic arrangements that flourished in British
+India and other colonial settings during the imperial era.
 
-In the current historical conjuncture, practices of (re)productive
-extraction and dispossession that are predicated on the forwarding of
-the slave episteme can be further illuminated by drilling down on the
-verb *to sublate*. As a philosophical concept, sublation has been most
-fully elaborated by Hegel, subsequent Hegelian philosophers, and Marxist
-theorists. In their usage (as opposed to the colloquial one) sublation
-is neither synonymous with disappearance nor repression. Rather, it is
-an active verb that describes the paradoxical movement through which
-ways of being in the world (Hegel's idea of dialectics) and systems of
-power such as feudalism or capitalism (Marx's idea of history) are
-simultaneously negated and preserved by opposing forces that transform
-the status quo by altering it over time. In certain strands of Marxist
-theory, sublation is used to describe the historical processes that
-continuously reshape the hegemony, not by toppling it in one fell swoop
-but rather by taking up new positions within an ongoing struggle for
-dominance. The national bourgeois revolutions that led to the birth of
-industrial capitalism are perhaps the most well-known example of the
-dialectical process of sublation. The proletarian revolution that Marx
-and subsequent generations of Marxists believe will eventuate in the
-destruction of the system of bourgeois private property is the most
-anticipated. The *Oxford English Dictionary* captures the duality of the
-verb *to sublate* in a definitional quotation: "It is the actualization
-of the system that makes it rational, and sublates past history into a
-rationally-necessary moment of the whole."
+Myths of the sexual availability and compliance of women of color were
+pivotal to sustain white masculinity and white male supremacy during
+both the European imperial era and the Cold War (Benard 2016, 3). In the
+case of US-Korea relations, orientalist stereotypes were used to attract
+young American men to enter into military service on the peninsula (Moon
+1997, 33). To the emerging South Korean state, camptown women's sexual
+labor was perceived as a guarantee for the safety and the honor of the
+nation as kijich'on women were seen as protecting the virtue of innocent
+Korean national womanhood from the perceived predatory sexuality of
+American soldiers. Nevertheless, working as a military prostitute was
+deeply stigmatized, as it breached against both neo-Confucianist norms
+of female chastity and the idea of the Korean people as a racially
+homogenous nation (Hübinette 2006; H. Kim 2016, 50; Moon 1997, 3).
+Camptown women were commonly also rejected by their own families, even
+when it was through their labor that the family was able to survive.
+Although officially outlawed by the USAMGIK in 1946, prostitution
+increased during the American occupation: by 1953 there were 350,000
+prostitutes in Korea, with 60 percent working around US military bases
+throughout the 1950s and 1960s (Cho 2008, 104). However, the link
+between prostitution and the American army was never recognized by the
+US Department of State (Cho, 2008, 101). In 1948, following South Korean
+independence, prostitution was banned by the South Korean government,
+but an exception was made for camptowns. During the military
+dictatorship of Park Chunghee (1961--1979), kijich'on women were
+officially recognized and encouraged to act as "diplomats" for their
+nation (Cho 2008, 110). As Katharine Moon notes, although most countries
+have prostitution, what sets the South Korean case apart is that it was
+both sanctioned and sponsored by the government (1997, 41).
 
-In returning to the irrepressible question about the role that
-"blackness" plays in biocapitalism, I venture the following formulation:
-*biocapitalism sublates slavery and the ongoing work of the slave
-episteme by negating, or actively obscuring from view the centrality of
-a preserved if at once altered process of (re)productive racialization
-that was once, but is no longer exclusively predicated on the creation
-of "blackness" as the rationale for rendering (re)productive labor and
-its products alienable and fungible.*^19^
+#### Unwed Mothers, Mixed-Race Orphans, and Racial Discrimination
 
-The dual action of negation and preservation that characterizes
-sublation is amplified in biocapitalism because the interlinked
-neoliberal ideologies of colorblindness and post-racialism with which
-biocapitalism is conjoined require that the forms of racial capitalism
-that were historically pervasive (slavery and colonialism) be regarded
-as antiquated, regimes of the past that are no longer today relevant.
-However, as already argued, it is precisely the processes of
-(re)productive racialization that were brewed up in slavery that are
-currently being recalibrated, and thus that persist in and through the
-contemporary exchange of (re)productive labor and products. Borrowing
-and at once tweaking the definitional quotation taken from the *Oxford
-English Dictionary*, I conclude by observing that "blackness" as the
-mark of (re)production's racialization has come over time to constitute
-a "rationally-necessary moment of the whole." This "moment" is now being
-sublated (rather than transcended or eclipsed) by pervasive, persistent,
-and patently ahistorical neoliberal ideologies such as post-racialism.
-In sum, today the slave episteme subtends processes of (re)productive
-racialization even though the "blackness" of (re)productive labor and
-products is no longer always visible as the primary expression of such
-processes.
+The Korean War had devastated the country, killed over one million
+civilians and displaced tens of thousands of children. The majority were
+mixed-race children who had been abandoned by their parents. According
+to Korean law, mothers were not recognized as the legal guardian of
+children born out of wedlock, which made the children illegitimate. Both
+women and their mixed-race offspring, particularly the children of
+African American servicemen, were seen as social outcasts and exposed to
+racial discrimination (Okazawa-Rey 1997; Cho 2008, 118). Camptown
+mothers carried the double stigma of miscegenation and illegitimacy (E.
+Kim 2010, 51). In both colonial India and South Korea, mixed-race
+children were seen as a problem. However, as Tobias Hübinette explains,
+adoption as the "solution" to this problem represents a historically
+significant shift from "the way the French, Dutch and British empires in
+Asia dealt with the problem of mixed children fathered by European
+settlers before World War II. Few, if any of these were ever adopted and
+moved to metropolitan Europe" (2006, 144).
 
-In the preceding pages, I have argued that the history of (re)production
-in Atlantic slavery ought to be accounted for alongside the history of
-reproduction in colonialism in scholarship on transnational reproduction
-and the global fertility chains that secure it, and in work on
-contemporary forms of racial capitalism including biocapitalism. In
-advancing this argument, I have suggested that the slave episteme,
-brewed up in slavery, is currently being forwarded into the
-biocapitalist present. In arguing thus, I do not mean to imply that the
-slave episteme determines the totality of contemporary social and
-economic relations as these pertain to contemporary (re)productive
-extraction and dispossession. There are clearly multiple and overlapping
-processes at work in each specific reproductive market; together, these
-processes enable (re)productive extraction and dispossession globally.
-Relatedly, there will always be many racial marks (each of which is
-likewise historically moored) that are today sublated alongside
-"blackness". As others in this special issue demonstrate, it is
-imperative to account for colonial legacies and settler colonial
-practices when examining (re)productive extraction and dispossession in
-former colonies and in contexts of ongoing settler occupation. And yet,
-even as we track what I would suggest we shorthand "the colonial
-episteme" and "the settler colonial episteme," scholarship on
-(re)production in biocapitalism can only be fully responsive to the
-history of (re)productive racialization that has enabled biocapitalist
-expansion when it attends to the slave episteme, and thus to the
-continuous recalibration of (re)production as a racializing process that
-is rooted in four hundred years of racial slavery.
+The task of rehabilitating the country was assigned to the US military,
+through programs such as the Armed Forces Assistance to Korea, and the
+military unit, the Korea Civil Assistance Command. In reconstructing the
+social welfare system, the construction of orphanages became a top
+priority, which illustrates how geopolitical agendas were framed as
+humanitarian interventions. As SooJin Pate and others have observed,
+"the acts of recovery performed by the U.S. military worked to cover
+over the acts of state violence that necessitated the need for recovery
+in the first place" (2014, 39). American news media contributed by
+broadcasting footage of GIs rescuing children from ruins and handing out
+presents at Christmas parties, which represented the American soldier as
+a kind of "pseudo-missionary" (Pate 2014). The emergence of Korean
+adoption was intimately linked to anti-communism and "Christian
+Americanism": a patriotic ideology that conflates Christian principles
+with "American values," articulated as a specifically American moral
+authority (Oh 2015). The Korean mixed-race children were seen as
+humanitarian orphans to be rescued, rather than as children abandoned by
+their American fathers (E. Kim 2010, 53), and as opposed to the native
+mothers in British India, Korean kijich'on women were not entitled to
+any legal protection or practical assistance from the US military (H.
+Kim 2016, 49). Interestingly, the sense of responsibility and
+entitlement that transnational adoption builds on was facilitated by an
+erasure of the ways in which the US was complicit in creating "the
+Korean orphan crisis."
 
-Sustained consideration of the forwarding of the slave episteme in
-biocapitalism has the capacity to thicken existing theorization of the
-"racial reproductive imaginaries" (Deomampo 2016) that together inform
-how and why consumers select both surrogates and eggs. Reciprocally,
-sustained consideration of the forwarding of the slave episteme has the
-ability to nuance analysis of (re)productive laborers' experiences of
-the racialized roles that they play in the lives of those who consume
-(re)productive labor and products. Beyond the instructive examples of
-surrogacy and oocyte vending, consideration of the forwarding of the
-slave episteme in biocapitalism has the capacity to make us aware of the
-anti-blackness that powers racial capitalism *tout court*. Clearly
-processes of (re)productive racialization will continue to shift and
-change in myriad ways. Sustained consideration of the work of the slave
-episteme might yet transform our collective consciousness of these
-shifts and changes, and enable greater attunement to the ways in which
-(re)productive extraction and dispossession simultaneously preserve and
-negate "blackness" and, in the process, create the complex and
-historically sedimented racial formations that are mobilized by
-biocapitalism in the service of its ongoing expansion.
+Early orphanages and adoption policies specifically targeted mixed-race
+children. Hosun Kim (2016) has shown that kijich'on mothers were
+persistently solicited by adoption agency workers who actively counseled
+them to relinquish their children. Only 25 percent of camptown mothers
+raised their children themselves (H. Kim 2016, 46). The overseas
+adoption of mixed-race orphans became a way to remove a population that
+challenged the ideas of Korean patriarchy and of Korea as a pure and
+racially homogenous nation, articulated through the ideology of one
+nation and one people (Hübinette 2006; H. Kim 2016, 50). Thus, in this
+initial phase, transnational adoption was established as a technology
+for population control and the removal of "excess" populations (H. Kim
+2016, 50, 66; Hübinette 2006). The US involvement also aligned with the
+new South Korean government's economic interests: national security and
+the building up of military forces, not social welfare, were top
+priorities. Furthermore, not only was it a practice that lowered state
+spendings, it became a significant source of foreign capital to the
+emerging South Korean state (E. Kim 2010, 32).
 
-### Notes
+Previous research has highlighted demographic shifts in the US and the
+conflation of anti-communism, evangelical Christianity, and US
+paternalism on the global stage as driving forces behind Korean adoption
+(E. Kim 2010; Oh 2008; Nelson 2006; Briggs 2012). Christina Klein (2003)
+suggests that the family becomes the dominant metaphor for understanding
+US-Asia relations in the 1950s. Viewing foreign relations as sentimental
+familial bonds made it possible for white Americans to imagine non-white
+Asians as part of their family. The creation of this group of privileged
+migrants is particularly noteworthy against the history of US anti-Asian
+immigration policies: the Chinese Exclusion Act (1882) and the 1924
+Immigration Act, which had practically made it impossible for Asians to
+immigrate legally to the United States (Lowe 2015).
 
-^1^ In 2003 Sarah Franklin and Margaret Lock observed that "shifts in
-the definition of biology-as-capital involve a prioritization of
-reproduction," thus announcing human reproduction's emergence as a
-"primary generator of wealth, agency, and value" in biosciences
-dependent on human research participants for what are often
-euphemistically referred to as "donations" or "gifts" of reproductively
-derived raw materials (Franklin and Locke 2003, 7). Subsequent
-scholarship fills out the portrait of a rapidly changing landscape.
-Contributions that inform the present argument demonstrate the
-centrality of human (re)production to the emergence of biocapitalism.
-Waldby and Mitchell (2006) develop the concept of "tissue economies"
-through analysis of embryonic stem cell and umbilical cord blood
-banking; Franklin (2007, 2013) tracks marketization of cloning back to
-innovations in animal husbandry and forward to IVF\'s transformation of
-human kinship; Spar (2006) examines the "commerce of conception";
-Dickenson (2008) treats "global markets in baby making"; Cooper (2008)
-explores financialization of "life itself" through production of "life
-as surplus"; Vora (2015) joins Hochschild (2012) in analysis of
-outsourcing of emotional labor and intimate life in the Indian surrogate
-market; Cooper and Waldby (2014) develop the concept of "clinical
-labor\" to describe commodification of *in vivo* processes, including
-surrogacy.
+A crucial step in transforming the social orphan into an adoptable child
+was to erase the native mother. The birth mothers were subjected to a
+process similar to that of their children: exposed to "social death"
+through the stripping of all social recognition and rights, reflected in
+their lack of "the right to ask for rights" pertaining to the child" (J.
+Kim 2009, 857; H. Kim 2016, 9). In the early period, it was primarily
+Christian, white, middle-class families who adopted Korean children. If
+adoption is a technology to shore up the ideal white nuclear family (Eng
+2010), it is important to add that it relies on the invisiblized
+reproductive labor of the single/unwed/immoral/prostitute birth mother.
 
-^2^ Here I extend earlier meditations on the use of the labor theory of
-value (LTV) to theorize surrogacy as a form of (re)productive labor
-(Weinbaum 1994). With the parentheses surrounding (re) I differentiate
-an approach rooted in the LTV from Marxist feminist "dual systems"
-approaches focused on unremunerated or non-commodified reproductive
-labor and autonomist feminist arguments focused on recognition of the
-productive value of unremunerated reproductive labor in the home.
+Patriarchal family practices and South Korean law give mothers little
+power over their children's lives. Relinquishing a child for adoption
+has not always required the consent of the birth mother. Lax
+governmental oversight has allowed adoption agencies to deploy ethically
+ambiguous practices for claiming custody of a child. In 1972 *Kyunghyang
+Daily News* reported that agencies customarily required only the
+father's consent in the relinquishment process (E. Kim 2010). Birth
+mothers' lack of legal protection and the broad criteria for adoptable
+children has made a large group of women---including divorced women,
+poor mothers, single mothers, women involved with married men, and
+mothers who leave home because of domestic abuse---vulnerable to losing
+their children to adoption. Mothers who leave their children for
+whatever reason lose all rights to their children. It has not been
+uncommon for mothers to discover that their child has been relinquished
+after the formal process of adoption has been completed.
 
-^3^ *The Afterlife of Reproductive Slavery* (Weinbaum 2019) focuses on
-surrogacy (as opposed to other ARTs) because I regard surrogacy as a
-unique heuristic device that provides insight into how *all* forms or
-(re)productive extraction and dispossession function in biocapitalism.
-Put otherwise, analysis of surrogacy opens the way to comprehension of
-racialized (re)productive extraction and dispossession in biocapitalism
-generally.
+### Unpacking the Coloniality of Power Nexus in Korean Adoption and Indian Surrogacy
 
-^4^ In addition to centering contributions by feminist historians of
-slavery (as I discuss shortly), *The Afterlife of Reproductive Slavery*
-treats Black Feminist literary scholars (Carby 1987; Christian 1985;
-Hartman 1997, 2007), Black Feminist legal scholars (Williams 1991;
-Roberts 1997; Allen 1990, 1991; Rutherford 1992; Cherry 2001), Black
-Feminist theorists (Spillers 1987; Davis 1971, 1998), Black Feminist
-reproductive justice activists (Ross and Solinger 2017), and novelists
-such as Toni Morrison and Octavia Butler.
+#### Transforming Waste into Profit
 
-^5^ The concept of "the afterlife of reproductive slavery" is indebted
-to Saidiya Hartman's (2007) signal contribution on the "afterlife of
-slavery." See also Hartman (1997).
+We exemplify the workings of coloniality of power through what we
+understand as three intersecting trajectories: (a) the transformation of
+waste into profit, (b) the devaluation/erasure of non-white mothers, and
+(c) the trope of the white savior. First, in both cases, neoliberal
+state policies are intertwined with the exploitation of sexual and
+reproductive labor of women who do not fit the national imaginary,
+transforming devalued populations seen as "waste" into profit-generating
+resources.
 
-^6^ The idea of "slave racial capitalism" also invites consideration of
-slavery as an early form of biocapitalism, albeit one to which the
-relatively new conceptual term can only be applied retroactively. Though
-it is beyond the scope of the present essay to treat this relationship
-as I do elsewhere (2019), it is worth noting that contrary to Birch and
-Tyfield (2012), who argue that the "bio" prefacing capitalism obscures
-economic realities, I regard the "bio" as revelatory in that it points
-to what is old (the slave episteme) about a supposedly new economic
-formation---namely, the commodification of (re)productive labor and
-products.
+In early British India, practices of concubinage lowered economic
+expenses while creating and maintaining racially unequal relations. This
+inequality has informed contemporary surrogacy practices. For roughly a
+decade (2004--2015), India stood as the world's "mother destination" for
+commercial gestational surrogacy. Low costs, the availability of highly
+qualified English-speaking medical doctors and women willing to work as
+surrogates, together with the lack of legal regulation surrounding
+surrogacy arrangements, contributed to India's flourishing fertility
+industry. Overall, surrogacy has benefited from the active promotion and
+financial support of the Indian government (Rudrappa 2015; Deompampo
+2016).
 
-^7^ Numerous Black Feminists theorize intersections of race, gender, and
-class and thus contribute to a specifically Black Feminist understanding
-of racial capitalism. Though this rich scholarship cannot be adequately
-represented in a single note, contributions that inform my thinking here
-include Angela Y. Davis (1971, 1981, 1998), the Combahee River
-Collective (1982), Carole Boyce Davies (2008), Sarah Haley (2016), and
-Shauna Sweeney (2021).
+The viewing of Indian women's bodies as excessively reproductive and
+fertile and thus inimical to development and progress was first
+formulated during British colonial rule and then reconfigured by the
+postcolonial Indian state and policy makers in the Global North (Wilson
+2018). Paradoxically, the same wombs that were seen as superfluous,
+dangerous, and wasteful, and thus requiring anti-natalist interventions,
+are now seen as profitable and lucrative sources of revenue for
+stakeholders within the fertility industry (Pande 2014; Rudrappa 2018).
 
-^8^ Beckles observes, "the ameliorations of the late eighteenth century
-can be defined as a system of thought and practice by which money that
-would have been otherwise spent on...buying unseasoned Africans was used
-to improve the lot of existing slaves in order to induce them to breed
-their replacements" (1989, 97).
+Similarly, the sexual and reproductive exploitation of Korean women
+after WWII was facilitated both by the South Korean and the US
+government, motivated by political as well as financial gains. In the
+postwar construction period, the transnational adoption of mixed-race
+children became a significant source of foreign capital (E. Kim 2010,
+32). In the 1960s and 1970s, a decline in the number of mixed-race
+children paralleled with a booming interest in the US to adopt Korean
+children, leading to practices such as baby hunting and financial
+renumeration to birth mothers (E. Kim 2010). The demographics of birth
+mothers has shifted since its initial years. Vulnerable to South Korea's
+aggressive modernization policies, poor female factory workers were
+counseled by adoption agency workers to relinquish their children (E.
+Kim 2010, 72). By the 1970s, the children of unmarried college students
+came to dominate, and by the late 1990s, teen pregnancies became the
+largest group, maintaining single or unmarried mothers as most
+vulnerable to losing their children (Briggs 2012). Until the 1990s,
+family members were able to hand over children for adoption against the
+mother's will or without her knowledge. Today, South Korea is the
+world's twelfth largest economy and has the world's lowest birth rates,
+yet adoption continues (Shin 2020). Approximately 90 percent of the
+children adopted oversees in recent years have unmarried birth mothers
+in their late teens or early twenties (E. Kim 2010, 34). News reports
+indicate that unwed mothers are pressured to give up their children for
+adoption through the guise of "counseling" organized by adoption
+agencies who have economic interests in recruiting children for adoption
+(Sköld and Lundberg 2021a).
 
-^9^ Ideas about European descendants of Eve as cursed with pain in
-childbirth paved the way for ideas about European sensate difference as
-a sign of racial superiority, and later as a basis for the theory of
-polygenesis (Morgan 2004, 40--47).
+Throughout its history, Korean adoption reflects the stigmatization and
+lack of social and financial support that out-of-wedlock motherhood is
+associated with in the country. Furthermore, these adoption practices
+have undermined the construction of child welfare policies in the
+country and been complicit in the disenfranchisement of Korean women.
+Overall, the history of Korean adoption is closely intertwined with
+South Korea's postcolonial process of modernization and current wealth
+(H. Kim 2016, 36--37; Pate 2014), serving both economic and political
+ends. As Pate notes, adoption transformed "South Korea's social
+outcasts...into useful subjects for the state. As adoptees, they became
+economically profitable for South Korea and politically beneficial for
+the United States" (2014, 103). Thus, since its beginnings,
+transnational adoption has turned undesired, "excessive" populations
+into a site of economic profit generation (H. Kim 2016, 36--37; Pate
+2014, 118).
 
-^10^ Hortense Spillers (1987) first theorized the abstracting logic of
-enslavement as an erasure of the gender specificity of "the captive
-African female" who is reduced to a quantity of commodified "flesh" that
-fills a designated space within the hold of the slave ship. Elsewhere I
-argue that when Spillers extends her insight about the ungendering of
-"the captive African female" to the question of enslaved (re)production,
-she effectively illuminates the manner in which slave (re)production
-depended upon the world historic application of the logic of fungibility
-to *in vivo* bodily processes and human biological products. (In so
-doing, Spillers compels questions about the gender of contemporary
-(re)production. See next note). Hartman (1997) extends Spillers' ideas
-about "black" fungibility through examination of the ontological and
-epistemological violence to which women were subject during and after
-slavery. Afropessimists such as Frank Wilderson and Jared Sexton drill
-down on ontological violence through examination of the persistence of
-anti-blackness and the foreclosure of "black" subjectivity in the wake
-of slavery (Winnubst 2020, 105). Other recent scholarship on fungibility
-moves in more liberatory directions. C. Riley Snorton (2017)
-influentially argues that the ungendering of blackness that first
-transpires in Middle Passage can and should be linked to transness, and,
-conversely, transness to blackness. Tiffany Lethabo King (2019)
-powerfully attests that blackness is irreducible to the commodity form
-precisely because it is fungible. For Snorton and King, fungibility is
-defiant, a resource for insurgent, life-affirming identity formation. In
-the present essay, I build on Spillers to argue that a specifically
-(re)productive form of enslaved fungibility continues to violently
-subtend racial capitalist expansion. Elsewhere, I examine how attention
-to the ungendering of enslaved deepens our understanding of racial
-capitalism, opens up new questions about enslaved (re)production's
-gender dynamics, and, potentially, allows for more expansive
-conceptualization of Reproductive Justice (Weinbaum, forthcoming 2022;
-Weinbaum forthcoming; Ross and Solinger 2017).
+#### Erasing the Non-white Mother
 
-^11^ Though it is impossible in the limited space of the present essay
-to treat the implications of the ungendering of the enslaved that
-Spillers' (1987) essay opens up, suffice it to note that this
-ungendering ought to ideally inform theorization of (re)production.
-Whereas non-commodified reproductive labor is today feminized and thus
-denigrated, devalued, underpaid, and hyper-exploited, commodified
-(re)production (i.e., surrogacy, egg vending, etc.) is shaped *both* by
-the feminization of non-commodified reproduction *and* by the
-ungendering of the enslaved in ways that scholars of biocapitalism have
-yet to adumbrate.
+Second, during the British colonial rule in India, native mothers were
+seen as detrimental to children and stripped of all legal and social
+recognition as mothers. As opposed to an ideal white motherhood, native
+mothers were constructed as unfit to nurture the offspring of white men.
+The omission of their names in the colonial archive is mirrored in
+contemporary birth certificates of children born through surrogacy in
+India, which bear no trace of the surrogate mother. Furthermore, by
+freighting in concepts of racial medicalization, Indian surrogates
+become perceived as sites of risk and danger to the fetus they gestate
+(Deomampo 2016). This mode of thought illustrates a colonial episteme
+according to which the body is commodified through fragmentation. We
+argue that this episteme is manifested through the myth of the empty
+womb as separated from the self and the rest of the body and therefore
+possible to "rent." Such a construction implies "instituting artificial
+and rigid lines of separation between the Indian surrogate's womb and
+the rest of her body...between the biological and the affective,"
+pushing surrogates to "completely disengage from several critical
+aspects of their identities" (A. Banerjee 2014, 124). We understand this
+violent imposition to be made possible by the coloniality of power:
+through the non-recognition of the surrogate as fully human. While it
+can be argued that processes of fragmentation and commodification are
+mobilized in all commercial surrogacy arrangements, we nonetheless
+suggest that some racialized bodies are more easily seen as dispensable.
+Thus, the predominantly white, heterosexual parents who seek fertility
+treatment in India rely on the non-recognized reproductive labor of
+Indian surrogates (Gondouin 2014; Deomampo 2016; Gondouin,
+Thapar-Björkert, and Ryberg 2018).
 
-^12^ Berry argues that the terms "breeder" or "breeding wench" were
-largely descriptive as opposed to pejorative in the early antebellum
-period. It was only after the closure of the transatlantic trade that
-these terms were used to indicate the market value attributed to
-enslaved women (2017, 20--21). Throughout I have enclosed the terms
-"breeding" and "breeder" in quotations marks to indicate both their
-violence and pliability.
+Similarly, the erasure of the birth mother has been crucial throughout
+the history of transnational adoption. Kijicho'on women were constructed
+as immoral, unsuitable mothers and lacked legal rights to their
+children. The process of turning a mixed-race child into an adoptable
+orphan required the erasure of the native mother, a procedure that was
+institutionalized in the dominant practice of "hard" or plenary
+adoptions introduced in the 1960s, which grants the child a new birth
+certificate that replaces the birth parents with the adoptive parents.
+Thus, importantly, transnational adoption as a means through which white
+middle-class nuclear families and white heteronormative kinship are
+created and sustained depends on the invisibilized reproductive labor of
+the single/unwed/immoral/prostitute Korean birth mother (Eng 2010; Pate
+2014).
 
-^13^ Berry (2017) introduces the term "third party rape" to describe how
-enslaved women *and* men were used against their will by enslavers.
-Davis (1971), Hartman (1997), and Berry and Harris (2018) examine
-enslavers' use of myriad forms of sexual violence as racial terror.
+In her pioneering work on Korean birth mothers, Hosu Kim highlights "how
+racialized, working class, poor birth mothers in the Global South are
+disproportionately devalued and delimited to a woman's capacity to bear
+a life, while their opportunities to parent that life are severely
+curtailed" (2016, 9). This stratification of reproductive labor is
+visible in current geopolitical conflicts, such as the highly mediatized
+example of the Trump administration's "zero tolerance" policy at the
+US-Mexican border in 2018--2019, when children of asylum seekers were
+separated from their caregivers and placed in "tender age" government
+shelters, from which some of them entered the US foster care and
+adoption system (Briggs 2020). Laura Briggs (2020) underscores the broad
+mobilization against the policy, made possible by drawing parallels
+between the separations at the Southern border and histories of slavery.
+However, when the Trump administration strategically referred to
+immigrants as parents putting their children at risk (because of
+criminal records or neglectfulness), it resuscitated the historically
+familiar trope of Black and native women's lack of maternal feelings and
+deficient parenthood. Subsequently, the critique became more muted
+(Briggs 2020, 165--66). We argue that a coloniality of power framework
+enables us to problematize practices of adoption and fostering that
+privilege the rights of white parents, seen as "better families," at the
+expense of limiting the ability of non-white individuals *to parent*.
 
-^14^ Morgan demonstrates that planters' wills reveal their understanding
-of the importance of the transfer of reproductive assets to future
-generations and their investment in reproductive speculation (2004, 92).
-Berry argues that speculation on "future increase" was commonplace and
-that enslavers placed value on "preconception" (2017, Chapter 1).
+#### Saving Children from Brown Mothers: The White Savior
 
-^15^ Here I distinguish between dominant trends in scholarship on
-transnational reproduction and Black Feminist treatments of surrogacy in
-the US in the 1990s (Allen 1990, 1991; Cherry 2001; Rutherford 1992;
-Davis 1998; Williams 1991; Roberts 1997) that link surrogacy to slavery.
-Important recent contributions by the Race and Reproductivities Working
-Group showcased in a double issue of *Medical Anthropology* (Valdez and
-Deomampo 2019) also examine racialization in ways the depart from
-dominant trends in scholarship through focus on how "race materializes
-through biogenetic, phenotypic, and cultural imaginaries" (554) that
-shape reproductive markets.
+[Third, in colonial India, the trope of the white savior (Hughey 2014)
+enabled white men and women to occupy a moral high ground vis-à-vis the
+colonized subjects, thus aiding those perceived as "less fortunate"
+while simultaneously fulfilling the "white man's burden," "that
+reputable colonial malaise, that sanctioned the subjugating of entire
+continents'' (Kabbani 1994, 5--6). Though British women's experiences of
+imperialism were ambiguous, they were not the hapless onlookers of the
+empire, but complicit in upholding the idea of moral superiority and
+agents of civilization (Burton 1990), drawing "their capital from
+others' deprivation while refusing to accept \[their\] own position as
+endowed" (Chow 1993, 14). Chatterjee (1999a; 1999b) observes how British
+men purchasing children or female slaves perceived of their role as that
+of saviors, "rescuing" the native from a miserable life subjected to the
+cruelty of indigenous communities. As previous scholarship has
+highlighted, a similar rhetoric of rescue is often mobilized amongst
+commissioning parents contracting a woman from the Global South as their
+surrogate (]{.mark}Pande 2014; Rudrappa 2015; Deomampo 2016)[. Paying a
+poor woman for her service is seen as offering "help." This rhetoric has
+also been understood as a way to manage anxieties regarding the
+potential exploitation involved in surrogacy.]{.mark}
 
-^16^ Several scholars of surrogacy in India (Pande; Rudrappa) argue that
-surrogates ought to be regarded as "free" agents who "choose" to
-surrogate. Notably, enslaved women exercised profound forms of agency
-when they sought to shape or refuse their (re)productive enslavement,
-and yet no scholar of slavery argues they had free choice (Davis 1971;
-Hine 1979; Morgan 2004; Turner 2017; Weinbaum 2019).
+[In the case of transnational adoption, the trope of the white savior
+has been central since its inception in postwar Korea. The intersecting
+ideologies of race, gender, and sexuality that made Korean war orphans
+objects of rescue by American Christianism and anti-communism are
+reconfigured in contemporary media representations of adoption.
+Recurrent images of celebrities such as Angelina Jolie, Mia Farrow, or
+Lady Diana, "saving, rescuing, or adopting international children from
+underprivileged parts of the world" (Shome 2011, 389) construct a
+discourse of white women as "global mothers." Global motherhood is a
+specific, contemporary reconfiguration through which whiteness
+articulates a new universality drawing on Christian visual tropes and
+culturally specific contexts (Gondouin 2015). The availability of
+children for transnational adoption is presented as the result of the
+faulty motherhood of the birth mother, formulated in terms of a lack in
+modernity and structured by a logic of abandonment. This understanding
+"obscures the historical and political context...and positions white
+citizens as rescuers and racial others as beneficiaries, making...the
+attitude towards the other a question of mercy and compassion" (Gondouin
+2015, 106). In a previous study, we analyzed the critically acclaimed TV
+series *Top of the Lake: China Girl* (Campion 2017), and demonstrated
+how the discourse of global motherhood is enacted in the context of
+surrogacy, as the white female protagonists are represented as the
+saviors of passive and silenced Thai sex workers who are also surrogates
+(Gondouin,]{.mark} Thapar-Björkert, and Ryberg [2018).]{.mark}
 
-^17^ This is especially important in a context in which biological ideas
-of race resurface in genetic guise despite scientific consensus that
-race is not located in our genes (Reardon 2005; Weinbaum 2007; Roberts
-2011; TallBear 2013).
+[The trope of white saviors and white global motherhood is associated
+with the rhetoric of the gift, which is a significant component in
+narratives of transnational surrogacy. Pande (2014) has observed how a
+rhetoric of the gift serves a crucial role for surrogate mothers:
+understanding their labor as a gift becomes a strategy to resist the
+commodification entailed in commercial surrogacy. While both rescue and
+gift indicate logics that oppose systems of commodification, the notion
+of the gift, in contrast to rescue, implies reciprocity, which was
+interestingly actively resisted by the commissioning parents interviewed
+in Daisy Deomampo's (2016) study. We suggest that this refusal can be
+understood in the light of Maldonado-Torres's reading of colonial
+subjugation. Maldonado-Torres sees the condition of the colonized as
+equivalent to the "damné" (the condemned) in Franz Fanon's writing.
+Noting that there is an etymological relation between "damner" and
+"donner," he explicates the meaning of the damné as "literally the
+subject who cannot give because what he or she has has been taken away
+from him or her" (Maldonado-Torres 2007, 258). The reluctance of
+intended parents to recognize reciprocity articulates with an
+understanding of colonial subjugation as a mode of existence that makes
+gift-giving and generous reception impossible.]{.mark}
 
-^18^ Two of neoliberalism's most salient features are the burdening of
-individuals with excessive responsibility, and the hyper-exploitation of
-people of color. Both are buttressed by ascendance of ideologies of
-color-blindness and post-racialism (Harvey 2005; Brown 2003, 2006;
-Melamed 2011).
+### Conclusion
 
-^19^ In arguing that "blackness" is sublated in biocapitalism, I
-dialogue with scholars of biopower who regard racialization as a context
-bound and ever shifting form of dehumanization (Weheliye 2014; Mbembe
-2003). In exposing the Eurocentrism of foundational theories (Michel
-Foucault and Giorgio Agamben), Weheliye and Mbembe demonstrate that
-"blackness" is never the only racial cut or "caesura" (to use Foucault's
-original term) that generates the distinctions upon which biopower (and,
-here I add, biocapitalism) depends----distinctions between living beings
-entitled to full humanity and those denied it; and those between living
-beings who (in Foucault\'s formulation) are "made to live," and those
-who (in Agamben\'s formulation) may "be killed with impunity."
+[In this paper, we argue that the legacies of US imperialism and British
+colonial rule are reflected in Korean adoption and Indian surrogacy
+through three key mechanisms: the transformation of waste into profit,
+the devaluation and/or erasure of non-white mothers, and the trope of
+the white savior. The latter, with its potential ethical pitfalls,
+speaks to the observations of the Dutch governmental]{.mark}
+
+[report on intercountry adoption. Our analysis of the colonial/imperial
+regimes of reproductive labor in South Korea and India, two seemingly
+disparate bio- and geopolitical contexts, underscores the centrality of
+raced, sexed, classed, and ethnicized bodies as sites through which
+imperial/colonial power was imagined and exercised. Native women's
+bodies have historically been a subject of anxiety and surveillance for
+imperial officials, and their management crucial for social order and
+political stability. Our analysis further foregrounds how the narrative
+of modernity is supported in and through the violence(s) of coloniality:
+juxtaposing notions of freedom, success, and visibility with erasure,
+marginalization, and exploitation. We hope that our analysis has
+rendered visible histories of inequality that shape women's reproductive
+choices, alerting us to some of the ways in which imperial/colonial
+regimes of exploitation inform contemporary practices of globalized
+reproduction.]{.mark}
 
 ### References
 
-Allen, Anita L. 1990. "Surrogacy, Slavery and the Ownership of Life."
-*Harvard Journal of Law and Public Policy* 13 (1): 139--49.
+Ankestyrelsen, 2021. "Mistanke om ulovlige forhold i adoptioner fra
+Chile til Danmark 1978--1988" \[Suspicion of Illegal Conditions in
+Adoptions from Chile to Denmark 1978-1988\].
+[[https://www.ft.dk/samling/20201/almdel/sou/bilag/264/2380532.pdf]{.underline}](https://www.ft.dk/samling/20201/almdel/sou/bilag/264/2380532.pdf).
 
-----------. 1991. "The Black Surrogate Mother." *Harvard Blackletter
-Journal* 8: 17-31.
+Banerjee, Amrita. 2014. "Race and a Transnational Reproductive Caste
+System: Indian Transnational Surrogacy." *Hypatia* 28 (1): 113--28.
+[[https://doi.org/10.1111/hypa.12056]{.underline}](https://doi.org/10.1111/hypa.12056).
 
-Allen, Theodore W. 1994. *The Invention of the White Race*. Vol. 1,
-*Racial Oppression and Social Control*. London: Verso.
+Banerjee, Swapna M. 2010. "Blurring Boundaries, Distant Companions:
+Non‐Kin Female Caregivers for children in Colonial India (Nineteenth and
+Twentieth Centuries)." *Paedagogica Historica* 46 (6): 775--88.
+[[https://doi.org/10.1080/00309230.2010.526345]{.underline}](https://doi.org/10.1080/00309230.2010.526345).
 
-Baptist, Edward E. 2014. *The Half Has Never Been Told: Slavery and the
-Making of American Capitalism*. New York: Basic Books.
+Benard, Akeia A.F. 2016. "Colonizing Black Female Bodies within
+Patriarchal Capitalism: Feminist and Human Rights Perspectives."
+*Sexualization, Media & Society* 2 (4): 1--11.
+[[https://doi.org/10.1177/2374623816680622]{.underline}](https://doi.org/10.1177%2F2374623816680622).
 
-Beckles, Hilary McD. 1989. *Natural Rebels: A Social History of Enslaved
-Women in Barbados*. New Brunswick, NJ: Rutgers University Press.
+Bitter, Sabine, Annika Bangerter, and Nadja Ramsauer. 2020. "Adoptionen
+von Kindern aus Sri Lanka in der Schweiz 1973--1997: Zur Praxis der
+Privaten Vermittlungsstellen und der Behörden" \[Child Adoptions from
+Sri Lanka to Switzerland 1973-1997: On the Practice of Private Adoptions
+and the Authorities\]. Institut für Kindheit, Jugend und Familie.
+[[https://www.bj.admin.ch/dam/bj/de/data/gesellschaft/adoption/illegale-adoptionen/ber-zhaw-adoptionen-srilanka.pdf.download.pdf/ber-zhaw-adoptionen-srilanka-d.pdf]{.underline}](https://www.bj.admin.ch/dam/bj/de/data/gesellschaft/adoption/illegale-adoptionen/ber-zhaw-adoptionen-srilanka.pdf.download.pdf/ber-zhaw-adoptionen-srilanka-d.pdf).
 
-Berry, Daina Ramey. 2017. *The Price for Their Pound of Flesh: The Value
-of the Enslaved, from Womb to Grave, in the Building of a Nation*.
-Boston: Beacon Press.
+Briggs, Laura. 2012. *Somebody's Children: The Politics of Transracial
+and Transnational Adoption*. Durham, NC: Duke University Press.
 
-Berry, Daina Ramey, and Leslie M. Harris, eds. 2018. *Sexuality and
-Slavery: Reclaiming Intimate Histories in the Americas*. Athens, GA:
-University of Georgia Press.
+---------. 2020. *Taking Children: A History of American Terror*.
+Berkeley: University of California Press.
 
-Bhattacharya, Tithi, ed. 2017. *Social Reproduction Theory: Remapping
-Class, Recentering Oppression*. London: Pluto Press.
+Burton, Antoinette M. 1990. "The White Woman's Burden: British Feminists
+and the Indian Woman, 1865--1915." *Women's Studies International Forum*
+13 (4): 295--308.
+[[https://doi.org/10.1016/0277-5395(90)90027-U]{.underline}](https://doi.org/10.1016/0277-5395(90)90027-U).
 
-Birch, Kean, and David Tyfield. 2012. "Theorizing the Bioeconomy:
-Biovalue, Biocapital, and Bioeconomics or...What?" *Science Technology
-and Human Values* 38 (3): 299--327.
-[https://doi.org/10.1177/0162243912442398](https://doi.org/10.1177%2F0162243912442398).
+Campion, Jane, director. *Top of the Lake: China Girl.* April 15, 2017.
 
-Boris, Eileen, and Rhacel Salazar Parreñas. 2010. *Intimate Labors:
-Cultures, Technologies, and the Politics of Care*. Stanford, CA:
-Stanford University Press.
-
-Brown, Wendy. 2003. "Neo-liberalism and the End of Liberal Democracy."
-*Theory & Event* 7 (1). <https://muse.jhu.edu/article/48659>.
-
----------. 2006. "American Nightmare: Neoliberalism, Neoconservatism,
-and De-democratization." *Political Theory* 34 (6): 690--714.
-[https://doi.org/10.1177/0090591706293016](https://doi.org/10.1177%2F0090591706293016).
-
-Bush, Barbara. 1990. *Slave Women in Caribbean Society, 1650--1838.*
-Bloomington: Indiana University Press.
-
-Camp, Stephanie. 2004. *Closer to Freedom: Enslaved Women and Everyday
-Resistance in the Plantation South*. Chapel Hill: University of North
-Carolina Press.
-
-Carby, Hazel. 1987. *Reconstructing Womanhood: The Emergence of the
-Afro-American Woman Novelist*. New York: Oxford University Press.
-
-Cherry, April L. 2001. "Nurturing in the Service of White Culture:
-Racial Subordination, Gestational Surrogacy, and the Ideology of
-Motherhood." *Texas Journal of Women and the Law* 10 (2): 83--128.
-<https://heinonline.org/HOL/P?h=hein.journals/tjwl10&i=89>.
-
-Christian, Barbara. 1985. *Black Feminist Criticism: Perspective on
-Black Women Writers*. New York: Pergamon.
-
-Combahee River Collective. 1982. "A Black Feminist Statement." In *All
-the Women Are White, All the Black Are Men, But Some of Us Are Brave,*
-edited by Akasha (Gloria T.) Hull, Patricia Bell Scott, and Barbara
-Smith, 13-22. New York: Feminist Press.
-
-Cooper, Melinda. 2008. *Life as Surplus: Biotechnology and Capitalism in
-the Neoliberal Era*. Seattle: University of Washington Press.
-
-Cooper, Melinda, and Catherine Waldby. 2014. *Clinical Labor: Tissue
-Donors and Research Subjects in the Global Bioeconomy*. Durham, NC: Duke
-University Press.
-
-Day, Iyko. 2016. *Alien Capital: Asian Racialization and the Logic of
-Settler Colonial Capitalism*. Durham, NC: Duke University Press.
-
-Davies, Carole Boyce. 2008. *Left of Karl Marx: The Political Life of
-Black Communist Claudia Jones*. Durham, NC: Duke University Press.
-
-Davis, Angela. 1971. "Reflections on Black Women's Role in the Community
-of Slaves." *The Black Scholar* 3 (4): 2--15.
-<https://doi.org/10.1080/00064246.1971.11431201>.
-
----------. 1981. *Women, Race, and Class*. New York: Random House.
-
----------. 1998. "Surrogates and Outcast Mothers: Racism and
-Reproductive Politics in the Nineties." In *The Angela Y. Davis Reader,*
-edited by Joy James, 210--21. Malden, MA: Blackwell.
-
-Deomampo, Daisy. 2016. *Transnational Reproduction: Race, Kinship and
-Commercial Surrogacy in India*. New York: New York University Press.
-
-Dickenson, Donna. 2008. *Body Shopping: The Economy Fueled by Flesh and
-Blood*. Oxford: Oneworld.
-
-Franklin, Sarah. 2007. *Dolly Mixtures: The Remaking of Genealogy*.
-Durham, NC: Duke University Press.
-
----------. 2013. *Biological Relatives: IVF, Stem Cells and the Future
-of Kinship*. Durham, NC: Duke University Press.
-
-Franklin, Sarah, and Margaret Lock. 2003. "Animation and Cessation: The
-Remaking of Life and Death." In *Remaking Life and Death: Toward an
-Anthropology of Biosciences*, 3--22. Santa Fe, NM: School of American
-Research Press.
-
-Federici, Silvia. 2012. *Revolution at Point Zero: Housework,
-Reproduction, and Feminist Struggle*. Oakland: PM Press.
-
-Fuentes, Marisa J. 2016. *Dispossessed Lives: Enslaved Women, Violence
-and the Archive.* Philadelphia: University of Pennsylvania Press.
-
-Haley, Sarah. 2016. *No Mercy Here: Gender, Punishment, and the Making
-of Jim Crow Modernity*. Chapel Hill: University of North Carolina Press.
-
-Harrison, Laura. 2016. *Brown Bodies, White Babies: The Politics of
-Cross-Racial Surrogacy*. New York: New York University Press.
-
-Hartman, Saidiya. 1997. *Scenes of Subjection: Terror, Slavery, and
-Self-Making in Nineteenth-Century America.* New York: Oxford University
-Press.
-
----------. 2007. *Lose Your Mother: A Journey Along the Atlantic Slave
-Route*. New York: Farrar, Straus and Giroux.
-
-Harvey, David. 2005. *A Brief History of Neoliberalism*. New York:
+Chatterjee, Indrani. 1999a. "Colouring Subalternity: Slaves, Concubines
+and Social Orphans in Early Colonial India." In *Subaltern Studies X,*
+edited by Gautam Bhadra, Gyan Prakash, and Susie Tharu, 49--98. Delhi:
 Oxford University Press.
 
-Hine, Darlene C. 1979. "Female Slave Resistance: The Economics of Sex."
-*Western Journal of Black Studies* 3 (2): 123--27.
+---------. 1999b. *Gender, Slavery and the Law in Colonial India*.
+Oxford: Oxford University Press.
 
-Hochschild, Arlie Russell. 2012. *The Outsourced Self: Intimate Life in
-Market Times*. New York: Metropolitan Books.
+Chaudhuri, Nupur. 1988. "Memsahibs and Motherhood in Nineteenth-Century
+Colonial India." *Victorian Studies* 31 (4): 517--35.
+[[https://www.jstor.org/stable/3827855]{.underline}](https://www.jstor.org/stable/3827855).
 
-Johnson, Walter. 1999. *Soul by Soul: Life inside the Antebellum Slave
-Market*. Cambridge, MA: Harvard University Press.
+---------. 1994. "Memsahibs and Their Servants in Nineteenth-Century
+India." *Women's History Review* 3 (4): 549--62.
+[[https://doi.org/10.1080/09612029400200071]{.underline}](https://doi.org/10.1080/09612029400200071).
 
----------. 2013. *River of Dark Dreams: Slavery and Empire in the Cotton
-Kingdom*. Cambridge, MA: Harvard University Press.
+Cho, Grace M. 2008. *Haunting the Korean Diaspora: Shame, Secrecy and
+the Forgotten War*. Minneapolis: University of Minnesota Press.
 
-Jung, Moon-Ho. 2006. *Coolies and Cane: Race, Labor, and Sugar in the
-Age of Emancipation*. Baltimore: Johns Hopkins University Press.
+Chow, Rey. 1993. *Writing Diaspora: Tactics of Intervention in
+Contemporary Cultural Studies*. Bloomington: Indiana University Press.
 
-King, Tiffany Lethabo. 2019. *The Black Shoals Offshore Formations of
-Black and Native Studies*. Durham, NC: Duke University Press.
+Colen, Shellee. 1995. "'Like a Mother to Them': Stratified Reproduction
+and West Indian Childcare Workers and Employers in New York." In
+*Conceiving the New World Order: The Global Politics of Reproduction,*
+edited by Faye D. Ginsburg and Rayna Rapp, 78--102. Berkeley: University
+of California Press.
 
-Lowe, Lisa. 2015. *Intimacies of Four Continents*. Durham, NC: Duke
+Collins, Patricia Hill. 1990. *Black Feminist Thought: Knowledge,
+Consciousness and the Politics of Empowerment*. New York: Routledge.
+
+Cott, Nancy F. 1978. "Passionlessness: An Interpretation of Victorian
+Sexual Ideology, 1790--1850." *Signs* 4 (2): 219--36.
+[[https://doi.org/10.1086/493603]{.underline}](https://doi.org/10.1086/493603).
+
+Deomampo, Daisy. 2016. *Transnational Reproduction: Race, Kinship and
+Commercial Surrogacy in India*. New York: NYU Press.
+
+Eng, David L. 2010. *The Feeling of Kinship: Queer Liberalism and the
+Racialization of Intimacy*. Durham, NC: Duke University Press.
+
+Ghosh, Durba. 2006. *Sex and the Family in Colonial India: The Making of
+Empire*. Cambridge: Cambridge University Press.
+
+Gondouin, Johanna. 2014. "Gay Fathers, Surrogate Mothers, and the
+Question of the Human: A Postcolonial Feminist Analysis of Emotions in
+*Barn till varje pris?"* *Lambda Nordica* 19 (3--4): 109--39.
+[[https://www.lambdanordica.org/index.php/lambdanordica/article/view/429/408]{.underline}](https://www.lambdanordica.org/index.php/lambdanordica/article/view/429/408).
+
+---------. 2015. "Global Feminist Motherhood: On Single Mother Adoption
+and White Femininity in a Swedish Media Context." In *Critical Kinship
+Studies,* edited by Charlotte Kroløkke, Lene Myong, Stine W. Adrian, and
+Tine Tjørnhøj-Thomsen, 101--16. London: Rowman & Littlefield
+International.
+
+Gondouin, Johanna, Suruchi Thapar-Björkert, and Ingrid Ryberg. 2018.
+"White Vulnerability and the Politics of Reproduction in *Top of the
+Lake: China Girl*." In *The Power of Vulnerability: Mobilizing Affect in
+Feminist, Queer and Antiracist Media Cultures*, edited by Anu Koivunen,
+Katariina Kyrölä, and Ingrid Ryberg, 116--32. Manchester: Manchester
 University Press.
 
-Mbembe, Achille. 2003. "Necropolitics." Translated by Libby Meintjes.
-*Public Culture* 15 (1): 11--40.
-<https://doi.org/10.1215/9781478007227-004>.
+Government of the Netherlands, Committee on the Investigation of
+Intercountry Adoption. 2021. *Committee on the Investigation of
+Intercountry Adoption, Unofficial Translation \[Joustra Report\]*.
+[[https://www.againstchildtrafficking.org/wp-content/uploads/ENG_Translation_COlA_Report.pdf]{.underline}](https://www.againstchildtrafficking.org/wp-content/uploads/ENG_Translation_COlA_Report.pdf)
 
-Melamed, Jodi. 2011. *Represent and Destroy: Rationalizing Violence in
-the New Racial Capitalism*. Minneapolis: University of Minnesota Press.
+Hughey, Matthew W. 2014. *The White Savior Film: Content, Critics and
+Consumption*. Philadelphia: Temple University Press.
 
----------. 2015. "Racial Capitalism." *Critical Ethnic Studies* 1 (1):
-76--85. <https://doi.org/10.5749/jcritethnstud.1.1.0076>.
+Hübinette, Tobias. 2006. *Comforting an Orphaned Nation: Representations
+of International Adoption and Adopted Koreans in Korean Popular
+Culture*. Seoul: Jimoondang.
 
-Mies, Maria. 1986. *Patriarchy and Accumulation on a World Scale: Women
-in the International Division of Labor*. London: Zed Books.
+Hyam, Ronald. 1990. *Empire and Sexuality: The British Experience.*
+Manchester: Manchester University Press.
 
-Morgan, Jennifer L. 2004. *Laboring Women: Reproduction and Gender in
-New World Slavery*. Philadelphia: University of Pennsylvania Press.
+Kabbani, Rana. 1994. *Imperial Fictions: Europe's Myths of the Orient*.
+London: Pandora.
 
----------. 2018. "Partus Sequitur Ventrem: Law, Race and Reproduction in
-Colonial Slavery." *Small Axe* 22 (1): 1--17.
-[https://www.muse.jhu.edu/article/689365](https://muse.jhu.edu/article/689365).
+Kim, Eleana J. 2010. *Adopted Territory: Transnational Korean Adoptees
+and the Politics of Belonging*. Durham, NC: Duke University Press.
 
-Nahman, Michal Rachel. 2013. *Extractions: An Ethnography of
-Reproductive Tourism*. New York: Palgrave Macmillan.
+Kim, Hosu. 2016. *Birth Mothers and Transnational Adoption Practice in
+South Korea: Virtual Mothering*. New York: Palgrave Macmillan.
+
+Kim, Jodi. 2009. "An 'Orphan' with Two Mothers: Transnational and
+Transracial Adoption, the Cold War and Contemporary Asian American
+Cultural Politics." *American Quarterly* 61 (4): 855--80.
+[[https://doi.org/
+10.1353/aq.0.0110]{.underline}](https://doi.org/10.1353/aq.0.0110).
+
+Klein, Christina. 2003. *Cold War Orientalism: Asia in the Middlebrow
+Imagination, 1945--1961*. Berkeley: University of California Press.
+
+Lowe, Lisa. 2015. *The Intimacies of Four Continents*. Durham, NC: Duke
+University Press.
+
+Lugones, María. 2008. "The Coloniality of Gender." *Worlds & Knowledges
+Otherwise* 2 (Spring): 1--17.
+<https://globalstudies.trinity.duke.edu/sites/globalstudies.trinity.duke.edu/files/documents/v2d2_Lugones.pdf>.
+
+Maldonado-Torres, Nelson. 2017. "Frantz Fanon and the Decolonial Turn in
+Psychology: From Modern/Colonial Methods to the Decolonial Attitude."
+*South African Journal of Psychology* 47 (4): 432--41.
+[[https://doi.org/10.1177/0081246317737918]{.underline}](https://doi.org/10.1177%2F0081246317737918).
+
+McClintock, Anne. 1995. *Imperial Leather: Race, Gender, and Sexuality
+in the Colonial Context*. New York: Routledge.
+
+Mignolo, Walter. 2011. *The Darker Side of Western Modernity: Global
+Futures, Decolonial Options*. Durham, NC: Duke University Press.
+
+Moon, Katharine H.S. 1997. *Sex among Allies: Military Prostitution in
+U.S.--Korea Relations*. New York: Columbia University Press.
+
+Nelsen, Aaron. 2021. "I Just Needed to Find My Family: The Scandal of
+Chile's Stolen Children." *The Guardian*, January 26, 2021.
+[[https://www.theguardian.com/news/2021/jan/26/chile-stolen-children-international-adoption-sweden]{.underline}](https://www.theguardian.com/news/2021/jan/26/chile-stolen-children-international-adoption-sweden).
+
+Nussbaum, Felicity A. 1995. *Torrid Zones Maternity, Sexuality, and
+Empire in Eighteenth-Century English Narratives*. Baltimore and London:
+The Johns Hopkins University Press.
+
+Oh, Arissa. H. 2015. *To Save the Children of Korea: The Cold War
+Origins of International Adoption*. Stanford, CA: Stanford University
+Press.
+
+Okazawa-Rey, Margo. 1997. "Amerasian Children of GI Town: A Legacy of
+U.S. Militarism in South Korea." *Asian Journal of Women's Studies* 3
+(1): 71--102.
+[[https://doi.org/10.1080/12259276.1997.11665787]{.underline}](https://doi.org/10.1080/12259276.1997.11665787).
 
 Pande, Amrita. 2014. *Wombs in Labor: Transnational Commercial Surrogacy
 in India*. New York: Columbia University Press.
 
-Parry, Bronwyn, and Rakhi Ghoshal. 2018. "Regulation of Surrogacy in
-India: Whenceforth Now?" *BMJ Global Health*.
-<http://doi.org/10.1136/bmjgh-2018-000986>.
+Park Nelson, Kim. 2006. "Shopping for Children in the International
+Market Place." In *Outsiders Within: Writings on Transracial Adoption*,
+edited by Jane Jeong Trenka, Julia Chinyere Oparah, and Sun Yung Shin,
+89-104. Boston: South End Press.
 
-Patterson, Orlando. 1982. *Slavery and Social Death: A Comparative
-Study*. Cambridge, MA: Harvard University Press.
+Pate, SooJin. 2014. *From Orphan to Adoptee: U.S. Empire and Genealogies
+of Korean Adoption*. Minneapolis: University of Minnesota Press.
 
-Reardon, Jenny. 2005. *Race to the Finish: Identity and Governance in an
-Age of Genomics*. Princeton, NJ: Princeton University Press.
-
-Roberts, Dorothy E. 1997*. Killing the Black Body: Race, Reproduction,
-and the Meaning of Liberty*. New York: Pantheon.
-
----------. 2011. *Fatal Invention: How Science, Politics and Big
-Business Re-create Race in the Twenty-First Century*. New York: New
+Procida, Mary A. 2002. *Married to the Empire: Gender Politics and
+Imperialism in India, 1883--1947*. Manchester: Manchester University
 Press.
 
-Robinson, Cedric. 1983. *Black Marxism: The Making of the Black Radical
-Tradition*. Chapel Hill: University of North Carolina Press.
+Quijano, Aníbal. 2000. "Coloniality of Power and Eurocentrism in Latin
+America." *International Sociology* 15 (2): 215--32.
+[[https://doi.org/10.1177/0268580900015002005]{.underline}](https://doi.org/10.1177%2F0268580900015002005).
 
-Roediger, David. 1991. *The Wages of Whiteness: Race and the Making of
-the American Working Class*. London: Verso.
+---------. 2007. "Coloniality and Modernity/Rationality." *Cultural
+Studies* 21 (2--3): 168--78.
+[<https://doi.org/10.1080/09502380601164353>.]{.underline}
 
-Ross, Loretta, and Rickie Solinger. 2017. *Reproductive Justice: An
-Introduction*. Oakland: University of California Press.
+Raleigh, Elizabeth. 2018. *Selling Transracial Adoption: Families,
+Markets, and the Color Line*. Philadelphia: Temple University Press.
 
 Rudrappa, Sharmila. 2015. *Discounted Life: The Price of Global
-Surrogacy in India*. New York: New York University Press.
+Surrogacy in India*. New York: NYU Press.
 
-Rutherford, Charlotte. 1992. "Reproductive Freedoms and African American
-Women." *Yale Journal of Law and Feminism* 4 (2): 255--90.
-<https://digitalcommons.law.yale.edu/yjlf/vol4/iss2/3/>.
+---------. 2018. "Reproducing Dystopia: The Politics of Transnational
+Surrogacy in India, 2002--2015." *Critical Sociology* 44 (7--8):
+1087--101.
+[[https://doi.org/10.1177/0896920517740616]{.underline}](https://doi.org/10.1177%2F0896920517740616).
 
-Smallwood, Stephanie E. 2004. "Commodified Freedom: Interrogating the
-Limits of Anti-Slavery Ideology in the Early Republic." *Journal of the
-Early Republic* 24 (2): 289--98.
-<https://doi.org/10.9783/9780812207231.139>.
+Sakai, Naoki. 2010. "Theory and Asian Humanity: On the Question of
+*Humanitas* and *Anthropos*." *Postcolonial Studies* 13 (4): 441--64.
+[[https://doi.org/10.1080/13688790.2010.526539]{.underline}](https://doi.org/10.1080/13688790.2010.526539).
 
----------. 2007. *Saltwater Slavery: A Middle Passage from Africa to
-American Diaspora*. Cambridge, MA: Harvard University Press.
+Sen, Indrani. 2009. "Colonial Domesticities, Contentious Interactions:
+Ayahs, Wet-Nurses and Memsahibs in Colonial India." *Indian Journal of
+Gender Studies* 16 (3): 299--328.
+[[https://doi.org/10.1177/097152150901600301]{.underline}](https://doi.org/10.1177%2F097152150901600301).
 
----------. 2019. "Reflections on Settler Colonialism, the Hemispheric
-Americas, and Chattel Slavery." *William and Mary Quarterly* 76 (3):
-407--16. <https://doi.org/10.5309/willmaryquar.76.3.0407>.
+Shin, Hyonhee. 2020. "South Korea's Birth Rate World's Lowest in
+Struggle for Balance: Report." *Reuters*, June 30, 2020.
+[[https://www.reuters.com/article/us-southkorea-women/south-korean-birth-rate-worlds-lowest-in-struggle-for-balance-report-idUSKBN2410YR]{.underline}](https://www.reuters.com/article/us-southkorea-women/south-korean-birth-rate-worlds-lowest-in-struggle-for-balance-report-idUSKBN2410YR).
 
-Snorton, C. Riley. 2017. *Black on Both Sides: A Racial History of Trans
-Identity.* Minneapolis: University of Minnesota Press.
+Shome, Raka. 2011. "'Global Motherhood': The Transracial Intimacies of
+White Femininity." *Critical Studies in Media Communication* 28 (5):
+388--406.
+[[https://doi.org/10.1080/15295036.2011.589861]{.underline}](https://doi.org/10.1080/15295036.2011.589861).
 
-Spar, Debora. 2006. *The Baby Business: How Money, Science, and Politics
-Drive the Commerce of Conception*. Boston: Harvard Business School.
+Sköld, Josefin, and Lundberg, Patrik. 2021a. "De sa: Ditt barn kommer
+bli olyckligt om du behåller det" \["They Said: Your Child will be
+Unhappy if you Keep It"\]. *Dagens Nyheter*, June 20, 2021.
+[[https://www.dn.se/varlden/de-sa-ditt-barn-kommer-bli-olyckligt-om-du-behaller-det/]{.underline}](https://www.dn.se/varlden/de-sa-ditt-barn-kommer-bli-olyckligt-om-du-behaller-det/).
 
-Spillers, Hortense J. 1987. "Mama's Baby, Papa's Maybe: An American
-Grammar Book." *Diacritics* 17 (2): 65--81.
-<https://doi.org/10.2307/464747>.
+---------. 2021b. "Riksdagen körde över regeringen om utredning av
+internationella adoptioner" \["The Parliament Ran over the Government
+Regarding Investigation of International Adoptions"\]. *Dagens Nyheter*,
+June 15, 2021.
+[[https://www.dn.se/sverige/riksdagen-korde-over-regeringen-om-utredning-av-internationella-adoptioner/]{.underline}](https://www.dn.se/sverige/riksdagen-korde-over-regeringen-om-utredning-av-internationella-adoptioner/).
 
-Sweeney, Shauna. 2021. "Gendering Capitalism and the Black Heretical
-Tradition." In *Histories of Racial Capitalism,* edited by Dustin
-Jenkins and Justin Leroy, 53--83. New York: Columbia University Press.
+Smolin, David M. 2006. "Child Laundering: How the Intercountry Adoption
+System Legitimizes and Incentivizes the Practices of Buying,
+Trafficking, Kidnapping, and Stealing Children." *Wayne Law Review* 52
+(1): 113--200. <https://law.bepress.com/expresso/eps/749/>.
 
-*Oxford English Dictionary*. 2019. S.v. "Sublate." 3rd ed. Accessed
-online.
+---------. 2010. "Child Laundering and the Hague Convention on
+Intercountry Adoption: The Future and Past of Intercountry Adoption."
+*University of Louisville Law Review* 48 (3): 441--98.
+[[http://works.bepress.com/david_smolin/8/]{.underline}](http://works.bepress.com/david_smolin/8/).
 
-TallBear, Kim. 2013. *Native American DNA: Tribal Belonging and the
-False Promise of Genetic Science*. Minneapolis: University of Minnesota
+SOU 2003:49*. Adoption -- till vilket pris?* \[Adoption - But at What
+Price?\] Stockholm: Socialdepartementet.
+
+Stoler, Ann Laura. 1989. "Making Empire Respectable: The Politics of
+Race and Sexual Morality in 20^th^-Century Colonial Cultures." *American
+Ethnologist* 16 (4): 634--60.
+[[https://doi.org/10.1525/ae.1989.16.4.02a00030]{.underline}](https://doi.org/10.1525/ae.1989.16.4.02a00030)
+
+---------. 2010. *Carnal Knowledge and Imperial Power: Race and the
+Intimate in Colonial Rule*. Berkeley: University of California Press.
+
+Trenka, Jane Jeong, Julia Chinyere Oparah, and Sun Yung Shin, eds. 2006.
+*Outsiders Within: Writings on Transracial Adoption*. Boston: South End
 Press.
 
-Turner, Sasha. 2017. *Contested Bodies: Pregnancy, Childbearing, and
-Slavery in Jamaica*. Philadelphia: University of Pennsylvania Press.
-
-Twine, France Widdance. 2011. *Outsourcing the Womb: Race, Class, and
+Twine, France Widdance. 2011. *Outsourcing the Womb: Race, Class and
 Gestational Surrogacy in a Global Market*. New York: Routledge.
 
-Vora, Kalindi. 2015. *Life Support: Biocapital and the New History of
-Outsourced Labor*. Minneapolis: University of Minnesota Press.
+Vora, Kalindi. 2009. "Indian Transnational Surrogacy and the
+Commodification of Vital Energy." *Subjectivity* 28 (1): 266--78.
+[[https://doi.org/10.1057/sub.2009.14]{.underline}](https://doi.org/10.1057/sub.2009.14).
 
-Valdez, Natali, and Daisy Deomampo. 2019. "Centering Race and Racism in
-Reproduction." *Medical Anthropology* 38 (7): 551--59.
-<https://doi.org/10.1080/01459740.2019.1643855>.
+---------. 2015. "Re-imagining Reproduction: Unsettling Metaphors in the
+History of Imperial Science and Commercial Surrogacy in India."
+*Somatechnics* 5 (1): 88--103.
+[[https://doi.org/10.3366/soma.2015.0149]{.underline}](https://doi.org/10.3366/soma.2015.0149).
 
-Vertommen, Sigrid. 2017. "Babies from Behind the Bars: Stratified
-Assisted Reproduction in Israel/Palestine." In *Assisted Reproduction in
-Movement Standarization and Renegotiation,* edited by Merete Lie and
-Nina Lykke, 207--18. New York: Routledge.
+Weinbaum, Alys Eve. 2019. *The Afterlife of Reproductive Slavery:
+Biocapitalism and Black Feminism's Philosophy of History*. Durham, NC:
+Duke University Press.
 
-Vertommen, Sigrid, Vincenzo Pavone, and Michal Nahman. 2021. "Global
-Fertility Chains: An Integrative Political Economy Approach to
-Understanding the Reproductive Bioeconomy." *Science, Technology and
-Human Value*. <https://doi.org/10.1177%2F0162243921996460>.
+Wilson, Kalpana. 2018. "Reproductive Justice in an Ara of Gates and
+Modi: The Violence of India's Population Policies." *Feminist Review*
+119 (1): 89--105.
+[[https://doi.org/10.1057/s41305-018-0112-0]{.underline}](https://doi.org/10.1057%2Fs41305-018-0112-0).
 
-Waldby, Catherine, and Robert Mitchell. 2006. *Tissue Economies: Blood,
-Organs, and Cell Lines in Late Capitalism*. Durham, NC: Duke University
-Press.
+Wynter, Sylvia. 2003. "Unsettling the Coloniality Of
+Being/Power/Truth/Freedom: Towards the Human, After Man, Its
+Overrepresentation---An Argument." 23*CR: The New Centennial Review* 3
+(3): 257--337.
+[[https://doi.org/10.1353/ncr.2004.0015]{.underline}](https://doi.org/10.1353/ncr.2004.0015).
 
-Wallerstein, Immanuel. 2004. *World Systems Analysis*. Durham, NC: Duke
-University.
+### Author Bios
 
-Weheliye, Alexander G. 2014. *Habeas Viscus: Racializing Assemblages,
-Biopolitics, and Black Feminist Theories of the Human*. Durham, NC: Duke
-University Press.
+**Johanna Gondouin** is an Assistant professor of Gender Studies at
+Linköping University.
 
-Weinbaum, Alys E. 1994. "Marx, Irigaray, and the Politics of
-Reproduction." *Differences* 6 (1): 98--128.
-<https://doi.org/10.2307/j.ctv47wcjp.17>.
-
----------. 2007. "Racial Aura: Walter Benjamin and the Work of Art in a
-Biotechnological Age." *Literature and Medicine* 26 (1): 207--39.
-[https://doi.org/
-10.1353/lm.2008.0011](https://doi.org/10.1353/lm.2008.0011).
-
----------. 2019. *The Afterlife of Reproductive Slavery: Biocapitalism
-and Black Feminism\'s Philosophy of History*. Durham, NC: Duke
-University Press.
-
----------. Forthcoming. 2022. "Ungendering Intersectionality and
-Reproductive Justice, Returning to Hortense Spillers." In *The Routledge
-Companion to Intersectionality,* edited by Jennifer C. Nash and Samantha
-Pinto. New York: Routledge.
-
-----------. Forthcoming. "Racial Capitalism and Reproductive
-Accumulation." *History of the Present: A Journal of Critical History*.
-
-White, Deborah Gray. 1985. *Ar'n't I a Woman? Female Slaves in the
-Plantation South*. New York: Norton.
-
-Williams, Patricia J. 1991. *The Alchemy of Race and Rights: Diary of a
-Law Professor*. Cambridge, MA: Harvard University Press.
-
-Winnubst, Shannon. 2020. "The Many Lives of Fungibility: Anti-Blackness
-in Neoliberal Times." *Journal of Gender Studies* 29 (1): 102--112.
-[[https://doi.org/10.1080/09589236.2019.1692193]{.underline}](https://doi.org/10.1080/09589236.2019.1692193).
-
-### Author Bio
-
-**Alys Eve Weinbaum** is a professor of English at the University of
-Washington. She is author, most recently, of *The Afterlife of
-Reproductive Slavery: Biocapitalism and Black Feminism's Philosophy of
-History* (Duke University Press, 2019). Her work contributes to the
-history of racial capitalism and the cultures and politics of human
-reproduction that both subtend and refuse it.
+**Suruchi Thapar-Björker** is a Senior Lecturer and Docent in the
+Department of Government at Uppsala University.
