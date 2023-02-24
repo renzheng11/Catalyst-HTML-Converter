@@ -17,13 +17,16 @@ import os
 
     # Manual changes
         # - Change article type before title (ex. special spection, original research, etc.)
+        # - Do not put quote marks (single or double) in alt-text (need to add manually to html after conversion)
 
     # Checklist for docx
         # - List of keywords should be normal body text (not a heading)
         # - Quotes should be in Heading 7 style
             # - If more than one quote in a row, they both need Heading 7 Style separately
-        # - Do not put quote marks (single or double) in alt-text
+        # - Do not put quote marks (single or double) in alt-text (need to add manually to html after conversion)
         # - Correct spacing in between each item
+        # - Empty lines should be normal body text style
+        # - Line break between photo and figure
 
     # if there are issues with text formatting, go through checklist for docx and reconvert to md then rerun script 
     # if there are outlying issues with text content, search for it in html to change it
@@ -53,7 +56,7 @@ def styleText(text, lastSection):
     if searchResult: #found match
         matchList = re.findall(markPattern, text)
         for item in matchList:
-            text = item.strip("[").replace(r"]{.mark}", "")
+            text = text.strip("[").replace(r"]{.mark}", "")
 
     # Replace link
     # [[link]{.underline}](link).
@@ -85,27 +88,27 @@ def styleText(text, lastSection):
 
     # Replace second link pattern
     # [link](link).
-    linkPattern = "\[.*\]\(.*\)"
-    searchResult = re.search(linkPattern, text)
-    if searchResult:
-        matchList = re.findall(linkPattern, text)
-        parenPattern = "\(.*\)"
-        for item in matchList:
-            # replace extra
-            itemPattern = "\s*\[.*\]\(.*\)*"
-            replacement = ""
-            text = re.sub(itemPattern, replacement, text)
+    # linkPattern = "\[.*\]\(.*\)"
+    # searchResult = re.search(linkPattern, text)
+    # if searchResult:
+    #     matchList = re.findall(linkPattern, text)
+    #     parenPattern = "\(.*\)"
+    #     for item in matchList:
+    #         # replace extra
+    #         itemPattern = "\s*\[.*\]\(.*\)*"
+    #         replacement = ""
+    #         text = re.sub(itemPattern, replacement, text)
 
-            # get link
-            searchResult = re.search(parenPattern, item)
-            if searchResult:
-                matchList = re.findall(parenPattern, item)
-                for item in matchList:
-                    link = item.strip("()")
+    #         # get link
+    #         searchResult = re.search(parenPattern, item)
+    #         if searchResult:
+    #             matchList = re.findall(parenPattern, item)
+    #             for item in matchList:
+    #                 link = item.strip("()")
         
-            text += f"""
-                <a href={link}>{link}</a>.</p>
-                """
+    #         text += f"""
+    #             <a href={link}>{link}</a>.</p>
+    #             """
 
     # Replace three --- em dash —
     dashPattern = "---"
@@ -141,15 +144,16 @@ def styleText(text, lastSection):
             text = re.sub(itemPattern, replacement, text)
 
     # Replace "quote marks" with “quote marks”
-    quotePattern = "\"[^\x22]+\""
-    searchResult = re.search(quotePattern, text)
-    if searchResult: #found match
-        matchList = re.findall(quotePattern, text)
+    # quotePattern = "\"[^\x22]+\""
+    # searchResult = re.search(quotePattern, text)
+    # if searchResult: #found match
+    #     matchList = re.findall(quotePattern, text)
 
-        for item in matchList:
-            itemPattern = '\"' + item.strip("\"") + '\"'
-            replacement = "“" + item.strip("\"") + "”"
-            text = re.sub(itemPattern, replacement, text)
+    #     for item in matchList:
+    #         print("[beg] " + item + "\n")
+    #         itemPattern = '\"' + item.strip("\"") + '\"'
+    #         replacement = "“" + item.strip("\"") + "”"
+    #         text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of ^superscripts^ (not notes)
     superPattern = "\^[^\d]{2}\^"
@@ -181,6 +185,17 @@ def styleText(text, lastSection):
         for item in matchList:
             itemPattern = '\*\*' + item.strip("**") + '\*\*'
             replacement = "<strong>" + item.strip("**") + "</strong>"
+            text = re.sub(itemPattern, replacement, text)
+
+    # Replace instances of ~~strike~~ text
+    strikePattern = "~~([^~]*)~~"
+    searchResult = re.search(strikePattern, text)
+    if searchResult: #found match
+        matchList = re.findall(strikePattern, text)
+
+        for item in matchList:
+            itemPattern = '~~' + item.strip("~~") + '~~'
+            replacement = "<del>" + item.strip("~~") + "</del>"
             text = re.sub(itemPattern, replacement, text)
 
     # Replace instances of *italic* text
@@ -253,6 +268,7 @@ def readContents(last, md, html, authors):
     active = True
     itemtext = ""
     global inList
+    onFig = 1
 
     while active:
         #read next line
@@ -304,19 +320,9 @@ def readContents(last, md, html, authors):
         if line.count("#######"):
             line = line.strip("####### ")
             contents += f'<p class=quotes>{line}'
-
-            # print("[beg]" + md.readline() + "[end]")
-            # print("[beg]" + md.readline() + "[end]")
-            # print("[beg]" + md.readline() + "[end]")
-            # print("[beg]" + md.readline() + "[end]")
-
-            count = 0 
             while True:
                 line = md.readline()
-                print("[beg]" + line + "[end]")
-                count += 1
                 if line.strip() == "":
-                    print("breaking")
                     break
                 contents += line + " "
 
@@ -326,17 +332,19 @@ def readContents(last, md, html, authors):
         fileName = authors[0][0].split(" ")[1].lower()
         if line.count("![") == 1:
             contents += f"""</p>
-            <img src="{fileName}1.jpg" class="figure" alt='
+            <img src="{fileName}{onFig}.jpg" class="figure" alt='
             """ + line.strip("![")
+
+            onFig += 1
             
             # start reading
             inAlt = True
             while inAlt:
                 line = md.readline()
                 if line.count("]") == 1: # end of alt text
-                    line = line.split("]")[0]
-                    contents += line +  "'" + '>'
-                    photoZ = True
+                    if (line.count("width=") != 0):
+                        line = line.split("]")[0]
+                        contents += line +  "'" + '>'
                     break
                 else:
                     contents += line + " "
@@ -526,6 +534,7 @@ def writeRefs(md, html):
     return
 
 def convertToHTML(file, lastSection):
+
     #---------start regex filtering and html writing--------
 
     fileName = str(file).strip(".md")
@@ -879,16 +888,19 @@ def convertToHTML(file, lastSection):
             #if lastSection matches sectionTitle
             if re.match(sectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
+                lastSection = styleText(lastSection, lastSection)
                 html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
             #if lastSection matches subsectionTitle
             elif re.match(subsectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
+                lastSection = styleText(lastSection, lastSection)
                 html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
             #if lastSection matches subsubsectionTitle
             elif re.match(subsubsectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
+                lastSection = styleText(lastSection, lastSection)
                 html.write(f"""<p class="c1 sub_subsectionTitle">{lastSection}</p>""")
 
             # write body text under section title
@@ -919,7 +931,6 @@ def convertToHTML(file, lastSection):
         for line in md:
             # until end of file
             lineNum += 1
-
 
             if line == "\n" and lineNum > 2:
                 authorBio += "<br><br>"
