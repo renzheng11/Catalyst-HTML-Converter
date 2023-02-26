@@ -1,7 +1,7 @@
 
 # ---------------------------
 # Author: Ren Zheng
-# rzheng11@gatech.edu
+# renzheng112@gmail.com
 # ---------------------------
 
 #import libraries
@@ -125,7 +125,7 @@ def styleText(text):
             replacement = "“" + item.strip("\"") + "”"
             text = text.replace(item, replacement)
 
-    # Replace 'single quote marks' with “quote marks” [NOT FINISHED]
+    # Replace 'single quote marks' with “quote marks”
     # quotePattern = "'([^']*)'[^s]"
     # searchResult = re.search(quotePattern, text)
     # if searchResult: #found match
