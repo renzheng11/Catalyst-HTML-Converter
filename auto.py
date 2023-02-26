@@ -17,7 +17,7 @@ topNotes = []
 # Function: replace markdown styles with html styling tags 
 def styleText(text):
     # strip all newlines so text is one string
-    text = re.sub("\n", "", text)
+    text = text.replace("\n", "")
 
     # Replace three --- em dash —
     text = text.replace("---", "&mdash;")
@@ -51,70 +51,45 @@ def styleText(text):
     if searchResult: #found match
         matchList = re.findall(markPattern, text)
         for item in matchList:
-            replacement = item.strip("[").strip(r"]{.mark}")
+            replacement = item[1:-8]
             text = text.replace(item, replacement)
 
     # Replace underline link format
     # [[link]{.underline}](link).
-    linkPattern = "\[\[.*\]\{\.underline\}\]\(.*\)\."
+    linkPattern = "\[\[.*\]\{\.underline\}\]\([^)\]]*\)"
     searchResult = re.search(linkPattern, text)
     if searchResult:
         matchList = re.findall(linkPattern, text)
-        parenPattern = "\]\(.*\)"
         for item in matchList:
-            # replace extra
-            itemPattern = "\[\[.*\]\{\.underline\}\]\(.*\)\."
-            
-            # get link
-            searchResult = re.search(parenPattern, item)
-            if searchResult:
-                matchList = re.findall(parenPattern, item)
-                for item in matchList:
-                    item = item.strip("]()")
+            link = item.split("underline}]")[1][:-1][1:]
+            text = text.replace(item, f"<a href={link}>{link}</a>")
 
-            replacement = ""
-            text = re.sub(itemPattern, replacement, text)
-
-            text += f"""
-                <a href={item}>{item}</a>.</p>
-                """
-            
-    # Replace [link]{.underline}
-    linkPattern = "\[.*\]\{\.underline\}"
+    # Replace [link]{.underline} or [<link>]{.underline}
+    linkPattern = "\[<?.*>?\]\{\.underline\}"
     searchResult = re.search(linkPattern, text)
     if searchResult:
         matchList = re.findall(linkPattern, text)
         
-        
         for item in matchList:
-            link = item[:-13][1:]
-        text = re.sub(linkPattern, f"<a href={link}>{link}</a>", text)
+            if item.count("<") == 0:
+                link = item[:-13][1:]
+                text = text.replace(item, f"<a href={link}>{link}</a>")
+                # text = re.sub(linkPattern, , text)
+            else:
+                link = item[:-14][2:]
+                text = text.replace(item, f"<a href={link}>{link}</a>")
+                # text = re.sub(linkPattern, , text)
             
     # Replace second link format
     # [link](link).
-    linkPattern = "\[.*\](?=\()\(.*\)"
+    linkPattern = "\[.*\]\([^)]*\)"
     searchResult = re.search(linkPattern, text)
     if searchResult:
         matchList = re.findall(linkPattern, text)
-        parenPattern = "\(.*\)"
         for item in matchList:
-                # replace extra
-            itemPattern = "\s*\[.*\]\(.*\)*"
-            replacement = ""
-            text = re.sub(itemPattern, replacement, text)
-
-            # get link
-            searchResult = re.search(parenPattern, item)
-            if searchResult:
-                matchList = re.findall(parenPattern, item)
-                for item in matchList:
-                    link = item.strip("()")
+            link = item.split("](")[1][:-1]
+            text = text.replace(item, f"<a href={link}>{link}</a>")
         
-            text += f"""
-                <a href={link}>{link}</a>.</p>
-                """
-        
-    
     # Replace "double quote marks" with “quote marks”
     quotePattern = "\"[^\x22]+\""
     searchResult = re.search(quotePattern, text)
@@ -125,8 +100,9 @@ def styleText(text):
             replacement = "“" + item.strip("\"") + "”"
             text = text.replace(item, replacement)
 
-    # Replace 'single quote marks' with “quote marks”
+    # # Replace 'single quote marks' with “quote marks”
     # quotePattern = "'([^']*)'[^s]"
+    # # '(?!(s ))(?!(re ))(?!(d ))(?!(ll ))(?!(ve ))(?!(t )).*'(?!s)(?!r)(?!d)(?!ll)(?!ve)(?!t)
     # searchResult = re.search(quotePattern, text)
     # if searchResult: #found match
     #     matchList = re.findall(quotePattern, text)
@@ -259,7 +235,7 @@ def readContents(last, md, html, authors):
             contents += '<br><br></p><p class="c1">'
             
         # IMAGES + FIGURES
-        fileName = authors[0][0].split(" ")[1].lower()
+        fileName = authors[0][0].split(" ")[-1].lower()
         noAlt = False
         if line.count("![") == 1:
             onFig += 1
@@ -270,7 +246,7 @@ def readContents(last, md, html, authors):
             if line.count("![]") == 1:
                 contents += "'" + '>'
                 noAlt = True
-                print(f"Figure + {onFig} is missing alt text.")
+                print(f"[{fileName[0].upper() + fileName[1:]}] Figure {onFig} is missing alt text.")
             else:
                 contents +=  line.strip("![")
 
@@ -574,6 +550,8 @@ def convertToHTML(file, lastSection):
             authorNames += (authors[i][0])
             if i < (len(authors) - 1):
                 authorNames += ", "
+
+        fileName = authors[0][0].split(" ")[-1].lower()
 
         if not bookReview:
             # ABSTRACT AND KEYWORDS
@@ -943,11 +921,18 @@ def convertToHTML(file, lastSection):
     #close files
     md.close()
     html.close()
-    print("Finished!")
+    print(f"\nFinished converting {fileName[0].upper() + fileName[1:]}!\n")
 
 # Convert each md file in folder to html
 for file in os.listdir():
+    # reset global vars
+    writtenSections = []
+    topNotes = []
+
     # if str(file).endswith(".docx"):
     #     # convert to .md
+
     if str(file).endswith(".md"):
         convertToHTML(file, lastSection)
+
+    

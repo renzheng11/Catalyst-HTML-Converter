@@ -3,6 +3,8 @@
 Author: Ren Zheng
 renzheng112@gmail.com
 
+----------------------------------------------------------------------------
+
 ## How to run the script
     - This scripts converts markdown files (.md) to (.html)
     - To convert (.docx) to markdown (.md)...
@@ -14,6 +16,7 @@ renzheng112@gmail.com
         - (option 2: use a web converter to get (.md) file)
 
     - The .md file should be in the same folder as the auto.py script
+    - You can put multiple .md files in the folder and the script will convert all of them
 
     - You can make edits in the md file and html file
     - Do not make changes to the file auto.py
@@ -22,11 +25,19 @@ renzheng112@gmail.com
     - After html is generated, change article type before title
     - (ex. special spection, original research, etc.)
 
+----------------------------------------------------------------------------
+
 ## Errors
-    - If you run into an error or see a mistake in the html page, consult the checklist below...
+    - If you run into an error (don't panic!) or see a mistake in the html page,
+      consult the checklist below...
 
 ## Checklist for Docx / MD file
     - (you can check either one, I find MD easier to look for mistakes)
+
+    ** MD CONVERSION **
+        - Make sure the command to convert to md is correct (pandoc -s name.docx -o name.md)
+        - If you accidentally type .docx as the output, delete the file, re-place it into
+          the directory, and run the pandoc command again
 
     ** SECTIONS & TEXT **
         - List of keywords should be normal body text (not a heading)
@@ -44,6 +55,7 @@ renzheng112@gmail.com
         - If there are multiple images next to each other with only one Figure caption, 
             - remove the images from the md file except the first one
             - need to change image file names
+        - Ensure image hrefs are named correctly for uploading to OJS
 
     ** LINKS **
         - if a link is not linked, check the md file and include <> around the linked
@@ -56,6 +68,9 @@ renzheng112@gmail.com
     ** BOOK REVIEWS **
         - For book reviews: if the article does not have an abstract, include a empty heading
         in between author(s) and content
+
+    ** MD MARKS **
+        - If you see any remaining []{.mark} in the html, remove the []{.mark} symbols from the md
 
     ** OUTLYING ISSUES **
         - issues with text formatting: go through checklist on md file then rerun script 
