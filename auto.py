@@ -15,7 +15,7 @@ topNotes = []
 
 # refactor this !!
 # Function: replace markdown styles with html styling tags 
-def styleText(text, lastSection):
+def styleText(text):
     # strip all newlines so text is one string
     text = re.sub("\n", "", text)
 
@@ -24,6 +24,9 @@ def styleText(text, lastSection):
 
     # Replace two -- em dash –
     text = text.replace("--", "-")
+
+    # Replace \|
+    text = text.replace("\|", "|")
 
     # Replace [.]{.smallcaps}
     text = text.replace(r"[.]{.smallcaps}", "")
@@ -38,6 +41,9 @@ def styleText(text, lastSection):
     # Replace \"
     # Replace left and right brackets
     text = text.replace('\\"', '"')
+
+    # Replace apostrophes
+    text = text.replace("\\'", "'")
 
     # Replace []{.mark}
     markPattern = r"\[[^{}]*\]{\.mark}"
@@ -73,29 +79,41 @@ def styleText(text, lastSection):
                 <a href={item}>{item}</a>.</p>
                 """
             
+    # Replace [link]{.underline}
+    linkPattern = "\[.*\]\{\.underline\}"
+    searchResult = re.search(linkPattern, text)
+    if searchResult:
+        matchList = re.findall(linkPattern, text)
+        
+        
+        for item in matchList:
+            link = item[:-13][1:]
+        text = re.sub(linkPattern, f"<a href={link}>{link}</a>", text)
+            
     # Replace second link format
     # [link](link).
-    # linkPattern = "\[.*\]\(.*\)"
-    # searchResult = re.search(linkPattern, text)
-    # if searchResult:
-    #     matchList = re.findall(linkPattern, text)
-    #     parenPattern = "\(.*\)"
-    #     for item in matchList:
-    #         # replace extra
-    #         itemPattern = "\s*\[.*\]\(.*\)*"
-    #         replacement = ""
-    #         text = re.sub(itemPattern, replacement, text)
+    linkPattern = "\[.*\](?=\()\(.*\)"
+    searchResult = re.search(linkPattern, text)
+    if searchResult:
+        matchList = re.findall(linkPattern, text)
+        parenPattern = "\(.*\)"
+        for item in matchList:
+                # replace extra
+            itemPattern = "\s*\[.*\]\(.*\)*"
+            replacement = ""
+            text = re.sub(itemPattern, replacement, text)
 
-    #         # get link
-    #         searchResult = re.search(parenPattern, item)
-    #         if searchResult:
-    #             matchList = re.findall(parenPattern, item)
-    #             for item in matchList:
-    #                 link = item.strip("()")
+            # get link
+            searchResult = re.search(parenPattern, item)
+            if searchResult:
+                matchList = re.findall(parenPattern, item)
+                for item in matchList:
+                    link = item.strip("()")
         
-    #         text += f"""
-    #             <a href={link}>{link}</a>.</p>
-    #             """
+            text += f"""
+                <a href={link}>{link}</a>.</p>
+                """
+        
     
     # Replace "double quote marks" with “quote marks”
     quotePattern = "\"[^\x22]+\""
@@ -104,27 +122,14 @@ def styleText(text, lastSection):
         matchList = re.findall(quotePattern, text)
 
         for item in matchList:
-            itemPattern = '\"' + item.strip("\"") + '\"'
             replacement = "“" + item.strip("\"") + "”"
-            text = re.sub(itemPattern, replacement, text)
-    
-    # Replace instances of Apostrophes \'
-    aposPattern = "\\\'"
-    searchResult = re.search(aposPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(aposPattern, text)
-
-        for item in matchList:
-            itemPattern = '\\\'' + item.strip("\'")
-            replacement = "'"
-            text = re.sub(itemPattern, replacement, text)
+            text = text.replace(item, replacement)
 
     # Replace 'single quote marks' with “quote marks” [NOT FINISHED]
     # quotePattern = "'([^']*)'[^s]"
     # searchResult = re.search(quotePattern, text)
     # if searchResult: #found match
     #     matchList = re.findall(quotePattern, text)
-    #     # print(matchList)
 
     #     for item in matchList:
     #         if (item[:2] == "s "):
@@ -140,9 +145,10 @@ def styleText(text, lastSection):
     if searchResult: #found match
         matchList = re.findall(superPattern, text)
         for item in matchList:
-            itemPattern = '\^' + item.strip("\^") + '\^'
             replacement = "<sup>" + item.strip("\^") + "</sup>"
-            text = re.sub(itemPattern, replacement, text)
+            text = text.replace(item, replacement)
+    
+
 
     # Replace instances of **bold** text
     boldPattern = "\*\*[^*]*\*\*"
@@ -151,20 +157,27 @@ def styleText(text, lastSection):
         matchList = re.findall(boldPattern, text)
 
         for item in matchList:
-            itemPattern = '\*\*' + item.strip("**") + '\*\*'
             replacement = "<strong>" + item.strip("**") + "</strong>"
-            text = re.sub(itemPattern, replacement, text)
+            text = text.replace(item, replacement)
 
     # Replace instances of ~~strike~~ text
-    strikePattern = "~~([^~]*)~~"
+    strikePattern = "~~[^~]*~~"
     searchResult = re.search(strikePattern, text)
     if searchResult: #found match
         matchList = re.findall(strikePattern, text)
 
         for item in matchList:
-            itemPattern = '~~' + item.strip("~~") + '~~'
             replacement = "<del>" + item.strip("~~") + "</del>"
-            text = re.sub(itemPattern, replacement, text)
+            text = text.replace(item, replacement)
+
+    # Replace instances of ~subscript~
+    superPattern = "[^~]~.+~[^~]"
+    searchResult = re.search(superPattern, text)
+    if searchResult: #found match
+        matchList = re.findall(superPattern, text)
+        for item in matchList:
+            replacement = "<sub>" + item.strip("~") + "</sub>"
+            text = text.replace(item, replacement)
 
     # Replace instances of *italic* text
     italicPattern = "\*(?!\s)[\s\S]*?\*(?<!\s\*)"
@@ -173,22 +186,11 @@ def styleText(text, lastSection):
         matchList = re.findall(italicPattern, text)
 
         for item in matchList:
-            itemPattern = '\*' + item.strip("*") + '\*'
             replacement = "<i>" + item.strip("*") + "</i>"
-            text = re.sub(itemPattern, replacement, text)
+            text = text.replace(item, replacement)
 
     # last pass - remove blackslash
-    slashPattern = "\\\\"
-    
-    searchResult = re.search(slashPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(slashPattern, text)
-
-        for item in matchList:
-            
-            itemPattern = "\\\\"
-            replacement = ""
-            text = re.sub(itemPattern, replacement, text)
+    text = text.replace("\\", "")
 
     return text
 
@@ -196,7 +198,7 @@ def styleText(text, lastSection):
 def readContents(last, md, html, authors):
     contents = ""
 
-    if last == "Notes":
+    if last == "Notes" or last == "Note":
         line = writeNotes(md, html)
         return (contents, line)
 
@@ -260,25 +262,36 @@ def readContents(last, md, html, authors):
             
         # IMAGES + FIGURES
         fileName = authors[0][0].split(" ")[1].lower()
+        noAlt = False
         if line.count("![") == 1:
             contents += f"""</p>
             <img src="{fileName}{onFig}.jpg" class="figure" alt='
-            """ + line.strip("![")
+            """
+
+            if line.count("![]") == 1:
+                contents += "'" + '>'
+                noAlt = True
+            else:
+                contents +=  line.strip("![")
 
             onFig += 1
+
+            print("At least one of the images is missing alt text!")
             
             # start reading
             inAlt = True
-            while inAlt:
-                line = md.readline()
-                if line.count("]") == 1: # end of alt text
-                    if (line.count("width=") != 0):
-                        line = line.split("]")[0]
-                        contents += line +  "'" + '>'
-                    break
-                else:
-                    contents += line + " "
-                    contents = styleText(contents, lastSection)
+
+            if not noAlt:
+                while inAlt:
+                    line = md.readline()
+                    if line.count("]") == 1: # end of alt text
+                        if (line.count("width=") != 0):
+                            line = line.split("]")[0]
+                            contents += line +  "'" + '>'
+                        break
+                    else:
+                        contents += line + " "
+                        contents = styleText(contents)
 
             # clear end of alt text from line
             line = ""
@@ -311,7 +324,7 @@ def readContents(last, md, html, authors):
             #add section name to writtenSections list
             strippedSection = line.replace("#", "").strip()
             writtenSections.append(strippedSection)
-            contents = styleText(contents, lastSection)
+            contents = styleText(contents)
 
             contents = testForNote(contents, line)
             
@@ -351,14 +364,14 @@ def writeNotes(md, html):
     # strip line of ^#^
     line = re.sub("\^\d*\^\s+", "", line)
     # add first line of note 1
-    noteContent += line
+    noteContent += line 
 
     for l in md:
-        sectionTitle = "^#{3}\s.*$" 
-        if re.match(sectionTitle, l):
+        if l.count("###") == 1:
             # reached end of notes (hit References)
             # write last note:
-            noteContent = styleText(noteContent, lastSection)
+
+            noteContent = styleText(noteContent)
             html.write(
                 f"""
                 <div id="note{noteNum}b">
@@ -374,11 +387,10 @@ def writeNotes(md, html):
             break
         
         notePattern = "\^\d+\^"
-
         # if next note is hit
         if (re.search(notePattern, l)): 
             # add complete previous note to html
-            noteContent = styleText(noteContent, lastSection)
+            noteContent = styleText(noteContent)
             html.write(
                 f"""
                 <div id="note{noteNum}b">
@@ -436,7 +448,8 @@ def writeRefs(md, html):
             refContent = re.sub(linkPattern, "", refContent)
 
             # convert markdown styles
-            refContent = styleText(refContent, lastSection) 
+            refContent = styleText(refContent) 
+            # refSplit = refContent.split())
 
             # add complete previous reference to html
             if link != "": #reference has a link
@@ -465,23 +478,33 @@ def writeRefs(md, html):
 def convertToHTML(file, lastSection):
 
     #---------start regex filtering and html writing--------
+    bookReview = False
 
-    fileName = str(file).strip(".md")
-    # fileName = str(file).strip(".docx").strip(".m")
+    fileName = str(file).replace(".md", "")
 
     mdfile = open(file, "r")
     htmlfile = open(f"{fileName}.html", "w")
 
     with mdfile as md, htmlfile as html:
         topItems = []
-        #reads top of doc in order (not accurately matched)
+        #reads top of doc in order
         # get title until blank line
 
         # get rest of top
         for line in md:
-            #if line matches abstract
-            if re.match("### Abstract(\s+)?", line):
-                break
+            if line.count("###") == 1:
+                # hit abstract or ###
+                if (topItems[1].count("Book Review") == 1):
+                    # title = topItems[1]
+                    keywords = "Book Review"
+                    bookReview = True
+                if bookReview:
+                    break
+                else:
+                    if line.count("Abstract") == 1:
+                        break
+            # if re.match("### Abstract(\s+)?", line):
+            #     break
             else:
                 # if title is in second line
                 secondTitle = ""
@@ -505,6 +528,7 @@ def convertToHTML(file, lastSection):
         authors = {}
         
         title = topItems[1].strip("#").strip()
+        title = styleText(title)
 
         # delete logo and title from topItems
         del topItems[0:2]
@@ -539,24 +563,60 @@ def convertToHTML(file, lastSection):
             if i < (len(authors) - 1):
                 authorNames += ", "
 
-        # ABSTRACT AND KEYWORDS
-        md.readline()
-        abstract, lastSection = readContents(lastSection, md, html, authors)
-        keywords, lastSection = readContents(lastSection, md, html, authors)
-        keywords = keywords.strip("<br><br>")
+        if not bookReview:
+            # ABSTRACT AND KEYWORDS
+            # Keywords read manually (a lot of cases of keywords accidentally marked as heading 3)
+            md.readline()
+            abstract, lastSection = readContents(lastSection, md, html, authors)
+            keywords = ""
+            line = md.readline()
+            
+            if line != "":
+                if line.count("#") >= 1:
+                    line = line.strip("# ")
+                keywords += line
+            while True:
+                line = md.readline()
+                if line.count("#") >= 1:
+                    line = line.strip("# ")
+                keywords += line
+                if line.strip() == "":
+                    break
 
-        #write html head with metadata + styling
+            # get next section heading
+            lastSection = md.readline()
+
+            # OLD VERSION: Read keywords as body section
+            # keywords, lastSection = readContents(lastSection, md, html, authors)
+            # keywords = keywords.strip("<br><br>")
+
+            #write html head with metadata + styling
+            html.write(f"""
+                <html>
+
+                <head>
+                    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+                    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+                    <meta charset="UTF-8">
+                    <meta name="description" content="{title}">
+                    <meta name="keywords"
+                        content="{keywords}">
+                    <meta name="author" content="{authorNames}">
+            """)
+        else: #book review
+            html.write(f"""
+                <html>
+
+                <head>
+                    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+                    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+                    <meta charset="UTF-8">
+                    <meta name="description" content="{title}">
+                    <meta name="author" content="{authorNames}">
+            """)
+
+        # STYLING
         html.write(f"""
-            <html>
-
-            <head>
-                <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
-                <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-                <meta charset="UTF-8">
-                <meta name="description" content="{title}">
-                <meta name="keywords"
-                    content="{keywords}">
-                <meta name="author" content="{authorNames}">
 
             <!--PAGE STYLING-->
 
@@ -787,22 +847,24 @@ def convertToHTML(file, lastSection):
                 <p class="c1">&nbsp;</p>
                 """)
 
-        # write abstract + keywords
-        html.write(f"""
-            <!--Main Body-->
-            <p class="c1 sectionTitle">Abstract</p>
-            <p class="c1">{abstract}</p>
+        if not bookReview:
+            # write abstract + keywords
+            html.write(f"""
+                <!--Main Body-->
+                <p class="c1 sectionTitle">Abstract</p>
+                <p class="c1">{abstract}</p>
 
-            <p class="c1">&nbsp;</p>
+                <p class="c1">&nbsp;</p>
 
-            <p class="c1 sectionTitle">
-            Keywords
-            </p>
-            <p class="c1">
-                {keywords}
-            </p>
-            <p class="c1">&nbsp;</p>
-        """)
+                <p class="c1 sectionTitle">
+                Keywords
+                </p>
+                <p class="c1">
+                    {keywords}
+                </p>
+                <p class="c1">&nbsp;</p>
+                <p class="c1">&nbsp;</p>
+            """)
 
         #-------Read sections-------
         sectionTitle = "^#{3}\s.*$"
@@ -813,19 +875,19 @@ def convertToHTML(file, lastSection):
             #if lastSection matches sectionTitle
             if re.match(sectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
-                lastSection = styleText(lastSection, lastSection)
+                lastSection = styleText(lastSection)
                 html.write(f"""<p class="c1 sectionTitle">{lastSection}</p>""")
 
             #if lastSection matches subsectionTitle
             elif re.match(subsectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
-                lastSection = styleText(lastSection, lastSection)
+                lastSection = styleText(lastSection)
                 html.write(f"""<p class="c1 subsectionTitle">{lastSection}</p>""")
 
             #if lastSection matches subsubsectionTitle
             elif re.match(subsubsectionTitle, lastSection):
                 lastSection = lastSection.strip("#").strip()
-                lastSection = styleText(lastSection, lastSection)
+                lastSection = styleText(lastSection)
                 html.write(f"""<p class="c1 sub_subsectionTitle">{lastSection}</p>""")
 
             # write body text under section title
@@ -862,7 +924,7 @@ def convertToHTML(file, lastSection):
                 authorBio += "<br><br>"
 
             authorBio += line + " "
-        authorBio = styleText(authorBio, lastSection)
+        authorBio = styleText(authorBio)
         authorBio.strip("<br><br>")
         html.write(f"""<p class="c1">{authorBio}</p>""")
 

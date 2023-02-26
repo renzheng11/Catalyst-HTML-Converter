@@ -38,11 +38,10 @@ transformative pedagogical aims, characterized by the types of labor
 used to maintain the status quo, as well as a set of recommendations for
 moving beyond the frame of repair to sustainably and radically disrupt
 dominant pedagogies in games and related disciplines.
-
 ### Keywords 
-
-transformative pedagogy, STEM, feminism, social justice, higher
-education
+### transformative pedagogy, STEM, feminism, social justice, higher
+education, transformative pedagogy, STEM, feminism, social justice, higher
+education, last keywords
 
 ### Introduction
 
@@ -789,6 +788,7 @@ the world at a core level, the focus is intensely centered on the human.
 Dialogue begins not with change to be enacted "out there," but within
 the self in deep exchange with others, in sharp contrast to the
 performative gestures of change valorized in our institution's poetry.
+[https://one.usc.edu/program/queer-archives-queer-terrains]{.underline}.
 
 ### Notes
 
