@@ -147,8 +147,6 @@ def styleText(text):
         for item in matchList:
             replacement = "<sup>" + item.strip("\^") + "</sup>"
             text = text.replace(item, replacement)
-    
-
 
     # Replace instances of **bold** text
     boldPattern = "\*\*[^*]*\*\*"
@@ -176,7 +174,7 @@ def styleText(text):
     if searchResult: #found match
         matchList = re.findall(superPattern, text)
         for item in matchList:
-            replacement = "<sub>" + item.strip("~") + "</sub>"
+            replacement = "<sub>" + item.replace("~", "") + "</sub>"
             text = text.replace(item, replacement)
 
     # Replace instances of *italic* text
@@ -264,6 +262,7 @@ def readContents(last, md, html, authors):
         fileName = authors[0][0].split(" ")[1].lower()
         noAlt = False
         if line.count("![") == 1:
+            onFig += 1
             contents += f"""</p>
             <img src="{fileName}{onFig}.jpg" class="figure" alt='
             """
@@ -271,13 +270,10 @@ def readContents(last, md, html, authors):
             if line.count("![]") == 1:
                 contents += "'" + '>'
                 noAlt = True
+                print(f"Figure + {onFig} is missing alt text.")
             else:
                 contents +=  line.strip("![")
 
-            onFig += 1
-
-            print("At least one of the images is missing alt text!")
-            
             # start reading
             inAlt = True
 
@@ -311,6 +307,7 @@ def readContents(last, md, html, authors):
 
             figNum = figure[7]
             figContent = figure[10:]
+            figContent = styleText(figContent)
 
             contents += f"""
                 <p class=imageText>Figure {figNum}. {figContent}</p>
@@ -437,6 +434,7 @@ def writeRefs(md, html):
             break 
         
         # if blank space is hit
+        unformattedLink = False
         if l == "\n": 
             link = ""
             linkPattern = "<.*>\.*"
@@ -449,7 +447,6 @@ def writeRefs(md, html):
 
             # convert markdown styles
             refContent = styleText(refContent) 
-            # refSplit = refContent.split())
 
             # add complete previous reference to html
             if link != "": #reference has a link
@@ -458,12 +455,27 @@ def writeRefs(md, html):
                     <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
                     """
                 )
-            else: #reference does not have a link
-                html.write(
+            else: #reference does not have a link (in format)
+                refSplit = refContent.split()
+                for item in refSplit:
+                    if item.count("http") == 1:
+                        unformattedLink = True
+                        link = item[:-1]
+                        refContent = refContent[:-1]
+                        refContent = refContent.replace(link, "")
+
+                if unformattedLink:
+                    html.write(
                     f"""
-                    <p class="reference"> {refContent}</p>
+                    <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
                     """
                 )
+                else:
+                    html.write(
+                        f"""
+                        <p class="reference"> {refContent}</p>
+                        """
+                    )
 
             #reset note contents
             refContent = ""
@@ -931,6 +943,7 @@ def convertToHTML(file, lastSection):
     #close files
     md.close()
     html.close()
+    print("Finished!")
 
 # Convert each md file in folder to html
 for file in os.listdir():
