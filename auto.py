@@ -1,12 +1,14 @@
-
+# coding=utf-8
 # ---------------------------
 # Author: Ren Zheng
 # renzheng112@gmail.com
 # ---------------------------
 
 #import libraries
+
 import re
 import os
+import pypandoc
 
 # Global variables
 lastSection = ""
@@ -941,6 +943,11 @@ def convertToHTML(file, lastSection):
     md.close()
     html.close()
     # print(f"\nFinished converting {fileName[0].upper() + fileName[1:]}!\n")
+
+for file in os.listdir('.'):
+    if str(file).endswith(".docx"):
+        output = pypandoc.convert_file(file, 'md', outputfile=file.split(".")[0]+".md")
+        assert output == ""
 
 # Convert each md file in folder to html
 for file in os.listdir():
