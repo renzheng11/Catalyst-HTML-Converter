@@ -1,8 +1,16 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 # ---------------------------
 # Author: Ren Zheng
 # renzheng112@gmail.com
 # ---------------------------
+# For converting to an app using py2app:
+# py2applet --make-setup auto.py
+# rm -rf build dist
+# python3 setup.py py2app
+# Go to the dist folder, right click on the app and click "Show Package Contents"
+# Go to Contents/Resources/
+# In the Resources folder paste the word files
+# In the terminal run: dist/auto.app/Contents/MacOS/auto
 
 #import libraries
 
@@ -10,6 +18,9 @@ import re
 import os
 import pypandoc
 import sys
+
+
+print("Starting app")
 
 # Global variables
 lastSection = ""
@@ -480,8 +491,8 @@ def convertToHTML(file, lastSection):
 
     fileName = str(file).replace(".md", "")
 
-    mdfile = open(file, "r")
-    htmlfile = open(f"{fileName}.html", "w")
+    mdfile = open(file, "r",-1,encoding="utf-8")
+    htmlfile = open(f"{fileName}.html", "w",-1,encoding="utf-8")
 
     with mdfile as md, htmlfile as html:
 
@@ -966,21 +977,41 @@ def convertToHTML(file, lastSection):
     html.close()
     print(f"\nFinished converting {fileName[0].upper() + fileName[1:]}!\n")
 
-for file in os.listdir('.'):
+# path = os.path.abspath(os.getcwd())
+# print(path)
+
+sub_path = "docx"
+abs_path = os.path.dirname(__file__)
+path = os.path.join(abs_path,sub_path)
+
+# Convert the input file to the output format
+for file in os.listdir(path):
+
     if str(file).endswith(".docx"):
-        output = pypandoc.convert_file(file, 'md', outputfile=file.split(".")[0]+".md")
+
+        # Set the input file path (relative to the subfolder)
+        input_file = os.path.join(path, file)
+
+        # Set the output file path (relative to the subfolder)
+        output_file = os.path.join(path, file.split(".")[0]+".md")
+
+        output = pypandoc.convert_file(input_file, 'md', outputfile=output_file)
         assert output == ""
 
+        
+
 # Convert each md file in folder to html
-for file in os.listdir():
+for file in os.listdir(path):
     # reset global vars
     writtenSections = []
     topNotes = []
 
+    file_path = os.path.join(path, file)
     # if str(file).endswith(".docx"):
     #     # convert to .md
 
     if str(file).endswith(".md"):
-        convertToHTML(file, lastSection)
+        print("Converting: "+file)
+        convertToHTML(file_path, lastSection)
+        print("Converted md_file to html")
 
-    
