@@ -1,0 +1,1307 @@
+#  ![](media/image1.png){width="2.25in" height="0.6436111111111111in"}
+
+## 
+
+##  Memories and Motherhood in the Rhythms of Ugandan Computing
+
+Kerry Holden
+
+Queen Mary, University of London
+
+k.holden@qmul.ac.uk
+
+Matthew Harsh
+
+California Polytechnic State University
+
+mharsh@calpoly.edu
+
+Ravtosh Bal
+
+University of Toronto
+
+<ravtosh.bal@utoronto.ca>
+
+### Abstract
+
+Based on ethnographic research in the computing communities of Ugandan
+universities, we advance a feminist and decolonial critique of the
+dominant chronopolitics of globalizing technologies. Our analysis starts
+with participants recounting their childhood memories of growing up in
+rural poverty under the shadow of rebellion wars. We show how the future
+promises of computing make sense in reference to this past. The same
+chronopolitics of pitching the past against the future is used by the
+global computing and donor development industry, and Uganda's governing
+regime, which disguises the symbolic and physical violence of the
+evacuated present. In coping with the precarities of the present, we
+show how female computing researchers build enduring "near futures"
+through work that corresponds to the historical and symbolic role of
+Ugandan women in the domestic realm. And yet the chronopolitics of
+global computing syncopates with that of "near futures." Women's
+communal roles are written into computing and computing is made possible
+and doable in Uganda through the gendered logics of care practised in
+the present. The paper thus contributes to an expanding literature on
+computing in Africa, by providing a temporal analysis that recognizes
+women's roles in more substantive ways.
+
+### Keywords 
+
+### computing, feminism, Uganda, chronopolitics, technoliberalism, reproduction, decolonialism, temporality 
+
+### Introduction 
+
+Joy, a computing researcher at Makerere University in Kampala working on
+preserving the language of Runyikitara, was born in rural Uganda in the
+early 1970s.^1^ Julianne, Zebia, Charity, Joyce, Agnes, and Florence
+were born at around the same time, maybe a little later.^2^ These women
+are all computing researchers working at different universities in and
+around Kampala, the capital city of Uganda. They teach and carry out
+research using computing to address health, societal, and environmental
+problems. The era of their childhoods is significant because civil war
+raged in Uganda throughout the 1970s and 1980s, followed within a decade
+by an HIV/AIDS epidemic that ravaged the country, wiping out a
+generation. The rural villages in the east, west, and central regions
+provided safety away from the looted cities and epicenters of disease.
+At the turn of the millennium, each one of these women arrived in
+Kampala with good grades, proud mothers looking on, and a good dose of
+ambition to pursue their undergraduate studies.
+
+"It wasn't easy, but I have always had an ambitious spirit," laughed
+Zebia when we interviewed her in her office at Uganda Technology and
+Management University "I think it might be dying down with age, but I've
+always had \[an ambitious spirit\], from how I came to get the
+scholarship, to today, it is intriguing me." We share Zebia's intrigue,
+not at her own career achievements, but at how she constructs this
+narrative of progression. From what and towards what has she progressed
+and how does her story resonate with the dominant narratives of
+computing in African societies? Our aim is to examine how gender and
+computing resound with the colonial chronopolitics of contemporary
+technoliberal discourse. We show how linked ideologies of motherhood and
+nation-building exert a cruel optimism that is embodied by participants
+in their continual striving to actualize the benefits of computing in
+modernizing Uganda (Berlant 2011). At the same time, the expectations
+around women's roles in the family and community continue to sustain
+life in the evacuated present that lies in the wake of technoliberalism
+(Sharpe 2016). We argue that women's communal roles are written into
+computing and computing is made possible and doable in Uganda through
+the gendered logics of care practised in the present.
+
+Zebia, alongside other female computing researchers, recounted childhood
+stories of hardship in contrast to the apparent comfort they experience
+in continuous employment, a PhD from a European university under their
+belts, and opportunities to develop their research internationally.
+Beyond the apparent stability that a PhD and university career provide,
+the subject matter itself---computing---is encoded with narratives of
+modernity and nationhood flung far into the future that are held up
+against Uganda's turbulent past. In his memoir, Venansius Baryamureeba
+(2015), the former vice-chancellor who oversaw Makerere's success in
+computing, asserts that he saw the market value and potential future
+impacts of computing in meeting the goals of the government's national
+development plans to transition Uganda from a "peasant to a modern and
+prosperous country within 30 years" (NPA 2020, i). The Uganda 2040
+report is adorned with images of technoscientific progress---trains,
+electricity pylons, laboratories---alongside those of national pride to
+form a mosaic pattern in the shape of the country.^3^ These motifs of
+progress are tied to dreams of nationhood in which narratives of
+Uganda's past, depicted as conflict and poverty ridden, are juxtaposed
+with techno-utopian futures.
+
+Thinking through these ties between the temporal and technological, we
+develop a feminist and decolonial critique of the dominant
+chronopolitics of globalizing computing. As Octavia Butler (1979)
+conceived, chronopolitics entails thinking of time as sculptural, and
+while Kodwo Eshun (2003) argues that a chronopolitics inherited from
+colonialism splices time in Africa to empty out the present, it is met
+by another temporality sculpted in what Jane Guyer (2007) calls the
+"near future." Time moves along two axes that we identify, each
+resounding off the other to produce a critique of computing in the
+Ugandan context. By taking a decolonial approach, we break with the
+temporal and political orders of colonial power that are continuous in
+the present, and, as Sareeta Amrute and Luis Felipe R. Murillo (2020)
+argue, stake a claim in alternate ways of thinking and practising
+computing.
+
+In this paper, we contribute to studies in technology in and from Africa
+and the Global South that use ethnography to analyze what we refer to as
+syncopated beats between globalizing processes and local contexts (Irani
+2019; Odumusu 2017; Mavhunga 2014). We do not propose that technoliberal
+discourses float around the world in ready-made forms (Avle et al. 2020;
+Atanasoski and Vora 2018).^4^ Instead, we illustrate how globalizing
+discourses are made workable in local contexts (Avle 2020; Beltrán;
+2020; Ames 2019; Irani 2019; Chan 2013), showing how they are
+articulated and the ideals they represent put into practice by
+researchers working in Ugandan universities. In advancing this approach,
+we closely follow a group of female computing researchers and adopt
+"feminist theorizations of affect and care to expound the everyday
+practices that enable surviving and thriving in the face and in the wake
+of techno-empires" (Jack and Avle 2021, 2).
+
+We begin by introducing the research site and consider our positionality
+within it before moving onto the empirical sections that focus on two
+prevalent narratives in the testimonies of the female computing
+researchers interviewed for our research project. First, we explore how
+memories of Uganda's past frame the future imaginaries of computing. As
+a narrative device, Uganda's past is not only used by research
+participants, donors, and technology companies to promote the
+developmental promise of computing; the past also serves as a resource
+for the current authoritarian regime of the National Resistance Movement
+that has been in power since 1986. Yoweri Museveni, Uganda's long-term
+president, trades on the same memories of war and rural poverty to
+promote his deliverance of future prosperity, all the while utilizing
+technological infrastructure for political subjugation. A chronopolitics
+emerges through this framing of turbulent pasts against prosperous
+futures in which Ugandan citizens are situated in a past that they
+continually yearn to move beyond.
+
+Our second narrative concerns the "near future" in which the symbolic
+role of women and their reproductive capacity is performed in the
+maintenance of family and community (Guyer 2007). All the female
+participants had started families early in their careers, and, in
+addition to fulfilling an academic position, they have a central role in
+nurturing family, community, and the ancestral village through
+activities that range from communal child rearing to farming. We
+emphasize the different temporal orders in which a more enduring near
+future is culturally reproduced to guarantee bodily integrity and evade
+poverty in later life, what Grace Kyomuhendo and Marjorie McIntosh refer
+to as "domestic virtue" (2006, 2). This temporality deals with the
+inevitable precarities produced through techno-utopianism and
+authoritarianism by practising a gendered logic of care in the present.
+
+We then illustrate how the temporalities of globalized computing and
+motherhood form syncopated rhythms that amplify and agitate each other.
+Women's reproductive labor is continually enlisted in making computer
+science possible in Uganda, even when gender is neutralized in the
+discourses of technoliberalism.^5^ Participants relegate communal care
+to "life in parenthesis" away from the beating heart of computer science
+labs (Robbins 2004 quoted in Guyer 2007).^6^ Yet ideologies of
+motherhood are reproduced in scaling and commodifying computer science
+research in Uganda to be of planetary relevance as well as tutoring
+future generations to opportunistically exploit its political economies.
+While computing appears dressed in neutrality, we show that it embodies
+feminist strategies for survival in the near future that make bearable,
+indeed liveable, the necropolitics of technoliberalism (Mbembe 2019).
+
+### Methods
+
+This research is part of a larger project funded by the US National
+Science Foundation, comparing computing research in Kenya and Uganda
+from 2012 to 2016. The project documented the growth of nascent computer
+science communities in academic institutions (Harsh et al. 2018, 2019).
+In this paper we focus on women in computing in Uganda because of their
+strong presence in academic departments and the shared similarities in
+participants' ages, backgrounds, and working lives. These women were
+part of the first generation of PhD computer scientists in Uganda.
+
+Makerere University has succeeded in meeting one of the early goals of
+feminist technology studies by opening up access to computer science to
+men and women equally (Wajcman 2007). Women make up about 50 percent of
+the PhD graduates in computer science and related fields. The first
+cohort awarded studentships to undertake doctoral training as part of a
+program offered by Makerere and a European partner university began in
+the mid-2000s. Out of around thirty students, we learned that all except
+one had returned to work in the expanding computer science and
+information technology departments at Makerere (Harsh et al. 2018). For
+the female PhD graduates, the path of return was predestined because
+they had family commitments; one participant mentioned taking her
+youngest child with her and almost commuting between Uganda and Europe
+to fulfil both the PhD and her kinship role.
+
+Computing in Uganda is distinguished from other parts of East Africa by
+its academic focus and outputs. Research participants had ties to the
+local private sector, especially with local telecom providers and
+nongovernmental agencies such as the UN Global Pulse Lab. However, the
+entrepreneurial tech scene in Kampala is less vibrant than other African
+capitals, such as Nairobi, which is teeming with hubs, incubators, and
+accelerators (Harsh et al. 2018, 2019; Ndemo and Weiss 2017). This is
+not to say that respondents were not entrepreneurial, as we explore
+below, but they do not build capital through social networking sites and
+online presences. Rather, they build capital through grants, inventions,
+publications, citations, teaching, and mentoring.
+
+Our research involved successive year-on-year ethnography, collating a
+rich stock of qualitative interview and observational data, and building
+relationships with respondents through multiple interviews and
+interactions. All participants were computing researchers working at
+universities. Our methodology was approved by ethical review boards at
+two affiliated universities (one in the United States and one in
+Canada). At the beginning of the project, and throughout the research
+process, we discussed with participants how we could structure the
+project to create benefits for them. As a result of these conversations,
+we sponsored and co-designed a workshop at Makerere University where
+participants showcased their work to local media, private sector, and
+donors. As another way to bring attention to their work, the consent
+process asked participants whether or not they wanted to be anonymized
+in publications. Participants were then given the opportunities to
+reflect on transcripts and field notes as we progressed with the
+research. When the draft of this paper was prepared, it was sent to
+participants for comments and as an opportunity to reconfirm whether
+they wanted their names used. Participants who were not willing to be
+named were given pseudonyms to protect their anonymity as much as
+possible, and these cases are noted when the participants first appear
+in the text. Overall, our ethnographic approach has created
+possibilities for future collaborations and funding. Indeed, our current
+grants continue to support research participants we met over a decade
+ago.
+
+As researchers based at North American and European universities, we
+were positioned as being in the same profession as participants. Our
+social science approach resonated with participants, who published in
+journals and attended conferences of an interdisciplinary nature. Also,
+most participants were globally mobile, having been trained in Europe,
+North America, or Asia, and still attended meetings and conferences in
+different countries. We built lasting relationships from this sense of
+commonality that we are all academics dealing with overly hectic
+teaching and research responsibilities, constantly navigating external
+funding applications and institutional politics.
+
+While we shared anecdotes about working in higher education, there were
+distinct differences in our experiences. One difference concerned the
+visible lack of investment in infrastructure and resources at Makerere,
+which helped to position participants as recipients in the
+donor-philanthropic complex of global technologies and locked them into
+the temporal orders of development through the conditions of research
+funding. The impacts and outcomes of this research project, for example,
+are not explicitly tied to the development trajectories of our
+respective countries, but rather implicitly tied to its development
+assistance policy through National Science Foundation funding.
+
+The lack of institutional investment led to participants experiencing a
+heightened sense of precarity when relating that they could not rely on
+stable internet, journal access, or software provision; at times,
+absorbing research costs themselves. In contrast, our home institutes
+had engaged in real estate development and infrastructural strengthening
+in establishing their research prowess internationally. Working in this
+context, the authors experienced different degrees of precarity that
+stemmed from the disciplinary effects of audit cultures and the
+calculative futures around research outputs and reputational management.
+Another difference was in the management of work-life balance. Our
+authorship team includes a mother and a father, but unlike participants,
+all the authors had moved away from the communities we were raised in,
+one of us coming to North America from India. Thus, we were not in close
+proximity and as responsive to kinship networks in the same way as
+participants. Reflecting on these differences, and how they emerged in
+the data, led us to the analysis of the politics of time, to which we
+now turn.
+
+### African Pasts and Technoliberal Futures
+
+Since Africa is the future and it will be the future, this rhetoric
+claims implicitly, that Africa presently doesn't exist---that Africa's
+co-presence with the current times rings hollow.
+
+---Felwine Sarr, *Afrotopia*
+
+Memories of Uganda's past, framed by narratives of rebellion wars, rural
+poverty, and infectious disease, appear in the testimonies of the women
+we spoke to. The interviews often started with introductions and some
+background information. It was a typically balmy afternoon in Kampala
+when we arranged to meet Joy. We sat on white plastic chairs at the
+edges of the Makerere University Guest House garden overlooking a part
+of the city called Wandegeya. With the distant hum of afternoon traffic
+in the background, Joy remembered how the impact of Uganda's rebellion
+wars suspended her education:
+
+I started school in 1977...but there was a war and what have you so we
+could not continue in the school where I was. We had to change to
+another school which was relatively a bit stable...We actually couldn't
+do the exams because of the war. The rebel group of the current sitting
+president. That was the war in '85, so we could not sit the exams till
+'87...it was not quite a good experience because actually that war did
+so much harm on us. We had it rough. It was terrible.
+
+Joy was raised in the west of Uganda, where the National Resistance
+Movement originates. The rebellion conflicts of the 1970s and 1980s
+delayed her education by several years, leaving it stuck in the moment
+of near completion. This effect of stalling was also felt among her
+parents, who owned a smallholding that they farmed to survive and raise
+whatever funds they could from selling surplus produce to send their
+children to school. She explained, "They were typical peasant farmers.
+They were farming at a small-scale level. You just grow to eat, and you
+sell very little produce. Basically, that's where they would get money
+to pay for our school fees---from farming, basically."
+
+Tales of basic subsistence, rural poverty, and illiteracy formed part of
+everyday life under conflict. Zebia, also from the western region,
+recounts a similar background of rural poverty. Her parents had limited
+access to education and learnt literacy skills through the local church:
+"They did not have formal education to tell you the truth. They just had
+informal, church-based education. Yes, just teaching them how to read
+and write, teaching them basic literacy and numeracy. Yes, but they
+never had formal education."
+
+Research participants remember their lives as children and teenagers as
+slower and characterized by a rural upbringing and limited access to
+education. While conditions of poverty continue to impact life for many
+Ugandans, they were narrated by research participants as part of their
+background story, defining their own sense of self-development in
+parallel with the story of Uganda's transition to peacetime. The story
+of these women, who as girls struggled to advance their education, is
+narrated as a remarkable story of ambition and social mobility against
+considerable odds. Joy referred to her mother's limited understanding of
+what she does (as a computer scientist) as a sign of her own social
+mobility: "My mother, what she knows is that it is a degree, but she
+does not know how heavy or how light it is to have a PhD. She knows that
+now so far, I have two degrees, I mean three. She knows I have three
+degrees, but she doesn't really know what they mean."
+
+Joy refers to heaviness and lightness as states of being that represent
+educational achievements. While Joy's mother does not appear to
+understand her daughter's accomplishments, she speaks the local
+languages that Joy is trying to preserve using computing. Runyakitara is
+the dominant language of the western region, and it represents its
+political history, which is the same history through which Joy narrates
+her own story. It emerged as a "new" language in the 1980s, merging the
+dialects of four ethnic groups (Bernsten 1998). The origins of
+Runyakitara are in the Bunyoro-Kitara Kingdom that declined during
+colonialism because of the tribe's resistance to British rule. The
+Baganda were seen as more receptive to the British colonial
+administration, and tribal emissaries were given key posts across the
+territory, bringing with them educational and health programs all spoken
+in the Baganda language of Luganda. The revival of the western Bunyoro
+languages represents a postcolonial response to the dominance of the
+Baganda, but the four dialects merged primarily because during the wars,
+and radio was the main medium of communication across the region. Today,
+efforts to establish Runyakitara as a secondary language spoken as much
+as Luganda are seen as the project of "Makerere elites," of which Joy
+probably qualifies. While the preservation of regional dialects is
+considered vital to the continuation of cultures, linguistic history is
+revealing of political tensions and social upheaval (Fleisch and
+Stephens 2016). Language preservation is a research strength at
+Makerere, with several participants active in ongoing projects to build
+natural language processing (NLP) tools, machine learning methodologies
+that translate between languages. The computational processes of NLP
+effectively flatten languages, lightening the weight of history to focus
+on learning and acquisition, etymology, and linguistic comparison across
+texts; the intricate political histories through which languages change
+are lost in the standardizing practises of NLP (see, for example,
+Aludhilu and Bidwell 2018).
+
+Dr. Julianne Sansa-Otim, a successful researcher who leads the Weather
+Information Management in East Africa (WIMEA-ICT) project,^7^ intimates
+a different relationship to her mother, crediting her as the "real
+strength under my wings." As she explains, her mother endowed in her
+children the confidence to pursue their ambitions: "I think the real
+strength or the real wind under my wings in my education was my mother.
+She just exhibited this confidence in all her children and just letting
+you know that you can do anything." Elevation, or taking flight, infers
+a similar feeling of lightness to that of Joy's journey. The metaphor of
+flight implies transcendence instead of incremental progression.
+Julianne's flight took off at a young age when she was encouraged to
+pursue her interest in mathematics:
+
+I was one of the few girls who really enjoyed doing mathematics...I am
+so proud of my high school---first, it was an all-girls only school,
+okay that is good and bad, depending on how you look at it, but this
+school was so empowering. I know so many people who went to mixed
+schools and they always had the impression \[that maths\] is for boys,
+not for girls, but in this high school you could do anything, really. So
+this just encouraged me to continue believing in myself and in my
+dreams.
+
+Julianne locates her sense of empowerment and "belief in myself" in her
+mother's encouragement and the opportunities to study maths while at an
+all-girls school. The combination of mainly female encouragement is
+remembered as fueling her ascent.
+
+These memories of growing up in rural Uganda and with conflict rumbling
+in the background are conceived in plotlines of sedentariness succeeded
+by mobility, inertia by transcendence, feeling stuck by breaking free.
+These are celebratory stories of transformation that are also
+performative of wider narratives of global computing. A version of this
+story will be narrated to funding bodies, perhaps with the details of
+childhood memory omitted, but the aspirational rhetoric of development
+enhanced. Stories of succeeding in the face of adversary make research
+participants the ideal recipients of computer science philanthropy and
+donor funding.
+
+While participants narrated personal successes in stories of social
+mobility and educational attainment, these narratives were paralleled by
+stories of computing in Uganda as deterministic. Like Joy, Dr. Florence
+Tushabe works on Uganda's languages (Tushabe et al. 2010). She has
+translated the Mozilla Firefox interface into three different languages
+to extend accessibility. Florence states, "if you aren't an English
+speaker, you will not be able to use your smartphone and you find that
+the majority of Ugandans do not know English or are comfortable in
+English reading and writing." Florence translates applications and web
+services from English into the dominant language of each region of
+Uganda. By extending access via mobile phone to services such as
+healthcare (through mobile medicine and diagnostics) to economic
+transactions (through mobile money operators), Florence determines that
+the technology will make Ugandans healthier and wealthier (Rwashana et
+al. 2010).
+
+Julianne's project corresponds with Florence's by making data
+accessibility an economic stimulus. Julianne leads a team of eight
+researchers in developing the technology to capture, analyze, and
+disseminate weather reports with the long-term goal of supporting
+agribusiness, tourism, and leisure industries that rely on readings
+(Nsabagwa et al. 2019). Julianne explains,
+
+One of the reasons the \[Meteorological authority\] took long to
+actually get authority status was they were being asked, what's the
+value, the monetary value of what they do. It is easy to see why the
+Revenue Authorities are an authority because they collect taxes...It is
+not easy to see this, at least in our part of the world, it is not very
+obvious to the decision makers the value of this weather climate
+information...Hopefully as our relationship develops \[with the
+Meteorological authority\]...we will be able to...show the economic
+value\...and then feed\...into the national agenda through policy.
+
+In Julianne's and Florence's research, a deterministic concept of
+technology is configured as the driver of socioeconomic change.
+
+From these plateaus of technoliberalism emerges the perspectival view
+(Yusoff, forthcoming) of future sociotechnical imaginaries stretching
+out the economic benefits while simultaneously blurring the slow
+violence of digital technology in surveilling and subjectivating African
+citizens in the present.^8^ Uganda's long-term president, Yoweri
+Museveni, increasingly views social media as a destabilizing political
+force and a threat to his hold on power, exemplified by the repeated
+shutdowns around elections and the abrupt introduction of new taxes on
+apps.^9^ The 2021 general election represented the first time since his
+inauguration that Museveni ran against a new oppositional candidate.
+Instead of facing his old bush comrade Kizza Besigye, Museveni faced
+competition from musician Bobi Wine, a favored candidate in the cities
+and popular on social media across the world. The threat of Wine's
+youthful energy and social media reach prompted Museveni to shutdown
+social media platforms (Burke and Okiror 2021). This is not the first
+time that he has done this. A shutdown around the 2016 general election
+stoked controversy internationally as a breach of human rights by
+inhibiting freedom of speech during an election (Obla 2021). However,
+the impact of the shutdown was much more insidious because it blocked
+mobile money transactions essential to rural campaigning.
+
+In his speeches and dress code, Museveni regularly evokes the rebellion
+spirit that originally brought him to power and has long since justified
+his increasingly exclusionary grip. At times, and almost in the mode of
+technologically assisted bush tactics, he has used social media as a
+surveillance tool to identify and suppress dissenting voices.^9^ He
+embodies what Mats Utas (2012) characterizes as the African Big Man in
+his recapitulation of the original zeal of liberation politics that
+brought him to power in 1986 when the participants were young girls. In
+the subsequent decades, he has been constrained by global capitalism and
+the conditional development aid in sustaining Uganda's fragile economy
+(Tripp 2010). While Museveni looks back, invoking the past as a
+political resource, the technoscience-donor development complex
+(featuring constellations of philanthropy, bi- and multilateral aid, and
+global technology industries) uses the same past as a resource to
+embrace technoliberal futures.
+
+The chronopolitics wielded by Museveni and global computing industry
+meets Sarr's observation that "one shouldn't underestimate the enormous
+amount of symbolic violence inscribed and represented within the
+collective African imaginary in the form of some sort of failure, of
+some kind of handicap, or even as a kind of human deficiency and
+congenital deformity" (2019, 1). Instead of delivering democracy, the
+inheritance of liberatory struggles has morphed into authoritarianism,
+which, in turn, has seeded distrust in the competencies of present-day
+bureaucracies to function well. Global computing targets the resultant
+problems of dysfunctional governance that are perceived to perpetually
+derail a continent. The African Big Man rhetoric and the discourses of
+global computing vindicate each other, leaving Uganda and its citizens
+in continual states of lag and becoming. While Museveni flexes his
+political muscle through informal networks, computing promises to
+correct corruption by instituting mechanisms for transparency and
+accountability through innovations in e-governance; while Museveni
+promotes reciprocal forms of political value entrenched in rural
+cultures and traditions, computing promises democracy based on the
+rationalization of knowledge and its function in instituting
+representative politics and evidence-informed decision-making. The
+chronopolitics that is constructed and exercised by global technology
+stakeholders and Museveni's governing regime continually cancel out the
+present. The exertion of power in the management of time disempowers
+African citizens by relegating them to a past that restricts them from
+realizing their political subjectivity in the present (Mbembe 2001;
+Eshun 2003).
+
+Childhood memories become a chronopolitical tool in ordering the past in
+relation to the future that eclipses the violence wrought in the
+present; of, for example, Ugandans being subsumed in the larger
+biopolitical research projects of the North through global health (which
+serves as Florence's only source of funding) and through which the value
+of life is rendered calculable (Murphy 2017); of the commodification of
+metrics and their predictive futures (Julianne's research operates
+within the calculations of future food provision) that not only
+standardize and survey society and space but rely on global production
+chains and material infrastructures erected from racialized extractive
+and polluting industries (Liboiron 2021). While Julianne, Zebia, Joy,
+Agnes, and Florence strive to foster life through their computer science
+projects in weather readings, health diagnostics, and language
+preservation, the probabilities of the future are always being
+calculated to exceed the deficits that haunt the present. These women
+are embroiled in the fantasies of computer science, and they navigate
+the affective desires, precarity, and forms of abandonment that play out
+in their everyday lives. Their pasts are a proxy for African pasts that
+technology promises to move them beyond. The background rattle of war,
+disease, poverty, and illiteracy that rings in the ears of female
+computer scientists counterbalances the apparition of depoliticized
+computer science and the distant futures that unfold from it (Nyabola
+2018; Pogialli 2017). As we explore below, research participants'
+encounters with the chronopolitics of technoliberalism and
+authoritarianism are through the everyday routines of computing in
+higher education and their own symbolic status as women in Uganda in
+which their reproductive labor is tied to the future of the nation.
+
+### "Living in Parenthesis" 
+
+Who will bury you when you die? You really work hard for your body not
+to be ashamed when, you know, you die.
+
+---Joy
+
+![](media/image2.png){width="5.100694444444445in"
+height="7.874305555555556in"}Figure 1: Alex Baine, *Women's Emancipation
+in Uganda*, 1989. Oil on canvas, 164 cm × 102 cm Institute of Heritage
+Conservation and Restoration (IHCR) collection, Kampala. Reproduced with
+permission from Dr Amanda Tumusiime, Dean of the Margaret Trowel School
+of Industrial and Fine Art (MTSIFA) at Makerere University
+
+Back at the Makerere University Guest House garden, Joy laughed as she
+spoke, recognizing that she was asking an important question that
+broaches the symbolic status of women in Uganda, where the capacity to
+bear children and take care of family and community are considered
+primary roles. Motherhood is historically symbolic as a guarantee of
+future survival, as Joy articulates, and it is often evoked as
+foundational to nation-building. Kyomuhendo and McIntosh (2006) use the
+term "domestic virtue" to conceptualize this consistent style of thought
+that lends rectitude to motherhood and communal caring. Reproductive
+labor has also been important in the aims of Ugandan women's development
+movements to realize women's political subjectivity by turning domestic
+virtue into an active form of citizenship. While participants reflect on
+motherhood and communal caring as parenthetical to the goals of
+computing in securing Uganda's socioeconomic development, in this
+section, we illustrate how mothering embodies strategies for coping with
+the precariousness of living in the wake of technoliberal and
+authoritarian chronopolitics. "Life in parenthesis" (Robbins 2004)
+reveals the different temporalities participants experience through
+motherhood, and how participants nurture an enduring "near future" that
+attends to and puts meaning back into the present (Guyer 2007).
+
+Sitting in the offices and in the manicured gardens of campuses, our
+conversations began with academic achievements; however, participants
+were keen to remind us, often with humor, that as Ugandan women they all
+had significant family commitments to attend to. Female participants
+regularly left work earlier to collect children, prepare food, and
+attend to their home. They referred to working on the farm at weekends
+and attending church on Sundays where they would engage in communal
+affairs. They spoke as though they were tapping us on the shoulder and
+reminding us not to forget this role. Their eagerness to voice that in
+addition to computers, labs, students, and books there are also
+children, husbands, family, land, villages, church, communities, and an
+ongoing procession of weddings and funerals all arranged through
+multiplying WhatsApp groups, was also an acknowledgment that these parts
+of their lives were often written out of computer science grant
+applications and publications. Joy reminds us about the expectations of
+her role in reproductive and communal labor: "Even when you are in your
+books, your mind should not forget about the family matters...remember I
+am a woman, I have to have a family."
+
+The computer scientists we spoke to all had numerous children that they
+had given birth to and raised during their PhD studies and into their
+early careers. As Rhiannon Stephens (2012) charts in her linguistic
+history of poverty in East Africa, women avoided hardship and guaranteed
+their position in the community by giving birth.^10^ Joy echoes this
+history of gendered survival strategies in the epigraph. When she asks
+who will bury her when she dies, she intimates that having children and
+taking care of the community guarantees her future personhood. While Joy
+anticipates that motherhood guarantees that her body will not be
+forsaken, women's development movements have long sought to challenge
+this symbolic yet passive role of women by recognizing and advocating
+the active presence of women's reproductive labor in nation-building.
+Like many other parts of Africa, Uganda has maintained independent
+women's movements that have championed women's economic and political
+participation (Tripp 2000). In post-conflict Uganda of the late 1980s
+and 1990s, these women's movements focused on expanding the
+representation of women in the public sphere and increasing their legal,
+economic, and political representation. In the context of the broader
+international donor priorities, the need to court aid and respond to the
+aims of the Ugandan women's movements, Museveni's government supported
+the demand for greater representation and put into place affirmative
+action policies in education and politics (Tripp et al. 2008; Tamale
+2000). Participants have benefited from these campaigns and policies in
+receiving additional credit and gaining entry through equal
+opportunities schemes, as [Dr. Agnes Semwanga Rwashana,]{.mark} a health
+informatics specialist at Makerere states: "I think that right from
+entry to university...there is always a point 1.5 extra point given to
+female students. So that encouraged women to join the university to
+begin with and to carry on, and what we have seen with projects that we
+have had so far from Norway and Netherlands, they always insist that
+there has got to be a strong gender component on all the scholarships."
+
+Agnes was the first graduate in the PhD program at Makerere and as such,
+she is the beneficiary of the generations of women in the 1980s and
+1990s who were university-educated, urban, and employed as teachers,
+managers, doctors, and scientists (Tumusiime 2012, 2017). In her current
+role as the Gender Focal Person in the WIMEA-ICT project, Agnes nurtures
+the careers of younger female researchers. Thus, she extends the ethos
+of promoting women's work to computing. The painting by Alex Baine
+(Figure 1) visualizes the momentum gathered over generations of women's
+work: the darker bottom parts of the painting represent women's domestic
+labor giving birth, providing food, shelter, and clothing as part of the
+building blocks of Ugandan modernization. At the top of the painting,
+basking in the light, are groups of women donning the cap and gown of
+graduation ceremonies as representative of this cumulative and oft
+forgotten labor.
+
+The female computer scientists are indebted to women, intellectuals, and
+artists, who in the 1980s translated the power of their "domestic
+virtue" into active nation-building. [Participants echoed the discourse
+of empowered womanhood forging the nation in remembering the influence
+their mothers, teachers, and female kin had in supporting their
+education and careers. Julianne's mother, for example, embodies female
+empowerment by being "the wind beneath her wings," giving flight to her
+children's futures.]{.mark} And yet, participants were reluctant to
+apply the same temporal trajectory to their own labor in nation-building
+outside of the computer science laboratories. While their mothers'
+strength lifted them up, instilling in them the ambition to follow the
+upward trajectory depicted in the painting (Figure 1), participants did
+not place the same value on their own domestic and kinship roles, and
+relegated this sphere to life in parenthesis. As Zebia states,
+
+Still in African setting a woman still has to put in more. As a woman
+you have to end up putting in more because...according to our culture, a
+woman is the one responsible for the, what can I call it, the well-being
+of the family, in terms of household chores, making sure the kids are
+well looked after, all those kinds of small, small things at home. So as
+a woman you end up having to put in much more amount of time as compared
+to a man.
+
+Zebia's reaching for a label to describe reproductive labor signifies
+that there is no ready definition to hand. Yet, by reminding us of their
+communal role, participants alerted us to its lack of visibility in
+their professional roles (illuminated at the top of the painting). Their
+accounts amplify the gendered dimensions of the chronopolitical
+discourse we described earlier. Women's work in sustaining the nation is
+recalled as part of past struggles that their mothers helped them to
+transcend, but that participants do not lend the same significance in
+terms of contemporary nation-building. Zebia's scaling of her domestic
+life to the "small, small things" reflects the routine erasure of the
+political purchase of this communal caring that seems to run parallel to
+their professional role. To some degree, by tapping us on the shoulder
+and reminding us of their communal role, participants were also
+vindicating their careers as computer scientists as the potential
+gateway to a more contoured political subjectivity. Their careers and
+the institution they work for, alongside any research they engage in,
+formally lends them visibility in public life and in nation-building
+strategies that they otherwise might not enjoy as women in Ugandan
+society. The national development plans are after all replete with
+images of technoscience, whereas images of mothers and babies, farms and
+villages feature on development reports signifying past problems and not
+future promises. The diversification of women's roles to professional
+spheres is both an achievement of women's development movements,
+establishing greater representation of women in public life, and it is
+chronopolitical in organizing time around the formal and waged
+employment of computing in aspiring towards technoliberal futures. On
+the surface, motherhood does not appear to be important to doing
+computer science, which happens in offices with artifacts,
+dematerialized data, and students away from life in parenthesis.
+
+The problem with this logic is that the historical condition of
+colonialism has meant that formal institutions and waged employment have
+remained aspirational, unable to support this route to more active
+political subjectivity for women and men (Fanon \[1952\] 2008).
+Reproductive labor provides security and integrity for women and men in
+the face of vast precarities arising from the continual evacuation of
+the present, and its destabilizing effects on institutions and patterns
+of work. Sitting in a hotel lobby in downtown Kampala, while attending a
+conference,^11^ Florence made this precarity explicit: "For me, my
+dream, and I am not going to mince my words here, is to make a decent
+living with my skills."
+
+Florence's dream of a decent living is not easy to come by. Funding to
+do research is mostly dependent on external donors and their agendas,
+and provided only on contractual basis, thus making it conditional and
+ephemeral. The funding for Julianne's project finished in 2018 and
+weather reading is not yet a functional arm of the Ugandan government.
+For all the enthusiasm for computing, Julianne lamented the
+infrastructural and government obstacles to realizing the vision at the
+heart of her research grant. In addition to the provisional nature of
+funding, there are times when Makerere University cannot pay its
+employees. In 2016 Museveni closed Makerere in response to staff
+striking over unpaid compensation and students striking over not
+receiving financial aid from the Ministry of Education (Nakkazi 2016).
+Similarly, during the COVID-19 pandemic, the university was shut down,
+and its staff received reduced pay. This precarity is represented by the
+bare walls of participants' offices, which contained minimal decor and
+scant personal objects, almost in recognition that the space they occupy
+professionally might not last. Basking in the light at the top of the
+painting is a major motivation for all research participants, but the
+promise of stable institutional and waged work remained uncertain.
+
+### Syncopated Rhythms 
+
+The "small, small things" that Zebia does to care for her family and
+community, in fact, sustain the very large dreams of doing computing.
+She presented a version of computing that performs to the degendered
+dreams of global technology industries and philanthropic donors and
+excludes reference to motherhood. And yet, by analyzing how participants
+talk about tutelage and data, we reveal how the ideology of "domestic
+virtue" actually sustains computer science. In this way, we show how
+computing resounds in the rhythms of everyday life where time is
+experienced by participants in a syncopated way, at times amplifying the
+larger chronopolitical discourses and at other times diminishing them.
+
+Engineers and technicians are promoted as essential to Uganda's future
+economic prosperity. Making the social world, and in Julianne's case the
+natural world, legible requires a labor force capable of constructing
+technological infrastructures, writing code and algorithms, analyzing
+data, and so on. Florence, for example, directed the conversation
+towards her students, and, like many participants, she talked
+passionately about extending her caring role in tutoring a generation of
+coders equipped with the skills to join a growth economy. She describes
+her motivation for teaching and the joy she finds in the process,
+expressly comparing it to parenthood:
+
+I love it. I love dealing with students. I love seeing students come in
+when they don't know anything and they leave when, you know, they have a
+skill, and they can be self-employed. I love it when I see my students
+sustaining themselves and flying and reaching their full potential. Yes,
+I think as a parent I see that as my children, I think all of us are
+where we are because someone held our hand and helped us to be where we
+are. Maybe someone gave us some advice; maybe someone gave us some
+material support. So you support people and you don't know what can come
+out of them.
+
+Florence speaks to Baine's painting and to the testimony of participants
+in recognizing that their success was achieved through the strength of
+others. And like other participants, Florence uses the metaphor of
+learning to fly. However, she also expresses uncertainty in not knowing
+"what can come out of them." We interpret this as both about not knowing
+how much students can achieve in learning computing skills, but also
+uncertainty about whether and how these students will find economic and
+social security. The United Nations (2015) estimates that Africa's youth
+population will more than double from current levels by 2055. Florence
+reflects on computing as a response to both the opportunities and
+challenges presented by sharp population growth in Uganda's cities. She
+aims to train generations of coders who can ignite the economy, but she
+is also recognizing the vast insecurities around future work,
+particularly waged work.
+
+The university is graduating ever-increasing numbers of computing
+students for a data-enabled future that is speculative. Back in the
+early 2000s, Baryamureeba led a transformation at Makerere University
+that instituted a neoliberal model of higher education dependent on
+enlarged cohorts of fee-paying students. Computer science has indeed
+benefited from this political economy as technical skills are in high
+demand and equate to a market value in Uganda's transition to a "modern
+society" (NPA 2020). Yet the next generation of female computer
+scientists face the same precarity as their mentors: few academic jobs,
+and even less employment stability. Florence wishes to provide a means
+for her students to have stability, and thus she prepares them for a
+more enduring near future through self-employment and entrepreneurship
+that has traditionally defined the informal, non-waged economies of
+African societies. Tutelage extends further than training in computer
+skills. It entails imparting gestures and attitudes towards a future
+that could arrive, or it could not, in which case tutelage includes
+teaching strategies for coping with uncertainty.
+
+Julianne embarked on a similar strategy of "future proofing" in a public
+engagement event held at Makerere. She demonstrated the significance of
+Uganda's meteorological readings in connecting to global chains of
+supply and demand for data. In this way, Julianne envisioned a future
+political economy for her students to participate in. The public
+engagement event was oriented towards future jobs by scaling up
+Julianne's project to planetary dimensions, summoning a sociotechnical
+imaginary of anticipated supply and demand for weather data and the
+labour force to support it.
+
+The idea for Julianne's project started with her observing seasonal
+changes affecting a small farm she manages with her mother. To cope with
+the fluctuating rhythms of professional work, Julianne and her mother
+had established a smallholding. This was not unusual as most
+participants had made similar investments in farming and fulfilled
+multiple jobs (Harsh et al. 2019). Julianne explained,
+
+My mother thought...maybe we should begin doing some farming on this
+land and...I put my support into the project. I was following up on how
+things were and...I found out so many stumbling blocks...One of which
+was the fact that traditionally in Uganda, March is the rainy season and
+August, so March, April, May is rains and then August, September is also
+the shorter rains. We were farming in the March season. What happens is
+that traditionally in February everybody goes to plough, to prepare the
+ground for the planting and then in March everybody plants. That's what
+it has been for, I mean, from when I was born. But something happened. I
+don't know when it started happening...I'm not a meteorologist. So in
+this particular year we followed the traditional thinking...and then
+after we planted, it did not rain for several weeks.
+
+Her experience of farming led Julianne to "thinking weather" (Sansa-Otim
+et al. 2022). She noticed changes in the annual harvest that neither she
+nor the Uganda meteorological authorities could explain: "I began to
+understand that we actually have national authorities in our countries
+that are mandated to do this \[provide weather readings\] and then I
+reached out to them to understand okay, why aren't you doing this?...If
+you really want this \[weather\] information to be accessed by anybody
+who wants, what it would take?"
+
+Julianne's experience of farming bears similarity to Florence's
+experiences with childhood illnesses when she says, "you need a lot of
+samples of the sickle cell blood cell. You need that data." Through
+tutelage and scaling up their projects, Julianne, Florence, and other
+research participants structure much of their everyday lives around the
+production of big data. Yet to solve what participants recognize as data
+deficits requires the growth of vast sectors of the Ugandan economy.
+Open-access data available in the volumes required by research
+participants needs collection and storage facilities, communication
+networks, analytics, labor, hardware, and cloud computing. The
+materiality required to support the industrial trajectories of computing
+entails self-devouring growth. As Julie Livingstone (2019) notes, the
+theory of the limits to growth is not new but still relevant in
+understanding the effluence and extensions of modernization. The raw
+materials needed to build technoscientific infrastructures -- the metals
+and minerals mined from African earth, the fossil fuels burnt in the
+production processes and along the global production chains---all upend
+the problem-solving promises of data science (Bridge 2015).
+
+It is from observations in the discrete geographical sites of the farm
+and village health center that the problems Julianne and Florence pursue
+were born, but to do the computer science research, both
+epistemologically and financially, requires the kind of scaling that
+promises national growth by attending to "global problems\'\' (framed by
+the Sustainable Development Goals, for example). The dominant
+cartography of computing slides along the nested scales of nation,
+region, and globe that harmonizes data across a flat, even planetary
+surface. Participants imagine that they cannot do computing at the scale
+of the farm or the village health center; these cartographies literally
+do not compute, they are too small, bumpy, and dislocated.
+
+Through their investments in research projects, female computer
+scientists actively reproduce data in the service of national futures,
+which ideologically calls upon their symbolic status as women and
+induces ethical posturing towards nurturing the nation. This posture
+seems imperative, but it might not necessarily lead to solving the
+problems they observe, but deepening environmental degradation, health
+problems, and economic inequality. Research participants are immersed in
+these paradoxes of syncopating temporalities; their histories, both
+personal and societal, have been conditioned by the necropolitics of
+modernity, of which the spread of global computing in Ugandan higher
+education and research is an extension. Participants invoke the
+discourses of motherhood in Uganda to orchestrate the near future into a
+survivable state of being that can cope with the wavering precarity of
+computing.
+
+### Conclusion
+
+[It is not a vacant, uniform, or universal feature that sets in motion
+liberty but rather the future as it is seen, felt, and heard from the
+enfleshed parenthetical present of the oppressed, since this group's NOW
+is always already bracketed (held captive and set aside indefinitely)
+in, if not antithetical to, the world of]{.mark} Man.
+
+---Alexander Weheliye, *Habeas Viscus: Racializing Assemblages,
+Biopolitics, and Black Feminist Theories of the Human*
+
+Understanding computing in Uganda means paying attention to what makes
+it possible. The technoliberal discourses, emerging from Silicon Valley,
+operate across a seemingly smooth planetary surface encoding an
+ungendered and deracialized form of technology. Yet, in this paper, we
+have argued that gender is central to the configuration of computing in
+Uganda. The appearance of neutrality is a "god trick" performed in a
+dominant techno-philanthropic complex, the lack of acknowledgment that
+all knowledge is situated is where racial, ethnic, and gendered violence
+erupts (Haraway 1991). More significantly in this paper, we have focused
+on how female computer scientists cope with the uncertainty produced
+through chronopolitics by instantiating gender in ways that are specific
+to Ugandan culture and history.
+
+The epistemic demands of computer science for more data, extended and
+comparative metric systems promise to network countries such as Uganda
+into global digital infrastructures that promise socioeconomic growth in
+the form of jobs, innovation, and entrepreneurship. The present
+condition in Uganda, and across the African continent, is represented as
+impoverished time that can only be improved upon---through technology,
+in this instance. To add definition to the techno-utopias of the future,
+memories of African pasts are framed by problems of disease, poverty,
+conflict, and illiteracy.
+
+Museveni, Uganda's president, utilizes the same chronopolitics to
+consolidate his power base. He regularly invokes the same liberatory
+rhetoric and style that first brought him to power through the military
+coup by promising future prosperity against the backdrop of civil war.
+By ordering time in similar ways to technoliberalism, Museveni also
+relegates the present time to the "waiting room of history" (Chakrabarty
+\[2000\] 2008, 7). The products of global computing---namely, social
+media---are framed as either for or against Museveni. Shutdowns,
+surveillance, and taxes are just some of the more visible forms of
+subjugation and suppression that Museveni uses regularly used to govern
+social media in his favor.
+
+The chronopolitical discourses of authoritarianism and technoliberalism
+shape time in Uganda by pitching the past against the future and, in the
+process, evacuating the present. Everyday life is narrated in
+parenthesis, outside of the chronopolitical discourse but essential to
+the near futures in which life ticks by; work gets done, families are
+raised, and wider communal networks are cared for. The near future
+provides a way to cope with the precarity of chronopolitics and the
+uncertainties that are produced in chasing down futures that remain
+speculative socio-technical imaginaries.
+
+We show how the near future is a gendered space orchestrated by women
+that reverberates with the intricate histories of motherhood and social
+reproduction in Uganda. Conceptually, motherhood is linked to survival
+strategies. To bear children was to guarantee future survival and evade
+poverty. Research participants connect to this cultural history,
+investing in family and community to ensure future personhood.
+Motherhood is also symbolically important in Uganda as the nourishing
+force of the modern nation-state by bearing future generations. While
+women's movements have persuasively argued to shift the symbolic status
+of women to a political subjectivity that recognizes their power to
+produce good citizens, mothering was described to us as parenthetical to
+the profession of computing, necessary but perhaps not politically
+salient. Their professional role as computer scientists with research
+and teaching responsibilities gave them access to more public and
+representational roles.
+
+And yet closer interpretation of their testimonies shows how these
+winding histories of motherhood and social reproduction are written into
+computing through tutelage and data production. Equipping students with
+coding skills includes preparing them for uncertainty. Opportunism and
+hustling are taught in navigating a speculative future where
+industriousness might be needed to make a living. Similarly, echoing the
+rhetoric of technoliberalism by relaying the future promise of, for
+example, data about weather readings and child health are important in
+connecting to those global flows of capital and knowledge emanating from
+the universities and tech centers of the North. In building the near
+futures, female computer scientists are nurturing resilient environments
+able to cope with the evacuated present. These practices of care include
+recognition of the paradoxes of computing that on the one hand promise
+prosperity---so learning to speak the policy language and produce masses
+of data is useful---and on the other hand, confront the ecologically and
+economically destructive force of expanding extractive industries
+already eating into African lands in order to build the material
+infrastructures of computing. This paradox rings with the histories of
+colonialism and racial capitalism that have also shaped Uganda. What
+could be perceived as incongruities and irregularities in the realities
+of African women's lives is what we call a syncopated rhythm that is
+repetitive, amplifying, and dissipating the chronopolitics, but also
+irregularly producing random patterns. This is not a dialogic story for
+or against global computing by attempting to provincialize African
+science. The story moves away from the postcolonial critique of local
+resistance to a feminist critique that questions how computer science is
+made in Uganda through the syncopation between the globalizing processes
+and extended infrastructures of computing and the gendered strategies
+for coping with its inevitable precarities.
+
+### Acknowledgments 
+
+This material is based upon work supported by the National Science
+Foundation under Grant No. 1257145. Any opinions, findings, and
+conclusions or recommendations expressed in this material are those of
+the authors and do not necessarily reflect the views of the National
+Science Foundation.
+
+The authors wish to sincerely thank all the female computing researchers
+in Uganda who generously gave their time to participate in this study,
+including the following: [Dr. Joyce Nakatumba Nabende is an Associate
+Lecturer and Head of the Artificial Intelligence Laboratory at Makerere
+University. Dr. Julianne Sansa-Otim is a Senior Lecturer in Computer
+Networks at Makerere University and leads the WIMEA-ICT lab. She also
+serves on several boards including that of Research and Education
+Network for Uganda (RENU) and the UbuntuNet Alliance.]{.mark} [Dr. Agnes
+Semwanga Rwashana is Deputy Principal of the College of Computing and
+Information Sciences at Makerere University. Agnes uses health
+informatics, qualitative models, and simulation tools to aid healthcare
+decision-making.]{.mark} [Dr. Florence Tushabe is Associate Lecturer of
+ICT at Soroti University, specializing in developing computational tools
+to solve problems in maternal and women's health.]{.mark}
+
+### [Notes]{.mark} 
+
+^1^ Joy is a pseudonym used to protect anonymity as much as possible.
+See the Methods section.
+
+^2^ Zebia and Charity are pseudonyms used to protect anonymity as much
+as possible. See the Methods section.
+
+^3^ Stephen Kiprotich is pictured crossing the finish line to claim the
+Olympic gold medal in long-distance running in 2012.
+
+^4^ We use Atanasoski and Vora's (2018) critique of technoliberalism as
+an ideology of Silicon Valley, representative of global computing
+industries, and multilateral stakeholders such as the World Bank, in
+which social difference, injustice, inequality are pitched as problems
+that digital technologies, done right, can seamlessly overcome.
+Technoliberalism bears the hallmarks of the "culture of no culture"
+(Traweek 1998, 162) in recapitulating a neutral and depoliticized form
+of computer science.
+
+^5^ Colonialist power regimes have historically established territorial
+control by medically intervening in women's reproductive capacities, and
+thus succeeded in abstracting birth as a source of data and tool of
+surveillance (Hunt 1999).
+
+^6^ We borrow the term "life in parenthesis" from Robbins (2004; quoted
+in Guyer 2007) for a view of time where the present and the future are
+disconnected.
+
+^7^ WIMEA-ICT is a lab where low-cost automatic weather stations
+research, forecast modeling, and software development for weather
+services are conducted.
+
+^8^ Stella Nyanzi, a vocal feminist, human and LBTQI rights campaigner
+and academic, is regularly arrested, harassed, and smeared for writing
+about Museveni on her social media. A famous Facebook post featured a
+poem to Museveni's mother's vagina. Nyanzi campaigned in the 2021
+general election for a parliamentary seat representing a district in
+Kampala. She experienced harassment, claiming that her partner was
+abducted and tortured as a result of her political campaign, and it was
+last reported that she had fled to Kenya to seek safety.
+
+^9^ In July 2018, Museveni introduced additional taxes on the use of
+social media, which prompted many critics, writing mainly on their
+Facebook walls, to ask how authorities know about individual usage. The
+levies have led to a decrease in social media and mobile money usage
+amongst Uganda's youth (Aceng 2019; Boxell and Steinert-Threlkeld 2019).
+
+^10^ Stephens (2012) shows how historically male children were highly
+valued and were more likely to accommodate female relatives, especially
+their mothers, in later life. Female children would be married into
+another family.
+
+^11^ Participants regularly attended conferences where per diems and
+honorariums provide an extra income stream.
+
+### References
+
+Aceng, Sandra. 2019. "Taxing Dissent: Uganda's Social Media Dilemma."
+*Global Voices Advox*, December 12, 2019.
+<https://advox.globalvoices.org/2019/12/12/taxing-dissent-ugandas-social-media-dilemma/>.
+
+Aludhilu, Hilma N., and Nicola J. Bidwell. 2018. "Home Is Not Egumbo:
+Language, Identity and Web Design." *Proceedings of the 2nd African
+Conference for Human Computer Interaction: Thriving Communities*, art.
+no. 2, 1--11. <https://doi.org/10.1145/3283458.3283460>.
+
+Ames, Morgan G. 2019. *The Charisma Machine: The Life, Death, and Legacy
+of One Laptop per Child*. Cambridge, MA: MIT Press.
+
+Amrute, Sareeta, and Luis Felipe R. Murillo. 2020. "Introduction:
+Computing in/from the South." *Catalyst: Feminism, Theory,
+Technoscience* 6 (1): 1--23.
+[https://doi.org/10.28968/cftt.v6i2.34594.](https://doi.org/10.28968/cftt.v6i2.34594)
+
+Atanasoski, Neda, and Kalindi Vora. 2018. "The Surrogate Effect:
+Technoliberalism and Whiteness in a 'Post' Labor Era." *Catalyst:
+Feminism, Theory, Technoscience* 4 (1): 1--13.
+[https://doi.org/10.28968/cftt.v4i1.29637.](https://doi.org/10.28968/cftt.v4i1.29637)
+
+Avle, Seyram. 2020. "Making as Imaginative Crossroads: Ghanaian Makers
+and the Geopolitics of Technological Progress." *Proceedings of the
+Association for Information Science and Technology* 57 (1).
+<https://doi.org/10.1002/pra2.298>.
+
+Avle, Seyram, Cindy Lin, Jean Hardy, and Silvia Lindtner. 2020. "Scaling
+Techno-Optimistic Visions." *Engaging Science, Technology, and Society*,
+no. 6, 237--41.
+[https://doi.org/10.17351/ests2020.283.](https://doi.org/10.17351/ests2020.283%20)
+
+Baryamureeba, Venansius. 2015. *They Will See Him: Memoir of a
+Remarkable Life.* Self-published.
+
+Beltrán, Héctor. 2020. "The First Latina Hackathon*." Catalyst:
+Feminism, Theory, Technoscience* 6 (2): 1--29.
+<https://doi.org/10.28968/cftt.v1i001.32904>
+
+Berlant, Lauren. 2011. *Cruel Optimism*. Durham, NC: Duke University
+Press.
+
+Bernsten, Jan. 1998. "Runyakitara: Uganda's 'New' Language." *Journal of
+Multilingual and Multicultural Development* 19 (2): 93--107.
+<https://doi.org/10.1080/01434639808666345>
+
+Boxell, Levi I., and Zachary Steinert-Threlkeld. 2019. "Taxing Dissent:
+The Impact of a Social Media Tax in Uganda."
+<https://arxiv.org/pdf/1909.04107.pdf>.
+
+Bridge, Gavin. 2015. "The Hole World: Scales and Spaces of Extraction."
+*Scenario Journal* 5 (Fall).
+<https://scenariojournal.com/article/the-hole-world/>.
+
+Burke, Jason, and Samuel Okiror. 2021. "'This Is Africa's Generational
+Cause,' Says Uganda's Election Challenger." *The* *Guardian,* January 9,
+2021.
+<https://www.theguardian.com/world/2021/jan/09/this-is-africas-generational-cause-bobi-wine-uganda-election-challenger>.
+
+Butler, Octavia. 1978. *Kindred*. Boston, MA: Beacon Press
+
+Chakrabarty, Dipesh. (2000) 2008. *Provincializing Europe: Postcolonial
+Thought and Historical Difference*. Princeton, NJ: Princeton University
+Press.
+
+Chan, Anita. 2013. *Networking Peripheries: Technological Futures and
+the Myth of Digital Universalism*. Cambridge, MA: MIT Press.
+
+Eshun, Kodwo. 2003. "Further Considerations on Afrofuturism." *CR: The
+New Centennial Review* 3 (2): 287--302.
+[doi:10.1353/ncr.2003.0021](http://doi.org/10.1353/ncr.2003.0021).
+
+Fanon, Frantz. (1952) 2008. *Black Skin, White Masks*. New York: Grove
+Press.
+
+Fleisch, Axel, and Rhiannon Stephens, eds. 2016. *Doing Conceptual
+History in Africa*. New York: Berghahn.
+
+Guyer, Jane I. 2007. "Prophecy and the Near Future: Thoughts on
+Macroeconomic, Evangelical, and Punctuated Time." *American Ethnologist*
+34 (3): 409--21. <https://doi.org/10.1525/ae.2007.34.3.409>.
+
+Haraway, Donna. 1991. "Situated Knowledges: The Science Question in
+Feminism and the Privilege of Partial Perspective." In *Simians,
+Cyborgs, and Women: The Reinvention of Nature*, 183--201. London:
+Routledge.
+
+Harsh, Matthew, Kerry Holden, Jameson Wetmore, G.Pascal Zachary, and
+Ravtosh Bal. 2019. "Situating Science in Africa: The Dynamics of
+Computing Research in Nairobi and Kampala." *Social Studies of Science*
+49(1): 52--76.
+
+Harsh, Matthew, Ravtosh Bal, Jameson Wetmore, G. Pascal Zachary, and
+Kerry Holden. 2018. "The Rise of Computing Research in East Africa: The
+Relationship between Funding, Capacity and Research Community in a
+Nascent Field". *Minerva* 56(1): 35--58.
+
+Hunt, Nancy Rose. 1999. *A Colonial Lexicon: Of Birth Ritual,
+Medicalization, and Mobility in the Congo*. Durham, NC: Duke University
+Press.
+
+Irani, Lilly. 2019. *Chasing Innovation: Making Entrepreneurial Citizens
+in Modern India*. Princeton, NJ: Princeton University Press.
+
+Jack, Margaret, and Seyram Avle. 2021. "A Feminist Geopolitics of
+Technology." *Global Perspectives* 2 (1).
+<https://doi.org/10.1525/gp.2021.24398>.
+
+Kyomuhendo, Grace Bantebya, and Marjorie K. McIntosh. 2006. *Women, Work
+and Domestic Virtue in Uganda, 1900--2003*. Oxford: Oxford University
+Press.
+
+Liboiron, Max. 2021. *Pollution Is Colonialism*. Durham, NC: Duke
+University Press.
+
+Livingstone, Julie. 2019. *Self-Devouring Growth: A Planetary Tale as
+Told from Southern Africa*. Durham, NC: Duke University Press.
+
+Mavhunga, Clapperton Chakanetsa. 2014. *Transient Workspaces:
+Technologies of Everyday Innovation in Zimbabwe*. Cambridge, MA: MIT
+Press.
+
+Mbembe, Achille. 2001. *On the Postcolony*. Berkeley: University of
+California Press.
+
+Mbembe, Achille. 2019. *Necropolitics*. Durham, NC: Duke University
+Press.
+
+Murphy, Michelle. 2017. *The Economization of Life*. Durham, NC: Duke
+University Press.
+
+Nakkazi, Esther. 2016. "President Orders Indefinite Shutdown of Top
+University." *University World News*, November 4, 2016.
+<https://www.universityworldnews.com/post.php?story=20161104143813146>.
+
+NPA. 2020. *Third National Development Plan* 2020/21-2024/25. Kampala:
+National Planning Authority, Government of Uganda.
+
+Ndemo, Bitange, and Tim Weiss, eds. 2017. *Digital Kenya: An
+Entrepreneurial Revolution in the Making*. London: Palgrave Macmillan.
+
+Nsabagwa, Mary, Maximus Byamukama, Emmanuel Kondela, and Julianne
+Sansa-Otim. 2019. "Towards a Robust and Affordable Automatic Weather
+Station." *Elsevier Journal of Development Engineering*, no. 4, art. no.
+100040. <https://doi.org/10.1016/j.deveng.2018.100040>.
+
+Nyabola, Nanjala. 2018. *Digital Democracy, Analogue Politics: How the
+Internet Era is Transforming Politics in Kenya*. New York: Zed Books.
+
+Obla, Vincent. 2021. "Uganda Election: Museveni Social Media Ban Caps
+Violent Campaign." *The Conversation*, January 15, 2021.
+<https://theconversation.com/uganda-election-museveni-social-media-ban-caps-violent-campaign-153338>.
+
+Odumosu, Toluwalogo. 2017. "Making Mobiles African." In *What Do
+Science, Technology, and Innovation Mean from Africa?*, edited by
+Clapperton Chakanetsa Mavhunga, 137--50. Cambridge, MA: MIT Press.
+
+Poggiali, Lisa. 2017. "Digital Futures and Analogue Pasts? Citizenship
+and Ethnicity in Techno-utopian Kenya." *Africa* 87 (2): 253--77.
+<https://doi.org/10.1017/S0001972016000942>.
+
+Robbins, Joel. 2004. *Becoming Sinners: Christianity and Moral Torment
+in a Papua New Guinea Society*. Berkeley: University of California
+Press.
+
+Sansa-Otim, Julianne, Mary Nsabagwa, Andrew Mwesigwa, Becky Faith,
+Mojisola Owoseni, Olayinka Osuolale, Daudi Mboma, et al. 2022. "An
+Assessment of the Effectiveness of Weather Information Dissemination
+among Farmers and Policy Makers." *Sustainability* 14 (7): 3870.
+<https://doi.org/10.3390/su14073870>.
+
+Sarr, Felwine. 2019. *Afrotopia*. Translated by Drew S. Burk and Sarah
+Jones-Boardman. Minneapolis: University of Minnesota Press.
+
+Sharpe, Christina. 2016. *In the Wake: On Blackness and Being*. Durham,
+NC: Duke University Press.
+
+Stephens, Rhiannon. 2012. "Birthing Wealth? Motherhood and Poverty in
+East-Central Uganda, c. 700--1900." *Past and Present* 215 (1): 235--68.
+<https://doi.org/10.1093/pastj/gts002>.
+
+Tamale, Sylvia. 2000. *When Hens Begin to Crow: Gender and Parliamentary
+Politics in Uganda*. Milton Park, UK: Routledge.
+
+Traweek, Sharon. 1988. *Beamtimes and Lifetimes: The World of High
+Energy Physics*. Cambridge, MA: Harvard University Press.
+
+Tripp, Aili Mari. 2000. *Women and Politics in Uganda*. Madison:
+University of Wisconsin Press; and Oxford: Fountain Publishers.
+
+Tripp, Aili Mari. 2010. *Museveni's Uganda: Paradoxes of Power in a
+Hybrid Regime.* Boulder, CO: Lynne Rienner Publishers.
+
+Tripp, Aili Mari, Isabel Casimiro, Joy Kwesiga, and Alice Mungwa. 2008.
+*African Women\'s Movements: Transforming Political Landscapes*.
+Cambridge: Cambridge University Press.
+
+Tushabe, Florence, Venansius Baryamureeba, and Fridah Katushemererwe.
+2010. "The Translation of the Google Interface into Runyakitara.\'\'
+Presented at the *International Conference for Computing and ICT
+Research*, August 1--4 2010, Kampala, Uganda.
+
+Tumusiime, Amanda. 2012. "Art and Gender: Imag\[in\]ing the *New Woman*
+in Contemporary Ugandan Art." PhD diss., Makerere University.
+
+Tumusiime, Amanda. 2017. "Alex Baine's *Women's Emancipation in Uganda*:
+A Visual Archive of the History of a New Generation of Women in Uganda."
+*African Arts* 50 (2): 58--67. <https://doi.org/10.1162/AFAR_a_00344>.
+
+United Nations, Department of Economic and Social Affairs. 2015. "Youth
+Population Trends and Sustainable Development." *Population Facts*, no.
+1 (May 2015).
+<https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf>.
+
+Utas, Mats, ed. 2012. *African Conflicts and Informal Power: Big Men and
+Networks*. New York: Zed Books.
+
+Wajcman, Judy. 2007. "From Women and Technology to Gendered
+Technoscience." *Information, Community and Society* 10 (3): 287-98.
+<https://doi.org/10.1080/13691180701409770>
+
+Weheliye, Alexander G. 2014. *Habeas Viscus: Racializing Assemblages,
+Biopolitics, and Black Feminist Theories of the Human*. Durham, NC: Duke
+University Press.
+
+Yusoff, Kathryn. Forthcoming. *Geologic Life: Inhuman Intimacy and the
+Geophysics of Race*. Durham, NC: Duke University Press.
+
+### Author Bios
+
+**Kerry Holden** is a human geographer based at Queen Mary, University
+of London. Her research explores knowledge cultures, infrastructures and
+networks in the context of East Africa.
+
+**Matthew Harsh** is Matthew Harsh is Professor in Interdisciplinary
+Studies in Liberal Arts at California Polytechnic State University. His
+work focuses on the cultures and governance of science and innovation in
+Africa, especially related to new and emerging technologies.
+
+**Ravtosh Bal** is a research administrator at the University of
+Toronto. Her work as an independent researcher examines issues at the
+intersection of policy, science, and society.
