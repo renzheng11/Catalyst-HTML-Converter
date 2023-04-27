@@ -3,14 +3,6 @@
 # Author: Ren Zheng
 # renzheng112@gmail.com
 # ---------------------------
-# For converting to an app using py2app:
-# py2applet --make-setup auto.py
-# rm -rf build dist
-# python3 setup.py py2app
-# Go to the dist folder, right click on the app and click "Show Package Contents"
-# Go to Contents/Resources/
-# In the Resources folder paste the word files
-# In the terminal run: dist/auto.app/Contents/MacOS/auto
 
 #import libraries
 
@@ -19,7 +11,6 @@ import os
 import pypandoc
 import sys
 
-
 print("Starting app")
 
 # Global variables
@@ -27,462 +18,478 @@ lastSection = ""
 writtenSections = []
 topNotes = []
 
-# refactor this !!
 # Function: replace markdown styles with html styling tags
 def styleText(text):
-    # strip all newlines so text is one string
-    text = text.replace("\n", "")
+    try:
+        # strip all newlines so text is one string
+        text = text.replace("\n", "")
 
-    # Replace three --- em dash —
-    text = text.replace("---", "&mdash;")
+        # Replace three --- em dash —
+        text = text.replace("---", "&mdash;")
 
-    # Replace two -- em dash –
-    text = text.replace("--", "-")
+        # Replace two -- em dash –
+        text = text.replace("--", "-")
 
-    # Replace \|
-    text = text.replace("\|", "|")
+        # Replace \|
+        text = text.replace("\|", "|")
 
-    # Replace [.]{.smallcaps}
-    text = text.replace(r"[.]{.smallcaps}", "")
+        # Replace [.]{.smallcaps}
+        text = text.replace(r"[.]{.smallcaps}", "")
 
-    # Replace instances of ellipses \...
-    text = text.replace("\...", "...")
+        # Replace instances of ellipses \...
+        text = text.replace("\...", "...")
 
-    # Replace left and right brackets
-    text = text.replace("\[", "[")
-    text = text.replace("\]", "]")
+        # Replace left and right brackets
+        text = text.replace("\[", "[")
+        text = text.replace("\]", "]")
 
-    # Replace \"
-    # Replace left and right brackets
-    text = text.replace('\\"', '"')
+        # Replace \"
+        # Replace left and right brackets
+        text = text.replace('\\"', '"')
 
-    # Replace apostrophes
-    text = text.replace("\\'", "'")
+        # Replace apostrophes
+        text = text.replace("\\'", "'")
 
-    # Replace []{.mark}
-    markPattern = r"\[[^{}]*\]{\.mark}"
-    searchResult = re.search(markPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(markPattern, text)
-        for item in matchList:
-            replacement = item[1:-8]
-            text = text.replace(item, replacement)
+        # Replace []{.mark}
+        markPattern = r"\[[^{}]*\]{\.mark}"
+        searchResult = re.search(markPattern, text)
+        if searchResult: #found match
+            matchList = re.findall(markPattern, text)
+            for item in matchList:
+                replacement = item[1:-8]
+                text = text.replace(item, replacement)
 
-    # Replace underline link format
-    # [[link]{.underline}](link).
-    linkPattern = "\[\[.*\]\{\.underline\}\]\([^)\]]*\)"
-    searchResult = re.search(linkPattern, text)
-    if searchResult:
-        matchList = re.findall(linkPattern, text)
-        for item in matchList:
-            link = item.split("underline}]")[1][:-1][1:]
-            text = text.replace(item, f"<a href={link}>{link}</a>")
-
-    # Replace [link]{.underline} or [<link>]{.underline}
-    linkPattern = "\[<?.*>?\]\{\.underline\}"
-    searchResult = re.search(linkPattern, text)
-    if searchResult:
-        matchList = re.findall(linkPattern, text)
-        
-        for item in matchList:
-            if item.count("<") == 0:
-                link = item[:-13][1:]
+        # Replace underline link format
+        # [[link]{.underline}](link).
+        linkPattern = "\[\[.*\]\{\.underline\}\]\([^)\]]*\)"
+        searchResult = re.search(linkPattern, text)
+        if searchResult:
+            matchList = re.findall(linkPattern, text)
+            for item in matchList:
+                link = item.split("underline}]")[1][:-1][1:]
                 text = text.replace(item, f"<a href={link}>{link}</a>")
-            else:
-                link = item[:-14][2:]
-                text = text.replace(item, f"<a href={link}>{link}</a>")
+
+        # Replace [link]{.underline} or [<link>]{.underline}
+        linkPattern = "\[<?.*>?\]\{\.underline\}"
+        searchResult = re.search(linkPattern, text)
+        if searchResult:
+            matchList = re.findall(linkPattern, text)
             
-    # Replace second link format
-    # [link](link).
-    linkPattern = "\[.*\]\([^)]*\)"
-    searchResult = re.search(linkPattern, text)
-    if searchResult:
-        matchList = re.findall(linkPattern, text)
-        for item in matchList:
-            print(item)
-            bracketHalf = item.split("](")[0][-1]
-            print(bracketHalf + "[end]")
-            period = ""
-            if bracketHalf[-1] == ".":
+            for item in matchList:
+                if item.count("<") == 0:
+                    link = item[:-13][1:]
+                    text = text.replace(item, f"<a href={link}>{link}</a>")
+                else:
+                    link = item[:-14][2:]
+                    text = text.replace(item, f"<a href={link}>{link}</a>")
+                
+        # Replace second link format
+        # [link](link).
+        linkPattern = "\[.*\]\([^)]*\)"
+        searchResult = re.search(linkPattern, text)
+        if searchResult:
+            matchList = re.findall(linkPattern, text)
+            for item in matchList:
+                print(item)
+                bracketHalf = item.split("](")[0][-1]
+                print(bracketHalf + "[end]")
+                period = ""
+                if bracketHalf[-1] == ".":
 
-                period = "."
-            link = item.split("](")[1][:-1]
-            text = text.replace(item, f"<a href={link}>{link}</a>{period}")
-        
-    # Replace "double quote marks" with “quote marks”
-    quotePattern = "\"[^\x22]+\""
-    searchResult = re.search(quotePattern, text)
-    if searchResult: #found match
-        matchList = re.findall(quotePattern, text)
+                    period = "."
+                link = item.split("](")[1][:-1]
+                text = text.replace(item, f"<a href={link}>{link}</a>{period}")
+            
+        # Replace "double quote marks" with “quote marks”
+        quotePattern = "\"[^\x22]+\""
+        searchResult = re.search(quotePattern, text)
+        if searchResult: #found match
+            matchList = re.findall(quotePattern, text)
 
-        for item in matchList:
-            replacement = "“" + item.strip("\"") + "”"
-            text = text.replace(item, replacement)
+            for item in matchList:
+                replacement = "“" + item.strip("\"") + "”"
+                text = text.replace(item, replacement)
 
-    # # Replace 'single quote marks' with “quote marks”
-    # quotePattern = "'([^']*)'[^s]"
-    # # '(?!(s ))(?!(re ))(?!(d ))(?!(ll ))(?!(ve ))(?!(t )).*'(?!s)(?!r)(?!d)(?!ll)(?!ve)(?!t)
-    # searchResult = re.search(quotePattern, text)
-    # if searchResult: #found match
-    #     matchList = re.findall(quotePattern, text)
+        # # Replace 'single quote marks' with “quote marks”
+        # quotePattern = "'([^']*)'[^s]"
+        # # '(?!(s ))(?!(re ))(?!(d ))(?!(ll ))(?!(ve ))(?!(t )).*'(?!s)(?!r)(?!d)(?!ll)(?!ve)(?!t)
+        # searchResult = re.search(quotePattern, text)
+        # if searchResult: #found match
+        #     matchList = re.findall(quotePattern, text)
 
-    #     for item in matchList:
-    #         if (item[:2] == "s "):
-    #             continue
-    #         else:
-                # itemPattern = '\'' + item.strip("\'") + '\''
-                # replacement = "&lsquo;" + item.strip("\'") + "&lsquo;"
-                # text = re.sub(itemPattern, replacement, text)
+        #     for item in matchList:
+        #         if (item[:2] == "s "):
+        #             continue
+        #         else:
+                    # itemPattern = '\'' + item.strip("\'") + '\''
+                    # replacement = "&lsquo;" + item.strip("\'") + "&lsquo;"
+                    # text = re.sub(itemPattern, replacement, text)
 
-    # Replace instances of ^superscripts^ (not notes)
-    superPattern = "\^[^\d]{2}\^"
-    searchResult = re.search(superPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(superPattern, text)
-        for item in matchList:
-            replacement = "<sup>" + item.strip("\^") + "</sup>"
-            text = text.replace(item, replacement)
+        # Replace instances of ^superscripts^ (not notes)
+        superPattern = "\^[^\d]{2}\^"
+        searchResult = re.search(superPattern, text)
+        if searchResult: #found match
+            matchList = re.findall(superPattern, text)
+            for item in matchList:
+                replacement = "<sup>" + item.strip("\^") + "</sup>"
+                text = text.replace(item, replacement)
 
-    # Replace instances of **bold** text
-    boldPattern = "\*\*[^*]*\*\*"
-    searchResult = re.search(boldPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(boldPattern, text)
+        # Replace instances of **bold** text
+        boldPattern = "\*\*[^*]*\*\*"
+        searchResult = re.search(boldPattern, text)
+        if searchResult: #found match
+            matchList = re.findall(boldPattern, text)
 
-        for item in matchList:
-            replacement = "<strong>" + item.strip("**") + "</strong>"
-            text = text.replace(item, replacement)
+            for item in matchList:
+                replacement = "<strong>" + item.strip("**") + "</strong>"
+                text = text.replace(item, replacement)
 
-    # Replace instances of ~~strike~~ text
-    strikePattern = "~~[^~]*~~"
-    searchResult = re.search(strikePattern, text)
-    if searchResult: #found match
-        matchList = re.findall(strikePattern, text)
+        # Replace instances of ~~strike~~ text
+        strikePattern = "~~[^~]*~~"
+        searchResult = re.search(strikePattern, text)
+        if searchResult: #found match
+            matchList = re.findall(strikePattern, text)
 
-        for item in matchList:
-            replacement = "<del>" + item.strip("~~") + "</del>"
-            text = text.replace(item, replacement)
+            for item in matchList:
+                replacement = "<del>" + item.strip("~~") + "</del>"
+                text = text.replace(item, replacement)
 
-    # Replace instances of ~subscript~
-    superPattern = "[^~]~.+~[^~]"
-    searchResult = re.search(superPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(superPattern, text)
-        for item in matchList:
-            replacement = "<sub>" + item.replace("~", "") + "</sub>"
-            text = text.replace(item, replacement)
+        # Replace instances of ~subscript~
+        superPattern = "[^~]~.+~[^~]"
+        searchResult = re.search(superPattern, text)
+        if searchResult: #found match
+            matchList = re.findall(superPattern, text)
+            for item in matchList:
+                replacement = "<sub>" + item.replace("~", "") + "</sub>"
+                text = text.replace(item, replacement)
 
-    # Replace instances of *italic* text
-    italicPattern = "\*(?!\s)[\s\S]*?\*(?<!\s\*)"
-    searchResult = re.search(italicPattern, text)
-    if searchResult: #found match
-        matchList = re.findall(italicPattern, text)
+        # Replace instances of *italic* text
+        italicPattern = "\*(?!\s)[\s\S]*?\*(?<!\s\*)"
+        searchResult = re.search(italicPattern, text)
+        if searchResult: #found match
+            matchList = re.findall(italicPattern, text)
 
-        for item in matchList:
-            replacement = "<i>" + item.strip("*") + "</i>"
-            text = text.replace(item, replacement)
+            for item in matchList:
+                replacement = "<i>" + item.strip("*") + "</i>"
+                text = text.replace(item, replacement)
 
-    # last pass - remove blackslash
-    text = text.replace("\\", "")
+        # last pass - remove blackslash
+        text = text.replace("\\", "")
 
-    return text
+        return text
+    except:
+        return text
 
 # Function: read all body text until next section
 def readContents(last, md, html, authors, extraLine, secLine):
-    # brute fix for roundtable articles ?
-    contents = extraLine + " " + secLine
-    # previous: contents = ""
+    try:
+        # brute fix for roundtable articles ?
+        contents = extraLine + " " + secLine
+        # previous: contents = ""
 
-    if last == "Notes" or last == "Note":
-        line = writeNotes(md, html)
-        return (contents, line)
-
-    itemtext = ""
-    global inList
-    onFig = 1
-
-    while True:
-        #read next line
-        if itemtext:
-            line = itemtext
-        else:
-            line = md.readline() 
-
-        #if empty line
-        if (line == "\n"):
-            contents += "<br><br>"
-
-        # LISTS
-        listPattern = r"-   \w*"
-
-        if re.search(listPattern, line):
-            contents = contents.strip().strip("<br><br>") 
-            contents += """</p><p class="c1 quotes"><ul><li>""" + line.strip("-").strip()
-
-            inList = True
-            nextstartline = ""
-
-            while inList:
-                if nextstartline:
-                    line = nextstartline
-                    nextstartline = ""
-                else:
-                    line = md.readline()
-
-                if (line == "\n"): # end of item
-                    contents += "</li>"
-
-                    nextline = md.readline()
-                    if nextline.count("-") >= 1: # next item
-                        contents += "<li>" + line
-                        nextstartline = nextline
-
-                    if nextline.count("-") == 0: # end of list
-                        contents += '</ul></p><p class=c1>&nbsp;</p><p class=c1>' + nextline
-                        break
-                line = line.strip("-").strip()
-                contents += line + " "
-
-        # QUOTES
-        if line.count("#######"):
-            line = line.strip("####### ")
-            contents += f'<p class=quotes>{line}'
-            while True:
-                line = md.readline()
-                if line.strip() == "":
-                    break
-                contents += line + " "
-
-            contents += '<br><br></p><p class="c1">'
-            
-        # IMAGES + FIGURES
-        fileName = authors[0][0].split(" ")[-1].lower()
-        noAlt = False
-        if line.count("![") == 1:
-            onFig += 1
-            # contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='"""
-            contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='REPLACE ALT TEXT'> """
-
-            if line.count("![]") == 1:
-                # contents += "'" + '>'
-                noAlt = True
-                # print(f"[{fileName[0].upper() + fileName[1:]}] Figure {onFig} needs alt text.")
-            else:
-                contents +=  line.strip("![")
-
-            # start reading
-            inAlt = True
-            figure = ""
-
-            if not noAlt:
-                while inAlt:
-                    line = md.readline()
-                    if line.count("]") == 1: # end of alt text
-                        # if (line.count("width=") != 0):
-                            # line = line.split("]")[0]
-                            # contents += line +  "'" + '>'
-                        break
-                    # else:
-                        # contents += line + " "
-                        # contents = styleText(contents)
-
-
-            # clear end of alt text from line
-            line = ""
-
-            # next = md.readline() # empty line
-            # if next != "\n":
-            #     md.readline()
-
-            lineNotEmpty = True
-            while lineNotEmpty:
-                next = md.readline()
-                figure += next + " "
-                if next == "\n": # end of figure text
-                    break
-
-            figContent = "MISSING FIGURE CONTENT"
-            if len(figContent) > 1:
-                figContent = figure.split('"}')[1]
-            figContent = styleText(figContent)
-
-            contents += f"""
-                <p class=imageText>{figContent}</p>
-                <br><br>
-                <p class=c1>
-            """
-
-        #if the line is a section title
-        anySectionTitle = "^###.+"
-        if re.match(anySectionTitle, line):
-            #add section name to writtenSections list
-            strippedSection = line.replace("#", "").strip()
-            writtenSections.append(strippedSection)
-            contents = styleText(contents)
-
-            contents = testForNote(contents, line)
-            
+        if last == "Notes" or last == "Note":
+            line = writeNotes(md, html)
             return (contents, line)
 
-        # otherwise it is body text
-        else:
-            contents += " " + line 
+        itemtext = ""
+        global inList
+        onFig = 1
+
+        while True:
+            #read next line
+            if itemtext:
+                line = itemtext
+            else:
+                line = md.readline() 
+
+            #if empty line
+            if (line == "\n"):
+                contents += "<br><br>"
+
+            # LISTS
+            listPattern = r"-   \w*"
+
+            if re.search(listPattern, line):
+                contents = contents.strip().strip("<br><br>") 
+                contents += """</p><p class="c1 quotes"><ul><li>""" + line.strip("-").strip()
+
+                inList = True
+                nextstartline = ""
+
+                while inList:
+                    if nextstartline:
+                        line = nextstartline
+                        nextstartline = ""
+                    else:
+                        line = md.readline()
+
+                    if (line == "\n"): # end of item
+                        contents += "</li>"
+
+                        nextline = md.readline()
+                        if nextline.count("-") >= 1: # next item
+                            contents += "<li>" + line
+                            nextstartline = nextline
+
+                        if nextline.count("-") == 0: # end of list
+                            contents += '</ul></p><p class=c1>&nbsp;</p><p class=c1>' + nextline
+                            break
+                    line = line.strip("-").strip()
+                    contents += line + " "
+
+            # QUOTES
+            if line.count("#######"):
+                line = line.strip("####### ")
+                contents += f'<p class=quotes>{line}'
+                while True:
+                    line = md.readline()
+                    if line.strip() == "":
+                        break
+                    contents += line + " "
+
+                contents += '<br><br></p><p class="c1">'
+                
+            # IMAGES + FIGURES
+            fileName = authors[0][0].split(" ")[-1].lower()
+            noAlt = False
+            if line.count("![") == 1:
+                onFig += 1
+                # contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='"""
+                contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='REPLACE ALT TEXT'> """
+
+                if line.count("![]") == 1:
+                    # contents += "'" + '>'
+                    noAlt = True
+                    # print(f"[{fileName[0].upper() + fileName[1:]}] Figure {onFig} needs alt text.")
+                else:
+                    contents +=  line.strip("![")
+
+                # start reading
+                inAlt = True
+                figure = ""
+
+                if not noAlt:
+                    while inAlt:
+                        line = md.readline()
+                        if line.count("]") == 1: # end of alt text
+                            # if (line.count("width=") != 0):
+                                # line = line.split("]")[0]
+                                # contents += line +  "'" + '>'
+                            break
+                        # else:
+                            # contents += line + " "
+                            # contents = styleText(contents)
+
+
+                # clear end of alt text from line
+                line = ""
+
+                # next = md.readline() # empty line
+                # if next != "\n":
+                #     md.readline()
+
+                lineNotEmpty = True
+                while lineNotEmpty:
+                    next = md.readline()
+                    figure += next + " "
+                    if next == "\n": # end of figure text
+                        break
+
+                # figContent = "MISSING FIGURE CONTENT"
+                # if len(figContent) > 1:
+                #     figContent = figure.split('"}')[1]
+                # figContent = styleText(figContent)
+
+                contents += f"""
+                    <p class=imageText>{figure}</p>
+                    <br><br>
+                    <p class=c1>
+                """
+
+            #if the line is a section title
+            anySectionTitle = "^###.+"
+            if re.match(anySectionTitle, line):
+                #add section name to writtenSections list
+                strippedSection = line.replace("#", "").strip()
+                writtenSections.append(strippedSection)
+                contents = styleText(contents)
+
+                contents = testForNote(contents, line)
+                
+                return (contents, line)
+
+            # otherwise it is body text
+            else:
+                contents += " " + line 
+    except:
+        return (contents, "ERROR")
 
 # Function: test if line has a note
 def testForNote(text, line):
-    notePattern = "\^\d+\^"
+    try:
+        notePattern = "\^\d+\^"
 
-    if re.search(notePattern, text):
-        matchList = re.findall(notePattern, text)
+        if re.search(notePattern, text):
+            matchList = re.findall(notePattern, text)
 
-        for item in matchList:
-            noteNum = item.strip("^")
-            topNotes.append(noteNum)
+            for item in matchList:
+                noteNum = item.strip("^")
+                topNotes.append(noteNum)
 
-            # if doc reaches bottom Notes section
-            if (topNotes.count("1") == 2):
-                return line
+                # if doc reaches bottom Notes section
+                if (topNotes.count("1") == 2):
+                    return line
 
-            noteLink = f'<sup><a href=#note{noteNum}b id=note{noteNum}t>{noteNum}</a></sup>'
-            noteFullPattern = "\^" + noteNum + "\^"
-            text = re.sub(noteFullPattern, noteLink, text)
-    
-    return text
+                noteLink = f'<sup><a href=#note{noteNum}b id=note{noteNum}t>{noteNum}</a></sup>'
+                noteFullPattern = "\^" + noteNum + "\^"
+                text = re.sub(noteFullPattern, noteLink, text)
+        
+        return text
+    except: 
+        return text
 
 # Function: Write each note in Notes section and link to top notes
 def writeNotes(md, html):
-    line = md.readline()
-    noteNum = 1
-    noteContent = ""
+    try:
+        line = md.readline()
+        noteNum = 1
+        noteContent = ""
 
-    # strip line of ^#^
-    line = re.sub("\^\d*\^\s+", "", line)
-    # add first line of note 1
-    noteContent += line 
+        # strip line of ^#^
+        line = re.sub("\^\d*\^\s+", "", line)
+        # add first line of note 1
+        noteContent += line 
 
-    for l in md:
-        if l.count("###") == 1:
-            # reached end of notes (hit References)
-            # write last note:
+        for l in md:
+            if l.count("###") == 1:
+                # reached end of notes (hit References)
+                # write last note:
 
-            noteContent = styleText(noteContent)
-            html.write(
-                f"""
-                <div id="note{noteNum}b">
-                    <p class="notes">
-                        <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
-                    </p>
-                </div>
-                <p class="notes">&nbsp;</p>
-                """
-            )
+                noteContent = styleText(noteContent)
+                html.write(
+                    f"""
+                    <div id="note{noteNum}b">
+                        <p class="notes">
+                            <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
+                        </p>
+                    </div>
+                    <p class="notes">&nbsp;</p>
+                    """
+                )
 
-            line = l
-            break
+                line = l
+                break
+            
+            notePattern = "\^\d+\^"
+            # if next note is hit
+            if (re.search(notePattern, l)): 
+                # add complete previous note to html
+                noteContent = styleText(noteContent)
+                html.write(
+                    f"""
+                    <div id="note{noteNum}b">
+                        <p class="notes">
+                            <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
+                        </p>
+                    </div>
+                    <p class="notes">&nbsp;</p>
+                    """
+                )
+
+                #reset note contents
+                noteContent = ""
+
+                # add first line of note to contents
+                l = re.sub("\^\d*\^\s+", "", l)
+                noteContent += l
+
+                noteNum += 1
+
+            # if note still going
+            else: 
+                #add the line to contents
+                noteContent += " " + l
         
-        notePattern = "\^\d+\^"
-        # if next note is hit
-        if (re.search(notePattern, l)): 
-            # add complete previous note to html
-            noteContent = styleText(noteContent)
-            html.write(
-                f"""
-                <div id="note{noteNum}b">
-                    <p class="notes">
-                        <sup><a href=#note{noteNum}t>{noteNum}</a></sup> {noteContent}
-                    </p>
-                </div>
-                <p class="notes">&nbsp;</p>
-                """
-            )
-
-            #reset note contents
-            noteContent = ""
-
-            # add first line of note to contents
-            l = re.sub("\^\d*\^\s+", "", l)
-            noteContent += l
-
-            noteNum += 1
-
-        # if note still going
-        else: 
-            #add the line to contents
-            noteContent += " " + l
-    
-    # when all notes are read
-    return line
+        # when all notes are read
+        return line
+    except:
+        print("ERROR in WriteNotes")
+        return
 
 # Read references
 def writeRefs(md, html):
-    # write References sectionTitle
-    html.write(
-        f"""
-        <p class="c1 sectionTitle">References</p>
-        """
-    )
+    try:
+        # write References sectionTitle
+        html.write(
+            f"""
+            <p class="c1 sectionTitle">References</p>
+            """
+        )
 
-    refContent = ""
+        refContent = ""
 
-    for l in md:
-        sectionTitle = "^#{3}\s.*$" 
-        if re.match(sectionTitle, l):
-            # reached end of references (hit Author Bios reference)
-            break 
-        
-        # if blank space is hit
-        unformattedLink = False
-        if l == "\n": 
-            link = ""
-            linkPattern = "<.*>\.*"
-            searchResult = re.search(linkPattern, refContent)
+        for l in md:
+            sectionTitle = "^#{3}\s.*$" 
+            if re.match(sectionTitle, l):
+                # reached end of references (hit Author Bios reference)
+                break 
+            
+            # if blank space is hit
+            unformattedLink = False
+            if l == "\n": 
+                link = ""
+                linkPattern = "<.*>\.*"
+                searchResult = re.search(linkPattern, refContent)
 
-            if searchResult: #found a link
-                match = re.search(linkPattern, refContent).group()
-                link = match.strip("<").strip(">.")
-            refContent = re.sub(linkPattern, "", refContent)
+                if searchResult: #found a link
+                    match = re.search(linkPattern, refContent).group()
+                    link = match.strip("<").strip(">.")
+                refContent = re.sub(linkPattern, "", refContent)
 
-            # convert markdown styles
-            refContent = styleText(refContent) 
+                # convert markdown styles
+                refContent = styleText(refContent) 
 
-            # add complete previous reference to html
-            if link != "": #reference has a link
-                html.write(
-                    f"""
-                    <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
-                    """
-                )
-            else: #reference does not have a link (in format)
-                refSplit = refContent.split()
-                for item in refSplit:
-                    if item.count("http") == 1:
-                        unformattedLink = True
-                        link = item[:-1]
-                        refContent = refContent[:-1]
-                        refContent = refContent.replace(link, "")
-
-                if unformattedLink:
-                    html.write(
-                    f"""
-                    <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
-                    """
-                )
-                else:
+                # add complete previous reference to html
+                if link != "": #reference has a link
                     html.write(
                         f"""
-                        <p class="reference"> {refContent}</p>
+                        <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
                         """
                     )
+                else: #reference does not have a link (in format)
+                    refSplit = refContent.split()
+                    for item in refSplit:
+                        if item.count("http") == 1:
+                            unformattedLink = True
+                            link = item[:-1]
+                            refContent = refContent[:-1]
+                            refContent = refContent.replace(link, "")
 
-            #reset note contents
-            refContent = ""
-            link = ""
+                    if unformattedLink:
+                        html.write(
+                        f"""
+                        <p class="reference"> {refContent} <a href={link}>{link}</a>.</p>
+                        """
+                    )
+                    else:
+                        html.write(
+                            f"""
+                            <p class="reference"> {refContent}</p>
+                            """
+                        )
 
-        # if references still going
-        else: 
-            #add the line to contents
-            refContent += " " + l
-    return
+                #reset note contents
+                refContent = ""
+                link = ""
+
+            # if references still going
+            else: 
+                #add the line to contents
+                refContent += " " + l
+        return
+    except:
+        print("Error in writing references")
+        return
 
 def convertToHTML(file, lastSection):
 
@@ -502,8 +509,12 @@ def convertToHTML(file, lastSection):
 
         # get rest of top
         for line in md:
+            # if not book review but missing abstract
+            if line.count("#") == 0 and len(line) >= 100:
+                break
+            
+            # hit abstract or ###
             if line.count("###") == 1:
-                # hit abstract or ###
                 if (topItems[1].count("Book Review") == 1):
                     # title = topItems[1]
                     keywords = "Book Review"
@@ -536,41 +547,60 @@ def convertToHTML(file, lastSection):
         #-------Store authors-------
         # authors: "{0: [author, affil, contact], 1: [author, affil, contact]}"
         authors = {}
+
+        print(topItems)
         
         title = topItems[1].strip("#").strip()
         title = styleText(title)
 
         # delete logo and title from topItems
-        del topItems[0:2]
+        try:
+            del topItems[0:2]
+        except:
+            print("topItems")
 
         #store author names for metadata
         topIndex = 0
         keyIndex = 0
         topLength = len(topItems)
-        
+
+        # go through all names / affils / contacts
         while topLength > 0:
             #author
-            author = topItems[topIndex].strip()
+            try:
+                author = topItems[topIndex].strip()
+            except:
+                author = "[ERROR] Check list of authors / formatting"
 
             #affil
             # if cont affil, not an email
-
-            if len(topItems) > (topIndex + 2):
-                if not topItems[topIndex + 2].count("@") == 1: 
-                    # consolidate multiple affliation lines 
-                    topItems[topIndex + 1] = topItems[topIndex + 1] + topItems[topIndex + 2]
-                    del(topItems[topIndex + 2])
-                    topLength = topLength - 1
-            else:
+            try:
+                if len(topItems) > (topIndex + 2):
+                    if not topItems[topIndex + 2].count("@") == 1: 
+                        # consolidate multiple affliation lines 
+                        topItems[topIndex + 1] = topItems[topIndex + 1] + topItems[topIndex + 2]
+                        del(topItems[topIndex + 2])
+                        topLength = topLength - 1
+            except:
                 print("[FORMAT ERROR: Check formatting of Title and Authors (correct headings and body text)]")
+            # except:
+            #     topItems = ["fix1", "fix2", "fix3"]
 
-            affil = topItems[topIndex + 1].strip()
-            affil = styleText(affil)
+            try:
+                affil = topItems[topIndex + 1].strip()
+                affil = styleText(affil)
+            except:
+                affil = "[ERROR] Check list of authors / formatting"
 
-            if len(topItems) > (topIndex + 2):
+            # if len(topItems) > (topIndex + 2):
+            #     contact = topItems[topIndex + 2].strip()
+            # else:
+            #     print("[FORMAT ERROR: Check formatting of Title and Authors (correct headings and body text)]")
+
+            try:
                 contact = topItems[topIndex + 2].strip()
-            else:
-                print("[FORMAT ERROR: Check formatting of Title and Authors (correct headings and body text)]")
+            except:
+                contact = "[ERROR] Check list of authors / formatting"
 
             contact = contact.strip("<>")
             contact = styleText(contact)
@@ -581,6 +611,7 @@ def convertToHTML(file, lastSection):
             topIndex += 3
             keyIndex += 1
 
+        # end of names / affils / contacts
         authorNames = ""
         for i in range(len(authors)):
             authorNames += (authors[i][0])
@@ -606,7 +637,7 @@ def convertToHTML(file, lastSection):
                 if line.count("#") >= 1:
                     line = line.strip("# ")
                 keywords += line # add the line to keywords
-
+                
             # GET KEYWORDS
             while True:
                 line = md.readline()
@@ -997,8 +1028,6 @@ for file in os.listdir(path):
 
         output = pypandoc.convert_file(input_file, 'md', outputfile=output_file)
         assert output == ""
-
-        
 
 # Convert each md file in folder to html
 for file in os.listdir(path):

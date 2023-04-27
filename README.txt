@@ -1,24 +1,10 @@
-# HTML AUTOMATION GUIDE
-
-Author: Ren Zheng
-renzheng112@gmail.com
 
 ----------------------------------------------------------------------------
 
 ## How to run the script
-    - This scripts converts markdown files (.md) to (.html)
-    - To convert (.docx) to markdown (.md)...
-        - type this command into the terminal:
-
-        pandoc -s name.docx -o name.md
-
-        - (pandoc can be installed at https://pandoc.org/installing.html)
-        - (option 2: use a web converter to get (.md) file)
-
-    - The .md file should be in the same folder as the auto.py script
-    - You can put multiple .md files in the folder and the script will convert all of them
-
-    - You can make edits in the md file and html file
+    - Place .docx or .md files in folder named "docx"
+    - you can put multiple files in the folder and the script will convert all of them
+    - you can make edits in the html file if there are any issues
     - Do not make changes to the file auto.py
 
 ## Manual Changes
@@ -28,17 +14,10 @@ renzheng112@gmail.com
 ----------------------------------------------------------------------------
 
 ## Errors
-    - If you run into an error (don't panic!) or see a mistake in the html page,
-      consult the checklist below...
+    - If you run into an error or see a mistake in the html page,
+      see the checklist below...
 
 ## Checklist for Docx / MD file
-    - (you can check either one, I find MD easier to look for mistakes)
-
-    ** MD CONVERSION **
-        - Make sure the command to convert to md is correct (pandoc -s name.docx -o name.md)
-        - If you accidentally type .docx as the output, delete the file, re-place it into
-          the directory, and run the pandoc command again
-
     ** SECTIONS & TEXT **
         - List of keywords should be normal body text (not a heading)
         - Ensure author bio heading is not missing
@@ -62,8 +41,7 @@ renzheng112@gmail.com
             - example: <https://doi.org/10.14506/ca33.3.06>
 
     ** QUOTES **
-        - Quotes should be in Heading 7 style
-        - If more than one quote in a row, they both need Heading 7 Style separately
+        - Quotes tags need to be manually added in the html file
 
     ** BOOK REVIEWS **
         - For book reviews: if the article does not have an abstract, include a empty heading
@@ -75,3 +53,14 @@ renzheng112@gmail.com
     ** OUTLYING ISSUES **
         - issues with text formatting: go through checklist on md file then rerun script 
         - issues with text content, search for it in html to edit
+
+
+------
+# For converting to an app using py2app:
+# py2applet --make-setup auto.py
+# rm -rf build dist
+# python3 setup.py py2app
+# Go to the dist folder, right click on the app and click "Show Package Contents"
+# Go to Contents/Resources/
+# In the Resources folder paste the word files
+# In the terminal run: dist/auto.app/Contents/MacOS/auto
