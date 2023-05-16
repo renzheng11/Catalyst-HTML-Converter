@@ -11,12 +11,14 @@ import os
 import pypandoc
 import sys
 
-print("Starting app")
+print("\n---------------------\n")
+print("Starting program\n")
 
 # Global variables
 lastSection = ""
 writtenSections = []
 topNotes = []
+onFig = [0]
 
 # Function: replace markdown styles with html styling tags
 def styleText(text):
@@ -29,6 +31,7 @@ def styleText(text):
 
         # Replace two -- em dash –
         text = text.replace("--", "-")
+        text = text.replace("\--", "-")
 
         # Replace \|
         text = text.replace("\|", "|")
@@ -90,9 +93,7 @@ def styleText(text):
         if searchResult:
             matchList = re.findall(linkPattern, text)
             for item in matchList:
-                print(item)
                 bracketHalf = item.split("](")[0][-1]
-                print(bracketHalf + "[end]")
                 period = ""
                 if bracketHalf[-1] == ".":
 
@@ -154,14 +155,14 @@ def styleText(text):
                 replacement = "<del>" + item.strip("~~") + "</del>"
                 text = text.replace(item, replacement)
 
-        # Replace instances of ~subscript~
-        superPattern = "[^~]~.+~[^~]"
-        searchResult = re.search(superPattern, text)
-        if searchResult: #found match
-            matchList = re.findall(superPattern, text)
-            for item in matchList:
-                replacement = "<sub>" + item.replace("~", "") + "</sub>"
-                text = text.replace(item, replacement)
+        # # Replace instances of ~subscript~
+        # superPattern = "[^~]~.+~[^~]"
+        # searchResult = re.search(superPattern, text)
+        # if searchResult: #found match
+        #     matchList = re.findall(superPattern, text)
+        #     for item in matchList:
+        #         replacement = "<sub>" + item.replace("~", "") + "</sub>"
+        #         text = text.replace(item, replacement)
 
         # Replace instances of *italic* text
         italicPattern = "\*(?!\s)[\s\S]*?\*(?<!\s\*)"
@@ -193,7 +194,6 @@ def readContents(last, md, html, authors, extraLine, secLine):
 
         itemtext = ""
         global inList
-        onFig = 1
 
         while True:
             #read next line
@@ -252,53 +252,36 @@ def readContents(last, md, html, authors, extraLine, secLine):
             # IMAGES + FIGURES
             fileName = authors[0][0].split(" ")[-1].lower()
             noAlt = False
+
+
+            # hit image
             if line.count("![") == 1:
-                onFig += 1
-                # contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='"""
-                contents += f"""</p><img src="{fileName}{onFig}.jpg" class="figure" alt='REPLACE ALT TEXT'> """
 
-                if line.count("![]") == 1:
-                    # contents += "'" + '>'
-                    noAlt = True
-                    # print(f"[{fileName[0].upper() + fileName[1:]}] Figure {onFig} needs alt text.")
-                else:
-                    contents +=  line.strip("![")
-
-                # start reading
-                inAlt = True
+                onFig[0] += 1
+                imgLine = f"""</p><img src="{fileName}{onFig[0]}.jpg" class="figure" alt=''> """
+                contents += imgLine
                 figure = ""
 
-                if not noAlt:
-                    while inAlt:
-                        line = md.readline()
-                        if line.count("]") == 1: # end of alt text
-                            # if (line.count("width=") != 0):
-                                # line = line.split("]")[0]
-                                # contents += line +  "'" + '>'
-                            break
-                        # else:
-                            # contents += line + " "
-                            # contents = styleText(contents)
+                while True:
+                    if line.count("}") == 1: # end of alt text
+                        # clear end of alt text from line
+                        line = ""
+                        md.readline() # get line in between image and figure text
+                        break
+                    line = md.readline()
+                    if line.count("}") == 1: # end of alt text
+                        # clear end of alt text from line
+                        line = ""
+                        md.readline() # get line in between image and figure text
+                        break
+                    
 
-
-                # clear end of alt text from line
-                line = ""
-
-                # next = md.readline() # empty line
-                # if next != "\n":
-                #     md.readline()
-
-                lineNotEmpty = True
-                while lineNotEmpty:
+                # get figure
+                while True:
                     next = md.readline()
                     figure += next + " "
                     if next == "\n": # end of figure text
                         break
-
-                # figContent = "MISSING FIGURE CONTENT"
-                # if len(figContent) > 1:
-                #     figContent = figure.split('"}')[1]
-                # figContent = styleText(figContent)
 
                 contents += f"""
                     <p class=imageText>{figure}</p>
@@ -320,6 +303,7 @@ def readContents(last, md, html, authors, extraLine, secLine):
 
             # otherwise it is body text
             else:
+                contents = testForNote(contents, line)
                 contents += " " + line 
     except:
         return (contents, "ERROR")
@@ -492,9 +476,10 @@ def writeRefs(md, html):
         return
 
 def convertToHTML(file, lastSection):
-
     #---------start regex filtering and html writing--------
     bookReview = False
+    hasAbstract = False
+    hasKeywords = False
 
     fileName = str(file).replace(".md", "")
 
@@ -515,17 +500,40 @@ def convertToHTML(file, lastSection):
             
             # hit abstract or ###
             if line.count("###") == 1:
-                if (topItems[1].count("Book Review") == 1):
-                    # title = topItems[1]
-                    keywords = "Book Review"
-                    bookReview = True
+                try:
+                    if (topItems[1].count("Book Review") == 1):
+                        # title = topItems[1]
+                        keywords = "Book Review"
+                        bookReview = True
+                except:
+                    print("[ISSUE] Formatting in one of top items (title, authors, abstract, keyword)")
                 if bookReview:
                     break
                 else:
                     if line.count("Abstract") == 1:
+                        hasAbstract = True
+                        abstract = ""
+                        line = md.readline() # probably empty line
+                        
+                        if line != "": # if not empty line
+                            if line.count("#") >= 1:
+                                line = line.strip("#")
+                            abstract += line # add the line to keywords
+                            
+                        while True:
+                            line = md.readline()
+                            # if line.count("#") >= 1:
+                            #     line = line.strip("# ")
+                            abstract += " " + line.strip("#")
+                            if line.strip() == "": # hit empty line after keywords
+                                abstract = styleText(abstract)
+                                break
+                        # break
+                    if line.count("Keywords") == 1:
+                        #skips abstract
+                        hasKeywords = True
                         break
-            # if re.match("### Abstract(\s+)?", line):
-            #     break
+                    
             else:
                 # if title is in second line
                 secondTitle = ""
@@ -540,15 +548,16 @@ def convertToHTML(file, lastSection):
                     #add all lines to topItems
                     # if second line of title, replace first line
                     if secondTitle and len(topItems) > 1:
-                        topItems[1] = secondTitle
+                        try:
+                            topItems[1] = secondTitle
+                        except:
+                            print("[ISSUE] Formatting in one of top items (title, authors, abstract, keyword)")
                     else:
                         topItems.append(line)
 
         #-------Store authors-------
         # authors: "{0: [author, affil, contact], 1: [author, affil, contact]}"
         authors = {}
-
-        print(topItems)
         
         title = topItems[1].strip("#").strip()
         title = styleText(title)
@@ -557,30 +566,31 @@ def convertToHTML(file, lastSection):
         try:
             del topItems[0:2]
         except:
-            print("topItems")
+            print("[ISSUE] Formatting in one of top items (title, authors, abstract, keyword)")
 
         #store author names for metadata
         topIndex = 0
         keyIndex = 0
         topLength = len(topItems)
 
-        # go through all names / affils / contacts
+        # get author names / affils / contacts
         while topLength > 0:
             #author
             try:
                 author = topItems[topIndex].strip()
             except:
-                author = "[ERROR] Check list of authors / formatting"
+                author = "[ERROR] Check formatting for list of authors and their affiliation / contacts"
 
             #affil
-            # if cont affil, not an email
+            # if affil continues onto second line, not an email
             try:
                 if len(topItems) > (topIndex + 2):
                     if not topItems[topIndex + 2].count("@") == 1: 
                         # consolidate multiple affliation lines 
-                        topItems[topIndex + 1] = topItems[topIndex + 1] + topItems[topIndex + 2]
+                        topItems[topIndex + 1] = topItems[topIndex + 1] + " " + topItems[topIndex + 2]
                         del(topItems[topIndex + 2])
                         topLength = topLength - 1
+
             except:
                 print("[FORMAT ERROR: Check formatting of Title and Authors (correct headings and body text)]")
             # except:
@@ -590,17 +600,12 @@ def convertToHTML(file, lastSection):
                 affil = topItems[topIndex + 1].strip()
                 affil = styleText(affil)
             except:
-                affil = "[ERROR] Check list of authors / formatting"
-
-            # if len(topItems) > (topIndex + 2):
-            #     contact = topItems[topIndex + 2].strip()
-            # else:
-            #     print("[FORMAT ERROR: Check formatting of Title and Authors (correct headings and body text)]")
+                affil = "[ERROR] Check formatting for list of authors and their affiliation / contacts"
 
             try:
                 contact = topItems[topIndex + 2].strip()
             except:
-                contact = "[ERROR] Check list of authors / formatting"
+                contact = "[ERROR] Check formatting for list of authors and their affiliation / contacts"
 
             contact = contact.strip("<>")
             contact = styleText(contact)
@@ -612,68 +617,51 @@ def convertToHTML(file, lastSection):
             keyIndex += 1
 
         # end of names / affils / contacts
-        authorNames = ""
-        for i in range(len(authors)):
-            authorNames += (authors[i][0])
-            if i < (len(authors) - 1):
-                authorNames += ", "
+        try:
+            authorNames = ""
+            for i in range(len(authors)):
+                authorNames += (authors[i][0])
+                if i < (len(authors) - 1):
+                    authorNames += ", "
 
-        authorNames = styleText(authorNames)
+            authorNames = styleText(authorNames)
 
-        fileName = authors[0][0].split(" ")[-1].lower()
+            fileName = authors[0][0].split(" ")[-1].lower()
 
-        extraLine = ""
+            extraLine = ""
+        except:
+            print("[Error] authors")
 
-        if not bookReview:
-            # ABSTRACT AND KEYWORDS
-            # Keywords read manually (a lot of cases of keywords accidentally marked as heading 3)
-            emptyLine = md.readline() # empty line
-            
-            abstract, lastSection = readContents(lastSection, md, html, authors, "", "")
-            keywords = ""
+        # GET KEYWORDS
+        keywords = ""
+        if hasKeywords:
+            line = md.readline() # probably empty line
             line = md.readline() # probably empty line
             
+            # first line
             if line != "": # if not empty line
                 if line.count("#") >= 1:
                     line = line.strip("# ")
                 keywords += line # add the line to keywords
                 
-            # GET KEYWORDS
+            # rest of lines
             while True:
                 line = md.readline()
-                if line.count("#") >= 1:
-                    line = line.strip("# ")
-                keywords += line
+                # if line.count("#") >= 1:
+                #     line = line.strip("# ")
+                keywords += line.strip("# ")
                 if line.strip() == "": # hit empty line after keywords
                     break
-            
-            startedContent = False
 
-            # get next section heading
-            nextLine = md.readline()
-            if nextLine.count("##") >= 1:
-                lastSection = nextLine # introduction if it does not go straight into content
-            else: # goes straight into content
-                lastSection = "startedContent"
-                extraLine = nextLine
-        else:
-            #book review
-            html.write(f"""
-                <html>
+        # get next section heading
+        nextLine = md.readline()
+        if nextLine.count("##") >= 1:
+            lastSection = nextLine # introduction if it does not go straight into content
+        else: # goes straight into content
+            lastSection = "startedContent"
+            extraLine = nextLine
 
-                <head>
-                    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
-                    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-                    <meta charset="UTF-8">
-                    <meta name="description" content="{title}">
-                    <meta name="author" content="{authorNames}">
-            """)
-            
-        # OLD VERSION: Read keywords as body section
-        # keywords, lastSection = readContents(lastSection, md, html, authors)
-        # keywords = keywords.strip("<br><br>")
-
-        #write html head with metadata + styling
+        #write html head with metadata
         html.write(f"""
             <html>
 
@@ -686,7 +674,6 @@ def convertToHTML(file, lastSection):
                     content="{keywords}">
                 <meta name="author" content="{authorNames}">
         """)
-
 
         # STYLING
         html.write(f"""
@@ -882,7 +869,7 @@ def convertToHTML(file, lastSection):
             </head>
         """)
 
-        #write logo + title
+        # WRITE logo + title
         html.write(f"""
             <body class="c5">
             <img class="logo" style="width: 377px; height: 105px; position: relative; right:1%; top: 5%; display: block;"
@@ -899,7 +886,7 @@ def convertToHTML(file, lastSection):
             <p class="c1">&nbsp;</p>
         """)
 
-        # write authors
+        # WRITE authors
         for i in range(len(authors)):
             if i < (len(authors)):
                 html.write(f"""
@@ -920,30 +907,43 @@ def convertToHTML(file, lastSection):
                 <p class="c1">&nbsp;</p>
                 """)
 
-        # write keywords & abstract in meta data
-        if not bookReview:
-            # write abstract + keywords
+        # write body start 
+        html.write(f"""
+            <!--Main Body-->
+        """)
+
+        # WRITE ABSTRACT 
+        if hasAbstract:
             html.write(f"""
-                <!--Main Body-->
-                <p class="c1 sectionTitle">Abstract</p>
-                <p class="c1">{abstract}</p>
-
-                <p class="c1">&nbsp;</p>
-
                 <p class="c1 sectionTitle">
-                Keywords
+                Abstract
                 </p>
                 <p class="c1">
-                    {keywords}
+                    {abstract}
                 </p>
                 <p class="c1">&nbsp;</p>
                 <p class="c1">&nbsp;</p>
             """)
 
-        #-------Read sections-------
+        # WRITE KEYWORDS
+        if hasKeywords:
+            html.write(f"""
+                    <p class="c1 sectionTitle">
+                    Keywords
+                    </p>
+                    <p class="c1">
+                        {keywords}
+                    </p>
+                    <p class="c1">&nbsp;</p>
+                    <p class="c1">&nbsp;</p>
+                """)
+            
+
+        # READ SECTIONS
         sectionTitle = "^#{3}\s.*$"
         subsectionTitle = "^#{4}\s.*$"
         subsubsectionTitle = "^^#{5}\s.*$"
+
 
         for line in md:
 
@@ -1006,10 +1006,8 @@ def convertToHTML(file, lastSection):
     #close files
     md.close()
     html.close()
-    print(f"\nFinished converting {fileName[0].upper() + fileName[1:]}!\n")
 
 # path = os.path.abspath(os.getcwd())
-# print(path)
 
 sub_path = "docx"
 abs_path = os.path.dirname(__file__)
@@ -1031,16 +1029,21 @@ for file in os.listdir(path):
 
 # Convert each md file in folder to html
 for file in os.listdir(path):
-    # reset global vars
-    writtenSections = []
-    topNotes = []
+    try:
+        # reset global vars
+        writtenSections = []
+        topNotes = []
 
-    file_path = os.path.join(path, file)
-    # if str(file).endswith(".docx"):
-    #     # convert to .md
+        file_path = os.path.join(path, file)
 
-    if str(file).endswith(".md"):
-        print("Converting: "+file)
-        convertToHTML(file_path, lastSection)
-        print("Converted md_file to html")
+        if str(file).endswith(".md"):
+            fileName = str(file)[:-3]
+            print("Converting: " + str(file).strip("$"))
+            convertToHTML(file_path, lastSection)
+            print("Output: " + fileName.strip("$") + ".html\n")
+    except:
+        print("[ERROR] " + str(file) + " did not convert. You can refer to the guide for possible errors.")
+        continue
+
+print("\n---------------------\n")
 
