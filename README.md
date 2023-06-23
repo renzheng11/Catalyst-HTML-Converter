@@ -3,7 +3,7 @@
 This script converts the docx files of Catalyst articles (in Stage 2) and generates a HTML file based on its contents. 
 The script relies on the docx file being in the correct format (following the [Style Guide](https://docs.google.com/document/d/1KhPUAjPnpE2R6YC5VAZp8plm3v8bGDySnvoFNvnZumE/edit)). It will still run if the format is wrong but the wrong format may reflect in the html file.
 
-The info on this doc is also covered in this [video tutorial]. 
+The info on this doc is also covered in this [video tutorial](https://www.dropbox.com/s/876t685ms2jocei/Tutorial%20for%20Catalyst%20HTML%20article%20converter_1.mp4?dl=0). 
 
 Note: Do not make any changes to "auto.py" file.
 
