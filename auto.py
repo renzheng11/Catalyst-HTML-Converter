@@ -258,7 +258,7 @@ def readContents(last, md, html, authors, extraLine, secLine):
             if line.count("![") == 1:
 
                 onFig[0] += 1
-                imgLine = f"""</p><img src="{fileName}{onFig[0]}.jpg" class="figure" alt=''> """
+                imgLine = f"""</p><img src="{fileName}{onFig[0]}.jpg" class="figure" alt='{fileName}{onFig[0]} - Add Alt Text'> """
                 contents += imgLine
                 figure = ""
 
